@@ -1,0 +1,133 @@
+/* ============================================================
+   BIG 5 AFRICA SAFARI — slider.css
+   Package page image carousel + thumbnail strip
+   ============================================================ */
+
+.slider-section {
+  background: var(--brown-deep);
+  padding: 0 0 28px;
+}
+
+/* ---- Main stage ---- */
+.slider-main {
+  position: relative;
+  height: 480px;
+  overflow: hidden;
+  background: #1a1512;
+}
+.slider-main .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.55s ease;
+}
+.slider-main .slide.active {
+  opacity: 1;
+}
+.slider-main .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.slide-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(26, 21, 18, 0.45),
+    rgba(26, 21, 18, 0.08) 60%
+  );
+}
+
+/* ---- Arrow controls ---- */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s;
+}
+.slider-arrow:hover {
+  background: rgba(255, 255, 255, 0.34);
+}
+.slider-arrow svg {
+  width: 22px;
+  height: 22px;
+}
+.slider-prev {
+  left: 18px;
+}
+.slider-next {
+  right: 18px;
+}
+.slide-counter {
+  position: absolute;
+  bottom: 16px;
+  right: 20px;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+/* ---- Thumbnail strip ---- */
+.thumbs-row {
+  display: flex;
+  gap: 10px;
+  padding: 14px 28px 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.thumbs-row::-webkit-scrollbar {
+  display: none;
+}
+.thumb {
+  width: 110px;
+  height: 68px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  flex-shrink: 0;
+  border: 2.5px solid transparent;
+  transition:
+    border-color 0.2s,
+    opacity 0.2s;
+}
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.thumb.active {
+  border-color: var(--gold-bright);
+}
+.thumb:not(.active) {
+  opacity: 0.6;
+}
+.thumb:hover {
+  opacity: 1;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 700px) {
+  .slider-main {
+    height: 260px;
+  }
+  .thumbs-row {
+    padding: 10px 18px 0;
+  }
+}

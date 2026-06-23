@@ -1,0 +1,364 @@
+/* ============================================================
+   BIG 5 AFRICA SAFARI — forms.css
+   All form components: fields, inquiry, phone CC, contact, sidebar
+   ============================================================ */
+
+/* ---- Shared field ---- */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.field.full {
+  grid-column: 1 / -1;
+}
+.field label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--brown);
+}
+.field input,
+.field select,
+.field textarea {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--ink);
+  background: #fff;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  padding: 11px 13px;
+  transition:
+    border-color 0.18s,
+    box-shadow 0.18s;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235E544A' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 13px center;
+  background-size: 15px;
+  padding-right: 38px;
+}
+.field select.with-flag {
+  background-image: none;
+}
+.field textarea {
+  resize: vertical;
+  min-height: 74px;
+  line-height: 1.55;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(194, 138, 51, 0.16);
+}
+.field.invalid input,
+.field.invalid select,
+.field.invalid textarea {
+  border-color: #c0492f;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.form-note {
+  font-size: 12.5px;
+  color: var(--brown);
+  margin: 14px 0 0;
+  text-align: center;
+}
+
+/* ---- Success state ---- */
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 24px 10px;
+}
+.form-success.show {
+  display: block;
+}
+.form-success svg {
+  width: 56px;
+  height: 56px;
+  color: var(--olive);
+  margin: 0 auto 14px;
+}
+.form-success h3 {
+  font-size: 23px;
+  margin-bottom: 8px;
+}
+.form-success p {
+  color: var(--brown);
+  font-size: 15px;
+}
+.form-success-ic {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--sand);
+  display: grid;
+  place-items: center;
+  color: var(--olive);
+  margin: 0 auto 20px;
+}
+.form-success-ic svg {
+  width: 38px;
+  height: 38px;
+}
+
+/* ---- Hero inquiry form ---- */
+.inquiry {
+  background: rgba(251, 247, 239, 0.97);
+  border-radius: 22px;
+  padding: 32px 30px;
+  box-shadow: var(--shadow-lg);
+  pointer-events: auto;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.inquiry-head {
+  margin-bottom: 20px;
+}
+.inquiry-head h3 {
+  font-size: 25px;
+  color: var(--brown-deep);
+}
+.inquiry-head p {
+  margin: 6px 0 0;
+  font-size: 14.5px;
+  color: var(--brown);
+}
+
+/* ---- Phone with country-code selector ---- */
+.phone-group {
+  display: flex;
+  gap: 8px;
+}
+.phone-group input {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.cc {
+  position: relative;
+  flex: 0 0 auto;
+}
+.cc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 100%;
+  background: #fff;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  padding: 0 11px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--ink);
+  white-space: nowrap;
+  min-height: 44px;
+}
+.cc-btn .flag {
+  font-size: 17px;
+  line-height: 1;
+}
+.cc-btn .chev {
+  width: 13px;
+  height: 13px;
+  opacity: 0.55;
+}
+.cc-btn:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(194, 138, 51, 0.16);
+}
+.cc-pop {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 6px);
+  z-index: 70;
+  width: 290px;
+  max-height: 290px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--line);
+  display: none;
+  flex-direction: column;
+}
+.cc.open .cc-pop {
+  display: flex;
+}
+.cc-search {
+  padding: 10px;
+  border-bottom: 1px solid var(--line);
+}
+.cc-search input {
+  width: 100%;
+  padding: 9px 11px;
+  font-size: 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+}
+.cc-list {
+  overflow-y: auto;
+  padding: 6px;
+}
+.cc-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 9px 10px;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--ink);
+}
+.cc-item:hover {
+  background: var(--sand);
+}
+.cc-item .flag {
+  font-size: 18px;
+}
+.cc-item .nm {
+  flex: 1;
+}
+.cc-item .dial {
+  color: var(--brown);
+  font-weight: 600;
+}
+.cc-empty {
+  padding: 16px;
+  text-align: center;
+  color: var(--brown);
+  font-size: 14px;
+}
+
+/* ---- Contact page form box ---- */
+.form-box {
+  background: #fff;
+  border-radius: 22px;
+  padding: 40px 36px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--line);
+}
+.form-box-head {
+  margin-bottom: 28px;
+}
+.form-box-head h2 {
+  font-size: clamp(24px, 3vw, 34px);
+}
+.form-box-head p {
+  color: var(--brown);
+  font-size: 15px;
+  margin: 10px 0 0;
+}
+
+/* ---- Package sidebar form ---- */
+.sdb-form {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.sdb-form-head {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--brown-deep);
+  margin-bottom: 4px;
+}
+.sdb-form-sub {
+  font-size: 13px;
+  color: var(--brown);
+  margin-bottom: 8px;
+}
+.sf {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.sf label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brown);
+}
+.sf input,
+.sf select {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--ink);
+  background: #fff;
+  border: 1.5px solid var(--line);
+  border-radius: 9px;
+  padding: 10px 12px;
+  transition:
+    border-color 0.18s,
+    box-shadow 0.18s;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.sf select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235E544A' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 14px;
+  padding-right: 34px;
+}
+.sf input:focus,
+.sf select:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(194, 138, 51, 0.14);
+}
+.sf-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.form-note-sm {
+  font-size: 11.5px;
+  color: var(--brown);
+  text-align: center;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.form-note-sm svg {
+  width: 13px;
+  height: 13px;
+  color: var(--gold);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 700px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .sf-row {
+    grid-template-columns: 1fr;
+  }
+  .form-box {
+    padding: 26px 20px;
+  }
+  .cc-pop {
+    width: 270px;
+  }
+}

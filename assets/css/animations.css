@@ -1,0 +1,40 @@
+/* ============================================================
+   BIG 5 AFRICA SAFARI — animations.css
+   Scroll reveal, WhatsApp pulse keyframe
+   ============================================================ */
+
+/* ---- Scroll reveal ---- */
+.reveal {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+html.js .reveal:not(.in) {
+  opacity: 0;
+  transform: translateY(26px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js .reveal:not(.in) {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ---- WhatsApp bubble pulse ---- */
+@keyframes waPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

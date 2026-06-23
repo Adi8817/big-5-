@@ -1,0 +1,339 @@
+/* ============================================================
+   BIG 5 AFRICA SAFARI — navigation.css
+   Topbar, language dropdown, navbar, hamburger, drawer, breadcrumb
+   ============================================================ */
+
+/* ---- Top utility bar ---- */
+.topbar {
+  background: var(--brown-deep);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 13.5px;
+}
+.topbar .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+}
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+.topbar-left a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.15s;
+}
+.topbar-left a:hover {
+  color: var(--gold-bright);
+}
+.topbar-left svg {
+  width: 15px;
+  height: 15px;
+  color: var(--gold-bright);
+}
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.top-socials {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.top-socials a {
+  color: rgba(255, 255, 255, 0.7);
+  transition:
+    color 0.15s,
+    transform 0.15s;
+}
+.top-socials a:hover {
+  color: var(--gold-bright);
+  transform: translateY(-1px);
+}
+.top-socials svg {
+  width: 16px;
+  height: 16px;
+}
+.top-divider {
+  width: 1px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ---- Language dropdown ---- */
+.lang {
+  position: relative;
+}
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.lang-btn svg {
+  width: 14px;
+  height: 14px;
+}
+.lang-btn .chev {
+  transition: transform 0.2s;
+}
+.lang.open .lang-btn .chev {
+  transform: rotate(180deg);
+}
+.lang-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  background: #fff;
+  color: var(--ink);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  min-width: 170px;
+  padding: 6px;
+  z-index: 60;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition:
+    opacity 0.18s,
+    transform 0.18s,
+    visibility 0.18s;
+}
+.lang.open .lang-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.lang-menu button {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--ink);
+  padding: 10px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lang-menu button:hover {
+  background: var(--sand);
+}
+.lang-menu button.active {
+  color: var(--gold);
+  font-weight: 700;
+}
+.lang-menu .flag {
+  font-size: 16px;
+}
+
+/* ---- Sticky navbar ---- */
+.nav {
+  background: rgba(251, 247, 239, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition:
+    box-shadow 0.25s,
+    background 0.25s;
+}
+.nav.scrolled {
+  box-shadow: var(--shadow-sm);
+  background: rgba(251, 247, 239, 0.98);
+}
+.nav .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 84px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.brand img {
+  height: 50px;
+  width: auto;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.nav-links a {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--brown-deep);
+  position: relative;
+  padding: 6px 0;
+  letter-spacing: 0.01em;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: var(--gold);
+  transition: width 0.22s ease;
+}
+.nav-links a:hover {
+  color: var(--gold);
+}
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+.nav-links a.active {
+  color: var(--gold);
+}
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* ---- Hamburger ---- */
+.hamburger {
+  display: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.hamburger span {
+  width: 24px;
+  height: 2.5px;
+  background: var(--brown-deep);
+  border-radius: 2px;
+  transition: 0.25s;
+}
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* ---- Mobile drawer ---- */
+.drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  pointer-events: none;
+}
+.drawer-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(42, 37, 32, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.drawer-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: min(82vw, 340px);
+  background: var(--cream);
+  box-shadow: var(--shadow-lg);
+  transform: translateX(100%);
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 26px 24px;
+  overflow-y: auto;
+}
+.drawer.open {
+  pointer-events: auto;
+}
+.drawer.open .drawer-overlay {
+  opacity: 1;
+}
+.drawer.open .drawer-panel {
+  transform: translateX(0);
+}
+.drawer-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.drawer-head img {
+  height: 42px;
+}
+.drawer-close {
+  background: none;
+  border: 0;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--brown-deep);
+  cursor: pointer;
+}
+.drawer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 24px;
+}
+.drawer-links a {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 19px;
+  color: var(--brown-deep);
+  padding: 12px 10px;
+  border-radius: 10px;
+  border-bottom: 1px solid var(--line);
+}
+.drawer-links a:hover {
+  background: var(--sand);
+  color: var(--gold);
+}
+
+/* ---- Breadcrumb ---- */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 22px;
+  font-weight: 600;
+  flex-wrap: wrap;
+}
+.breadcrumb a {
+  color: rgba(255, 255, 255, 0.55);
+  transition: color 0.15s;
+}
+.breadcrumb a:hover {
+  color: var(--gold-bright);
+}
+.breadcrumb-sep {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 12px;
+}
