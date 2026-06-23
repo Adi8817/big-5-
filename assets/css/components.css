@@ -373,7 +373,7 @@
   margin-top: 30px;
 }
 .welcome-sign .logo-chip {
-  height: 54px;
+  height: 70px;
   width: auto;
 }
 .welcome-sign .who strong {
@@ -1186,13 +1186,13 @@
 .footer-brand .footer-logo {
   display: inline-flex;
   background: #fff;
-  padding: 13px 18px;
+  padding: 10px 12px;
   border-radius: 14px;
   margin-bottom: 22px;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
 }
 .footer-brand .footer-logo img {
-  height: 44px;
+  height: 66px;
   width: auto;
   display: block;
 }
@@ -1699,7 +1699,7 @@
   border-top: 1px solid var(--line);
 }
 .story-sign .logo-chip {
-  height: 46px;
+  height: 70px;
   width: auto;
 }
 .sign-text strong {
