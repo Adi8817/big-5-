@@ -3275,3 +3275,518 @@
   width: 17px;
   height: 17px;
 }
+
+
+
+
+
+
+
+
+/* ======================================
+   REVIEWS PAGE
+====================================== */
+
+/* ============================================================
+   reviews.html — page-specific styles
+   Move to css/components.css when ready.
+   All tokens come from css/base.css (:root).
+   ============================================================ */
+
+/* ---- 1. HERO ---- */
+.rv-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(155deg, #2a2017 0%, #3B342C 42%, #574836 100%);
+}
+.rv-hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(90% 70% at 88% 8%, rgba(216,162,63,.28), transparent 58%);
+  pointer-events: none;
+}
+.rv-hero::after {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,.045) 1px, transparent 1px);
+  background-size: 22px 22px;
+  opacity: .6;
+  pointer-events: none;
+}
+.rv-hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+}
+.rv-hero-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  opacity: .22;
+}
+.rv-hero-inner {
+  position: relative; z-index: 2;
+  padding: 72px 0 88px;
+}
+.rv-hero-inner .eyebrow { color: var(--gold-bright); }
+.rv-hero-inner .eyebrow::before { background: var(--gold-bright); }
+.rv-hero h1 {
+  color: #fff;
+  font-size: clamp(34px, 5vw, 60px);
+  max-width: 720px;
+}
+.rv-hero h1 em { color: var(--gold-bright); font-style: normal; }
+.rv-hero-sub {
+  color: rgba(255,255,255,.85);
+  font-size: clamp(16px, 1.6vw, 19px);
+  margin: 20px 0 36px;
+  max-width: 560px;
+  line-height: 1.65;
+}
+/* Hero trust pills row */
+.rv-hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.rv-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.22);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 999px;
+}
+.rv-hero-pill svg {
+  width: 16px; height: 16px;
+  color: var(--gold-bright);
+  flex-shrink: 0;
+}
+
+/* ---- 2. STATS STRIP ---- */
+/* Reuses .bg-dark .stats-grid .stat-cell from existing CSS */
+
+/* ---- 3. FEATURED REVIEWS ---- */
+.rv-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+.rv-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 26px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: transform .28s, box-shadow .28s;
+  position: relative;
+}
+.rv-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+.rv-card-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.rv-avatar {
+  width: 54px; height: 54px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 20px;
+  color: #fff;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.rv-avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.rv-person h4 {
+  font-size: 16px;
+  margin: 0 0 2px;
+  color: var(--brown-deep);
+}
+.rv-person-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: var(--brown);
+  font-weight: 500;
+}
+.rv-person-meta .sep { color: var(--line); }
+.rv-card-stars {
+  display: flex;
+  gap: 2px;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.rv-card-stars svg { width: 16px; height: 16px; }
+.rv-card-pkg {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--sand);
+  color: var(--brown-deep);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  width: fit-content;
+}
+.rv-card-pkg svg { width: 13px; height: 13px; color: var(--gold); }
+.rv-card-text {
+  font-size: 15px;
+  color: var(--brown);
+  line-height: 1.7;
+  flex: 1;
+  margin: 0 0 18px;
+}
+.rv-card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--brown);
+  font-weight: 500;
+}
+.rv-card-foot .g-src { display: flex; align-items: center; gap: 5px; }
+.rv-card-foot .g-src svg { width: 16px; height: 16px; }
+.rv-quote-mark {
+  font-family: var(--font-display);
+  font-size: 64px;
+  line-height: .5;
+  color: var(--gold-soft);
+  margin-bottom: 10px;
+  display: block;
+}
+/* Featured (large) card */
+.rv-card.featured {
+  grid-column: span 2;
+  flex-direction: row;
+  gap: 30px;
+  align-items: flex-start;
+}
+.rv-card.featured .rv-card-body { flex: 1; }
+.rv-card.featured .rv-card-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.rv-card.featured .rv-card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+.rv-card.featured .rv-card-text { font-size: 16px; }
+
+/* ---- 4. VIDEO TESTIMONIALS ---- */
+.rv-video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.rv-video-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  height: 240px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: transform .28s, box-shadow .28s;
+}
+.rv-video-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.rv-video-card img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform .45s;
+}
+.rv-video-card:hover img { transform: scale(1.05); }
+.rv-video-shade {
+  position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(24,19,13,.78) 0%, rgba(24,19,13,.18) 60%);
+  pointer-events: none;
+}
+.rv-video-play {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -60%);
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  background: rgba(194,138,51,.92);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,.3);
+  transition: background .2s, transform .2s;
+}
+.rv-video-card:hover .rv-video-play {
+  background: var(--gold-bright);
+  transform: translate(-50%, -60%) scale(1.1);
+}
+.rv-video-play svg { width: 22px; height: 22px; margin-left: 3px; }
+.rv-video-body {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 18px;
+  color: #fff;
+}
+.rv-video-body h4 { font-size: 16px; color: #fff; margin: 0 0 4px; }
+.rv-video-body span { font-size: 12.5px; color: rgba(255,255,255,.78); }
+
+/* ---- 5. GUEST STORIES ---- */
+.rv-stories-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.rv-story {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 26px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform .28s, box-shadow .28s;
+}
+.rv-story:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.rv-story-img {
+  height: 100%;
+  min-height: 220px;
+  overflow: hidden;
+}
+.rv-story-img img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+.rv-story-body { padding: 24px 24px 24px 0; }
+.rv-story-body .stars {
+  display: flex;
+  gap: 2px;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.rv-story-body .stars svg { width: 15px; height: 15px; }
+.rv-story-body h3 { font-size: 19px; margin-bottom: 8px; }
+.rv-story-body p { font-size: 14.5px; color: var(--brown); margin: 0 0 14px; line-height: 1.65; }
+.rv-story-meta {
+  font-size: 12.5px;
+  color: var(--brown);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+.rv-story-meta .dot {
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: inline-block;
+}
+/* Full-width featured story */
+.rv-story.wide {
+  grid-column: span 2;
+  grid-template-columns: 320px 1fr;
+}
+.rv-story.wide .rv-story-img { min-height: 300px; }
+.rv-story.wide .rv-story-body h3 { font-size: 24px; }
+.rv-story.wide .rv-story-body p { font-size: 16px; }
+
+/* ---- 6. GOOGLE HIGHLIGHT ---- */
+.rv-google-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.rv-google-badge {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 40px 36px;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+.rv-google-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.rv-google-logo svg { width: 38px; height: 38px; }
+.rv-google-logo span {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--brown-deep);
+}
+.rv-google-score {
+  font-family: var(--font-display);
+  font-size: 72px;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.rv-google-stars {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.rv-google-stars svg { width: 26px; height: 26px; }
+.rv-google-count {
+  font-size: 15px;
+  color: var(--brown);
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.rv-google-trust {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.rv-google-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14.5px;
+  color: var(--brown-deep);
+  font-weight: 600;
+  text-align: left;
+}
+.rv-google-trust-item svg {
+  width: 18px; height: 18px;
+  color: var(--olive);
+  flex-shrink: 0;
+}
+/* Rating bar breakdown */
+.rv-rating-bars { display: flex; flex-direction: column; gap: 12px; }
+.rv-rating-row {
+  display: grid;
+  grid-template-columns: 60px 1fr 36px;
+  gap: 12px;
+  align-items: center;
+}
+.rv-rating-row .label { font-size: 13px; color: var(--brown); font-weight: 600; }
+.rv-rating-bar-track {
+  height: 8px;
+  background: var(--sand-deep);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.rv-rating-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--gold);
+}
+.rv-rating-row .pct { font-size: 12.5px; color: var(--brown); font-weight: 700; text-align: right; }
+.rv-google-copy h2 { font-size: clamp(28px, 3.8vw, 44px); margin-bottom: 18px; }
+.rv-google-copy p { font-size: 16.5px; color: var(--brown); line-height: 1.7; margin: 0 0 30px; }
+.rv-google-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* ---- 7. WHY TRUST — reuses .why2-card, .why2-ic from components.css ---- */
+/* No new CSS needed — using existing classes */
+
+/* ---- 8. REVIEW CATEGORIES ---- */
+.rv-cats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+.rv-cat-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 22px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform .28s, box-shadow .28s, border-color .28s;
+  cursor: pointer;
+}
+.rv-cat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--gold-soft);
+}
+.rv-cat-ic {
+  font-size: 36px;
+  margin-bottom: 14px;
+  display: block;
+  line-height: 1;
+}
+.rv-cat-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: var(--brown-deep);
+}
+.rv-cat-card p {
+  font-size: 13px;
+  color: var(--brown);
+  margin: 0 0 14px;
+  line-height: 1.55;
+}
+.rv-cat-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--sand);
+  color: var(--brown-deep);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+.rv-cat-count svg { width: 13px; height: 13px; color: var(--gold); }
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 1100px) {
+  .rv-reviews-grid { grid-template-columns: 1fr 1fr; }
+  .rv-card.featured { grid-column: span 2; }
+  .rv-cats-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 960px) {
+  .rv-video-grid { grid-template-columns: 1fr 1fr; }
+  .rv-google-inner { grid-template-columns: 1fr; gap: 40px; }
+  .rv-stories-grid { grid-template-columns: 1fr; }
+  .rv-story.wide { grid-column: span 1; grid-template-columns: 180px 1fr; }
+  .rv-story { grid-template-columns: 160px 1fr; }
+}
+@media (max-width: 760px) {
+  .rv-reviews-grid { grid-template-columns: 1fr; }
+  .rv-card.featured { grid-column: span 1; flex-direction: column; }
+  .rv-card.featured .rv-card-img { width: 100%; height: 200px; }
+  .rv-video-grid { grid-template-columns: 1fr; }
+  .rv-story, .rv-story.wide { grid-template-columns: 1fr; }
+  .rv-story-img { min-height: 200px; height: 200px; }
+  .rv-story.wide .rv-story-img { min-height: 220px; }
+  .rv-story-body { padding: 22px; }
+  .rv-cats-grid { grid-template-columns: repeat(2, 1fr); }
+  .rv-google-badge { padding: 28px 22px; }
+}
+@media (max-width: 480px) {
+  .rv-cats-grid { grid-template-columns: 1fr 1fr; }
+  .rv-hero-pills .rv-hero-pill { font-size: 13px; padding: 8px 14px; }
+}
+
+/* <!-- NEW CSS END --> */
