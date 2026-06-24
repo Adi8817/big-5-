@@ -93,3 +93,22 @@
   }
 
 }());
+
+if (window.innerWidth <= 991) {
+
+  document.querySelectorAll('.submenu-toggle').forEach(btn => {
+
+    btn.addEventListener('click', function(e) {
+
+      e.preventDefault();
+      e.stopPropagation();
+
+      const parent = this.closest('.has-dropdown');
+
+      parent.classList.toggle('active');
+
+    });
+
+  });
+
+}
