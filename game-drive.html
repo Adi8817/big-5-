@@ -2,6 +2,7 @@
 <html lang="en" class="js">
 <head>
 <script>/* mark JS alive synchronously */</script>
+
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Game Drive Safari — Big 5 Africa Safari | Expert-Led Wildlife Drives in Kenya &amp; Tanzania</title>
@@ -9,54 +10,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
 <link rel="stylesheet" href="assets/css/main.css" />
 
-<!-- NEW CSS START -->
-<style>
-/* ============================================================
-   game-drive.html — minimal additional styles
-   All major components reused from css/components.css
-   Move to css/components.css when ready
-   ============================================================ */
 
-/* ---- What To Expect timeline (extends day-item accordion) ---- */
-.expect-num {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: var(--gold);
-  color: #fff;
-  display: grid;
-  place-items: center;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 17px;
-  flex-shrink: 0;
-  line-height: 1;
-}
-/* ---- Simple 2-col info list inside overview ---- */
-.info-2col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 28px;
-  margin-top: 16px;
-}
-.info-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 9px;
-  font-size: 14px;
-  color: var(--brown-deep);
-}
-.info-item svg { width: 17px; height: 17px; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
-.info-item strong { display: block; font-size: 12px; font-weight: 700; color: var(--brown); text-transform: uppercase; letter-spacing: .05em; }
-
-/* ---- Responsive ---- */
-@media (max-width: 700px) {
-  .info-2col { grid-template-columns: 1fr; }
-}
-</style>
-<!-- NEW CSS END -->
 </head>
 <body>
 
@@ -902,39 +859,7 @@
 </div>
 
 <!-- NEW JS START -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-(function () {
-  'use strict';
-  // ---- Gallery lightbox (same as machame-route.html) ----
-  var lightbox      = document.getElementById('lightbox');
-  var lightboxImg   = document.getElementById('lightboxImg');
-  var lightboxClose = document.getElementById('lightboxClose');
-  if (!lightbox || !lightboxImg) return;
-
-  document.querySelectorAll('.trek-gallery__item').forEach(function (item) {
-    item.addEventListener('click', function () {
-      var src = item.dataset.src || item.querySelector('img').src;
-      var alt = item.querySelector('img').alt || '';
-      lightboxImg.src = src;
-      lightboxImg.alt = alt;
-      lightbox.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
-  });
-
-  function closeLightbox() {
-    lightbox.classList.remove('open');
-    lightboxImg.src = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
-    document.body.style.overflow = '';
-  }
-
-  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
-}());
-</script>
-<!-- NEW JS END -->
-
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script src="assets/js/navigation.js"></script>
 <script src="assets/js/forms.js"></script>
 <script src="assets/js/animations.js"></script>

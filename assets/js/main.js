@@ -180,3 +180,41 @@
   });
 
 }());
+
+
+
+
+
+
+
+(function () {
+  'use strict';
+  // ---- Gallery lightbox (same as machame-route.html) ----
+  var lightbox      = document.getElementById('lightbox');
+  var lightboxImg   = document.getElementById('lightboxImg');
+  var lightboxClose = document.getElementById('lightboxClose');
+  if (!lightbox || !lightboxImg) return;
+
+  document.querySelectorAll('.trek-gallery__item').forEach(function (item) {
+    item.addEventListener('click', function () {
+      var src = item.dataset.src || item.querySelector('img').src;
+      var alt = item.querySelector('img').alt || '';
+      lightboxImg.src = src;
+      lightboxImg.alt = alt;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    lightboxImg.src = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+    document.body.style.overflow = '';
+  }
+
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
+}());
+
+
