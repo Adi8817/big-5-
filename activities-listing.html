@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+<head>
+<script>/* mark JS alive synchronously */</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Activities — Big 5 Africa Safari | Safari, Adventure, Culture &amp; Nature</title>
+<meta name="description" content="Explore every activity Big 5 Africa Safari offers — game drives, hot air balloons, Maasai village tours, birding, walking safaris and more across Kenya and Tanzania." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/main.css" />
+
+<!-- NEW CSS START -->
+<style>
+/* ============================================================
+   activities-listing.html — new component styles
+   Move to css/components.css + css/utilities.css when ready
+   ============================================================ */
+
+/* ---- Activity card (extends dest-card pattern) ---- */
+.act-list-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.act-list-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform .28s, box-shadow .28s;
+}
+.act-list-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+
+.act-list-card__media {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+.act-list-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s;
+}
+.act-list-card:hover .act-list-card__media img { transform: scale(1.07); }
+
+.act-list-card__cat {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 5;
+  background: var(--gold);
+  color: #fff;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+  letter-spacing: .04em;
+  pointer-events: none;
+}
+.act-list-card__cat.adventure  { background: #b94030; }
+.act-list-card__cat.culture    { background: var(--olive); }
+.act-list-card__cat.nature     { background: #2a7d4f; }
+
+.act-list-card__body {
+  padding: 20px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.act-list-card__loc {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.act-list-card__loc svg { width: 13px; height: 13px; }
+.act-list-card__body h3 { font-size: 18px; line-height: 1.2; margin-bottom: 8px; }
+.act-list-card__desc { font-size: 13.5px; color: var(--brown); margin: 0 0 14px; line-height: 1.65; flex: 1; }
+.act-list-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.act-list-card__meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--brown);
+}
+.act-list-card__meta span svg { width: 13px; height: 13px; color: var(--gold); flex-shrink: 0; }
+.act-list-card__foot {
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  margin-top: auto;
+}
+
+/* ---- Category section header — reuses dest-country-header pattern ---- */
+.act-cat-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 32px;
+}
+.act-cat-header__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--sand);
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.act-cat-header__icon svg { width: 26px; height: 26px; }
+.act-cat-header__icon.adventure { background: rgba(185,64,48,.1); color: #b94030; }
+.act-cat-header__icon.culture   { background: rgba(110,118,81,.12); color: var(--olive); }
+.act-cat-header__icon.nature    { background: rgba(42,125,79,.1); color: #2a7d4f; }
+.act-cat-header__text h2 { font-size: clamp(22px, 3vw, 32px); margin-bottom: 4px; }
+.act-cat-header__text p  { font-size: 14.5px; color: var(--brown); margin: 0; }
+.act-cat-header__line { flex: 1; height: 1px; background: var(--line); }
+
+/* ---- Featured strip (2-col large cards) reuses dest-featured-grid ---- */
+.act-featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 0;
+}
+.act-featured-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: var(--shadow-md);
+  transition: transform .3s, box-shadow .3s;
+}
+.act-featured-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.act-featured-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .55s;
+}
+.act-featured-card:hover img { transform: scale(1.05); }
+.act-featured-card__shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(18,14,9,.92) 0%, rgba(18,14,9,.45) 45%, rgba(18,14,9,.06) 78%);
+  pointer-events: none;
+}
+.act-featured-card__body {
+  position: relative;
+  z-index: 2;
+  padding: 28px 26px;
+  color: #fff;
+}
+.act-featured-card__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255,255,255,.13);
+  border: 1px solid rgba(255,255,255,.26);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+  letter-spacing: .02em;
+}
+.act-featured-card__body h3 { color: #fff; font-size: clamp(18px, 2.2vw, 24px); margin-bottom: 8px; line-height: 1.15; }
+.act-featured-card__body p  { color: rgba(255,255,255,.82); font-size: 13.5px; margin: 0 0 16px; line-height: 1.6; }
+
+/* ---- Responsive ---- */
+@media (max-width: 1100px) {
+  .act-list-grid { grid-template-columns: 1fr 1fr; }
+  .act-featured-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 960px) {
+  .act-featured-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 700px) {
+  .act-list-grid { grid-template-columns: 1fr; }
+  .act-featured-grid { grid-template-columns: 1fr; }
+  .act-featured-card { min-height: 300px; }
+  .act-cat-header__line { display: none; }
+}
+</style>
+<!-- NEW CSS END -->
+</head>
+<body>
+
+<!-- ==================== TOPBAR ==================== -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-left">
+      <a href="tel:+14372172330">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +1 437 217 2330
+      </a>
+      <a href="/cdn-cgi/l/email-protection#bfd6d1d9d0ffddd6d88aded9cdd6dcdeccded9decdd691dcd0d2" class="hide-sm">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        <span class="__cf_email__" data-cfemail="caa3a4aca58aa8a3adffabacb8a3a9abb9abacabb8a3e4a9a5a7">[email&#160;protected]</span>
+      </a>
+    </div>
+    <div class="topbar-right">
+      <div class="top-socials">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 4.67a5.13 5.13 0 1 0 0 10.26 5.13 5.13 0 0 0 0-10.26zm0 8.46a3.33 3.33 0 1 1 0-6.66 3.33 3.33 0 0 1 0 6.66zm6.54-8.66a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.5a3 3 0 0 0-2.12-2.13C19.5 3.86 12 3.86 12 3.86s-7.5 0-9.38.51A3 3 0 0 0 .5 6.5C0 8.38 0 12 0 12s0 3.62.5 5.5a3 3 0 0 0 2.12 2.13c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51A3 3 0 0 0 23.5 17.5C24 15.62 24 12 24 12s0-3.62-.5-5.5zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a>
+      </div>
+      <div class="top-divider"></div>
+      <div class="lang" id="lang">
+        <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span id="langLabel">English</span>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button class="active" data-lang="English"><span class="flag">🇬🇧</span> English</button>
+          <button data-lang="Français"><span class="flag">🇫🇷</span> Français</button>
+          <button data-lang="Deutsch"><span class="flag">🇩🇪</span> Deutsch</button>
+          <button data-lang="Español"><span class="flag">🇪🇸</span> Español</button>
+          <button data-lang="Kiswahili"><span class="flag">🇹🇿</span> Kiswahili</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a href="index.html" class="brand" aria-label="Big 5 Africa Safari home">
+      <img src="assets/big5-logo.png" alt="Big 5 Africa Safari" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="destinations-listing.html">Destinations</a></li>
+      <li><a href="trekking-listing.html">Trekking</a></li>
+      <li><a href="activities-listing.html" class="active">Activities</a></li>
+      <li><a href="index.html#tours">Tours</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary">Plan My Safari</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="drawer" id="drawer">
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer-panel">
+    <div class="drawer-head">
+      <img src="assets/big5-logo.png" alt="Big 5 Africa Safari" />
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="destinations-listing.html">Destinations</a>
+      <a href="trekking-listing.html">Trekking</a>
+      <a href="activities-listing.html">Activities</a>
+      <a href="index.html#tours">Tours</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="btn btn-primary btn-block">Plan My Safari</a>
+  </div>
+</div>
+
+<!-- ==================== HERO — reusing .about-hero ==================== -->
+<header class="about-hero" id="top" data-screen-label="Hero">
+  <div class="wrap">
+    <div style="position:relative;z-index:2;padding:68px 0 80px;">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span style="color:rgba(255,255,255,.85);">Activities</span>
+      </div>
+      <p class="eyebrow" style="color:var(--gold-bright);">🌿 Wildlife · Adventure · Culture · Nature</p>
+      <h1 style="color:#fff;font-size:clamp(32px,5vw,60px);max-width:740px;">
+        Extraordinary Activities in the <em style="color:var(--gold-bright);font-style:normal;">Heart of East Africa</em>
+      </h1>
+      <p style="color:rgba(255,255,255,.85);font-size:clamp(16px,1.6vw,19px);margin:20px 0 34px;max-width:580px;line-height:1.65;">
+        Beyond the game drive — walk with Maasai warriors, drift above the Serengeti at sunrise, paddle through hippo-filled channels, or simply let a master birder reveal an ecosystem in a single tree. Every activity is private, tailor-made and guided by East Africans who live this life.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;">
+        <a href="#wildlife" class="btn btn-primary btn-lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Explore All Activities
+        </a>
+        <a href="contact.html" class="btn btn-ghost btn-lg">Get a Free Quote</a>
+      </div>
+      <div class="hero-trust" style="margin-top:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,.18);">
+        <span class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 20+ Unique Activities</span>
+        <span class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Private Groups Only</span>
+        <span class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Kenya &amp; Tanzania</span>
+        <span class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Expert Local Guides</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== FEATURED ACTIVITIES ==================== -->
+<section class="pad bg-cream" id="featured" data-screen-label="Featured Activities">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow center">Not to Be Missed</p>
+      <h2>Our Signature Experiences</h2>
+      <p>Three activities our guests name as the highlights of their entire East Africa journey — each completely unique, each unforgettable.</p>
+    </div>
+    <div class="act-featured-grid">
+
+      <!-- Featured 1 — Game Drive -->
+      <article class="act-featured-card reveal">
+        <img src="assets/safari-1.webp" alt="Big Five game drive across the Serengeti plains at sunset" loading="lazy" />
+        <div class="act-featured-card__shade"></div>
+        <div class="act-featured-card__body">
+          <span class="act-featured-card__tag">🦁 Wildlife</span>
+          <h3>Big Five Game Drive</h3>
+          <p>Track lion, leopard, elephant, buffalo and rhino across the Serengeti and Masai Mara with our expert naturalist guides.</p>
+          <a href="contact.html" class="btn btn-primary" style="padding:12px 22px;font-size:14px;">Book This Activity</a>
+        </div>
+      </article>
+
+      <!-- Featured 2 — Hot Air Balloon -->
+      <article class="act-featured-card reveal">
+        <img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=1100&q=80&auto=format&fit=crop" alt="Hot air balloon safari drifting over the Masai Mara at golden sunrise" loading="lazy" />
+        <div class="act-featured-card__shade"></div>
+        <div class="act-featured-card__body">
+          <span class="act-featured-card__tag" style="background:rgba(185,64,48,.85);">🎈 Adventure</span>
+          <h3>Hot Air Balloon Safari</h3>
+          <p>Drift silently above the Mara at sunrise, watching the savanna wake below you. Ends with a champagne bush breakfast — pure magic.</p>
+          <a href="contact.html" class="btn btn-primary" style="padding:12px 22px;font-size:14px;">Book This Activity</a>
+        </div>
+      </article>
+
+      <!-- Featured 3 — Maasai Village -->
+      <article class="act-featured-card reveal">
+        <img src="assets/safari-group-fun.webp" alt="Maasai village cultural visit — traditional welcome dance and ceremony" loading="lazy" />
+        <div class="act-featured-card__shade"></div>
+        <div class="act-featured-card__body">
+          <span class="act-featured-card__tag" style="background:rgba(110,118,81,.88);">🏺 Culture</span>
+          <h3>Maasai Village Experience</h3>
+          <p>Step inside a genuine Maasai boma — meet the elders, share stories around the fire and leave with a deep understanding of one of Africa's most iconic communities.</p>
+          <a href="contact.html" class="btn btn-primary" style="padding:12px 22px;font-size:14px;">Book This Activity</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WILDLIFE SAFARI ACTIVITIES ==================== -->
+<section class="pad bg-sand" id="wildlife" data-screen-label="Wildlife Safari Activities">
+  <div class="wrap">
+    <div class="act-cat-header reveal">
+      <div class="act-cat-header__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+      <div class="act-cat-header__text">
+        <h2>Wildlife Safari Activities</h2>
+        <p>The core of every East Africa itinerary — private game drives, migration tracking and predator encounters</p>
+      </div>
+      <div class="act-cat-header__line" aria-hidden="true"></div>
+    </div>
+    <div class="act-list-grid">
+
+      <!-- Game Drives -->
+      <article class="act-list-card reveal">
+        <div class="act-list-card__media">
+          <img src="assets/safari-2.webp" alt="Morning game drive on the open Serengeti plains" loading="lazy" />
+          <span class="act-list-card__cat">Wildlife</span>
+        </div>
+        <div class="act-list-card__body">
+          <div class="act-list-card__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Kenya &amp; Tanzania
+          </div>
+          <h3>Morning &amp; Afternoon Game Drives</h3>
+          <p class="act-list-card__desc">Private open-roof 4WD game drives at dawn and dusk — the two peak activity windows for wildlife. Your naturalist guide anticipates every encounter.</p>
+          <div class="act-list-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3–5 hrs</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Year-round</span>
+          </div>
+          <div class="act-list-card__foot">
+            <a href="contact.html" class="btn btn-outline btn-block" style="font-size:13.5px;">Book Activity</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Big Five Safari -->
+      <article class="act-list-card reveal">
+        <div class="act-list-card__media">
+          <img src="https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=800&q=80&auto=format&fit=crop" alt="Big Five tracking — lion, leopard, elephant, buffalo and rhino" loading="lazy" />
+          <span class="act-list-card__cat">Wildlife</span>
+        </div>
+        <div class="act-list-card__body">
+          <div class="act-list-card__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Masai Mara · Serengeti
+          </div>
+          <h3>Big Five Focused Safari</h3>
+          <p class="act-list-card__desc">A dedicated, expert-led search for all five iconic species — lion, leopard, elephant, Cape buffalo and rhino — in a single day's intensive tracking.</p>
+          <div class="act-list-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Full day</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Year-round</span>
+          </div>
+          <div class="act-list-card__foot">
+            <a href="contact.html" class="btn btn-outline btn-block" style="font-size:13.5px;">Book Activity</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Great Migration -->
+      <article class="act-list-card reveal">
+        <div class="act-list-card__media">
+          <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80&auto=format&fit=crop" alt="Great Migration — wildebeest river crossing at the Mara River" loading="lazy" />
+          <span class="act-list-card__cat">Wildlife</span>
+        </div>
+        <div class="act-list-card__body">
+          <div class="act-list-card__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Masai Mara · Serengeti
+          </div>
+          <h3>Great Migration Safari</h3>
+          <p class="act-list-card__desc">Witness 1.5 million wildebeest thunder across the Mara River in a crocodile-charged spectacle that ranks as one of Earth's greatest wildlife events.</p>
+          <div class="act-list-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Full day</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Jul – Oct</span>
+          </div>
+          <div class="act-list-card__foot">
+            <a href="contact.html" class="btn btn-outline btn-block" style="font-size:13.5px;">Book Activity</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Walking Safari -->
+      <article class="act-list-card reveal">
+        <div class="act-list-card__media">
+          <img src="assets/safari-group-lake.webp" alt="Guided walking safari — tracking wildlife on foot with a ranger" loading="lazy" />
+          <span class="act-list-card__cat">Wildlife</span>
+        </div>
+        <div class="act-list-card__body">
+          <div class="act-list-card__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Tanzania Parks
+          </div>
+          <h3>Guided Walking Safari</h3>
+          <p class="act-list-card__desc">Leave the vehicle behind. On foot with an armed ranger, the bush reveals itself in extraordinary detail — tracks, dung, insects, trees and micro-ecosystems invisible from a 4WD.</p>
+          <div class="act-list-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>2–4 hrs</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Jun – Oct</span>
+          </div>
+          <div class="act-list-card__foot">
+            <a href="contact.html" class="btn btn-outline btn-block" style="font-size:13.5px;">Book Activity</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Night Game Drive -->
+      <article class="act-list-card reveal">
+        <div class="act-list-card__media">
+          <img src="assets/safari-3.webp" alt="Night game drive under a star-filled East African sky" loading="lazy" />
+          <span class="act-list-card__cat">Wildlife</span>
+        </div>
+        <div class="act-list-card__body">
+          <div class="act-list-card__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Select Reserves
+          </div>
+          <h3>Night Game Drive</h3>
+          <p class="act-list-card__desc">After dark, East Africa's nocturnal world awakens — leopards on the hunt, bushbabies darting through trees, and a sky blazing with more stars than you've ever seen in your life.</p>
+          <div class="act-list-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>2–3 hrs</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Year-round</span>
+          </div>
+          <div class="act-list-card__foot">
+            <a href="contact.html" class="btn btn-outline btn-block" style="font-size:13.5px;">Book Activity</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ADVENTURE ACTIVITIES ==================== -->
+<section class="pad bg-cream" id="adventure" data-screen-label="Adventure Activities">
+  <div class="wrap">
+    <div class="act-cat-header reveal">
+      <div class="act-cat-header__icon adventure">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
+      <div class="act-cat-header__text">
+        <h2>Adventure Activities</h2>
+        <p>Push your limits across the skies, rivers and mountains of East Africa</p>
+      </div>
+      <div class="act-cat-header__line" aria-hidden="true"></div>
+    </div>
+    <div class="act-list-grid">
+
+      <!-- Hot Air Balloon -->
+      <article class="act-list-card reveal">
+        <div class="act-list-card__media">
+          <img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=800&q=80&auto=format&fit=crop" alt="Hot air balloon floating over the Masai Mara at sunrise" loading="lazy" />
+          <span class="act-list-card__cat adventure">Adventure</span>
+        </div>
+        <div class="act-list-card__body">
+          <div class="act-list-card__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Masai Mara · Serengeti
+          </div>
+          <h3>Hot Air Balloon Safari</h3>
+          <p class="act-list-card__desc">Drift silently above the savanna at dawn as the world glows golden below. Animals scatter across the plains and the horizon stretches forever — ends with a champagne bush breakfast.</p>
+          <div class="act-list-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>~1 hr flight</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Year-round</span>
+          </div>
+          <div class="act-list-card__foot">
+            <a href="contact.html" class="btn btn-outline btn-block" style="font-size:13.5px;">Book Activity</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Mountain Trekking -->
+      <article class="act-list-card reveal">
+        <div class="act-list-card__media">
+          <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800&q=80&auto=format&fit=crop" alt="Mountain trekking — ascending Kilimanjaro through alpine moorland" loading="lazy" />
+          <span class="act-list-card__cat adventure">Adventure</span>
+        </div>
+        <div class="act-list-card__body">
+          <div class="act-list-card__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Kilimanjaro · Meru · Kenya
+          </div>
+          <h3>Mountain Trekking</h3>
+          <p class="act-list-card__desc">Reach the Roof of Africa on Kilimanjaro (5,895m), summit Mount Meru (4,566m) or ascend Mount Kenya (5,199m). All routes guided by our KINAPA-certified local mountain experts.</p>
+          <div class="act-list-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>4–10 days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Jan–Feb · Jun–Oct</span>
+          </div>
+          <div class="act-list-card__foot">
+            <a href="trekking-listing.html" class="btn btn-outline btn-block" style="font-size:13.5px;">View Trekking Routes</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Canoeing Safari -->
+      <article class="act-list-card reveal">
+        <div class="act-list-card__media">
+          <img src="assets/safari-group-lake.webp" alt="Canoeing safari on Lake Manyara through hippo and bird habitats" loading="lazy" />
+          <span class="act-list-card__cat adventure">Adventure</span>
+        </div>
+        <div class="act-list-card__body">
+          <div class="act-list-card__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Arusha NP · Lake Manyara
+          </div>
+          <h3>Canoeing Safari</h3>
+          <p class="act-list-card__desc">Paddle silently past hippo pods, flamingo flocks and kingfishers on the Momella Lakes of Arusha National Park — a completely unique perspective unavailable from any vehicle.</p>
+          <div class="act-list-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>2–3 hrs</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Year-round</span>
+          </div>
+          <div class="act-list-card__foot">
+            <a href="contact.html" class="btn btn-outline btn-block" style="font-size:13.5px;">Book Activity</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Cycling Safari -->
+      <article class="act-list-card reveal">
+        <div class="act-list-card__media">
+          <img src="assets/safari-4.webp" alt="Cycling safari through the East African countryside" loading="lazy" />
+          <span class="act-list-card__cat adventure">Adventure</span>
+        </div>
+        <div class="act-list-card__body">
+          <div class="act-list-card__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Kenya · Tanzania Countryside
+          </div>
+          <h3>Cycling Safari</h3>
+          <p class="act-list-card__desc">Explore local villages, farmland and bush landscapes by bicycle at your own pace — stopping to interact with communities, spot birdlife and experience East Africa beyond the reserves.</p>
+          <div class="act-list-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Half or full day</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Jun – Oct</span>
+          </div>
+          <div class="act-list-card__foot">
+            <a href="contact.html" class="btn btn-outline btn-block" style="font-size:13.5px;">Book Activity</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Horse Riding -->
+      <article class="act-list-card reveal">
+        <div class="act-list-card__media">
+          <img src="assets/safari-crater.webp" alt="Horse riding safari through the Ngorongoro highlands" loading="lazy" />
+          <span class="act-list-card__cat adventure">Adventure</span>
+        </div>
+        <div class="act-list-card__body">
+          <div class="act-list-card__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Masai Mara · Ngorongoro
+          </div>
+          <h3>Horse Riding Safari</h3>
+          <p class="act-list-card__desc">Ride through the open savanna and highland terrain — approaching wildlife more closely than any vehicle can, guided by experienced riders who know the land intimately.</p>
+          <div class="act-list-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>2–4 hrs</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Jun – Oct</span>
+          </div>
+          <div class="act-list-card__foot">
+            <a href="contact.html" class="btn btn-outline btn-block" style="font-size:13.5px;">Book Activity</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CULTURAL EXPERIENCES ==================== -->
+<section class="pad bg-sand" id="culture" data-screen-label="Cultural Experiences">
+  <div class="wrap">
+    <div class="act-cat-header reveal">
+      <div class="act-cat-header__icon culture">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div class="act-cat-header__text">
+        <h2>Cultural Experiences</h2>
+        <p>Immersive encounters with the communities whose traditions are inseparable from the landscapes they inhabit</p>
+      </div>
+      <div class="act-cat-header__line" aria-hidden="true"></div>
+    </div>
+    <div class="act-list-grid">
+
+      <!-- Maasai Village -->
+      <article class="act-list-card reveal">
+        <div class="act-list-card__media">
+          <img src="assets/safari-group-fun.webp" alt="Maasai village tour — traditional boma welcome ceremony" loading="lazy" />
+          <span class="act-list-card__cat culture">Culture</span>
+        </div>
+        <div class="act-list-card__body">
+          <div class="act-list-card__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Masai Mara · Ngorongoro
+          </div>
+          <h3>Maasai Village Tour</h3>
+          <p class="act-list-card__desc">Enter a genuine Maasai boma, witness traditional jumping dances, meet the women's beading cooperative, and share tea with village elders — a deeply human experience alongside the wildlife.</p>
+          <div class="act-list-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>2–3 hrs</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Year-round</span>
+          </div>
+          <div class="act-list-card__foot">
+            <a href="contact.html" class="btn btn-outline btn-block" style="font-size:13.5px;">Book Activity</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Hadzabe Tribe -->
+      <article class="act-list-card reveal">
+        <div class="act-list-card__media">
+          <img src="assets/safari-1.webp" alt="Hadzabe Tribe experience — one of Africa's last hunter-gatherer communities" loading="lazy" />
+          <span class="act-list-card__cat culture">Culture</span>
+        </div>
+        <div class="act-list-card__body">
+          <div class="act-list-card__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Lake Eyasi, Tanzania
+          </div>
+          <h3>Hadzabe Tribe Experience</h3>
+          <p class="act-list-card__desc">Spend a morning with the Hadzabe — one of the world's last surviving hunter-gatherer peoples. Join an early-morning hunt, observe traditional fire-making and learn about a way of life unchanged for millennia.</p>
+          <div class="act-list-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Half day</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Year-round</span>
+          </div>
+          <div class="act-list-card__foot">
+            <a href="contact.html" class="btn btn-outline btn-block" style="font-size:13.5px;">Book Activity</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Local Market Tour -->
+      <article class="act-list-card reveal">
+        <div class="act-list-card__media">
+          <img src="assets/safari-2.webp" alt="Arusha and Moshi local market tour" loading="lazy" />
+          <span class="act-list-card__cat culture">Culture</span>
+        </div>
+        <div class="act-list-card__body">
+          <div class="act-list-card__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Arusha · Moshi · Nairobi
+          </div>
+          <h3>Local Market Tour</h3>
+          <p class="act-list-card__desc">Walk the colour and chaos of a genuine African market with a local guide — spices, textiles, crafts, fresh produce and the real pulse of urban East African life, far from tourist trails.</p>
+          <div class="act-list-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>2–3 hrs</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Year-round</span>
+          </div>
+          <div class="act-list-card__foot">
+            <a href="contact.html" class="btn btn-outline btn-block" style="font-size:13.5px;">Book Activity</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Coffee Plantation -->
+      <article class="act-list-card reveal">
+        <div class="act-list-card__media">
+          <img src="assets/safari-crater.webp" alt="Coffee plantation tour on the slopes of Mount Kilimanjaro" loading="lazy" />
+          <span class="act-list-card__cat culture">Culture</span>
+        </div>
+        <div class="act-list-card__body">
+          <div class="act-list-card__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Kilimanjaro Foothills · Zanzibar
+          </div>
+          <h3>Coffee Plantation Tour</h3>
+          <p class="act-list-card__desc">Tour the fertile Arabica coffee farms on Kilimanjaro's lower slopes — pick beans, observe traditional processing, and roast and taste the finest coffee you will ever drink, at the source.</p>
+          <div class="act-list-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3–4 hrs</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Year-round</span>
+          </div>
+          <div class="act-list-card__foot">
+            <a href="contact.html" class="btn btn-outline btn-block" style="font-size:13.5px;">Book Activity</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Traditional Dance -->
+      <article class="act-list-card reveal">
+        <div class="act-list-card__media">
+          <img src="assets/safari-couple.webp" alt="Traditional Maasai and Chagga dance experience" loading="lazy" />
+          <span class="act-list-card__cat culture">Culture</span>
+        </div>
+        <div class="act-list-card__body">
+          <div class="act-list-card__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Kenya &amp; Tanzania
+          </div>
+          <h3>Traditional Dance Experience</h3>
+          <p class="act-list-card__desc">Join the famous Maasai jumping dance (adumu), watch the energetic Chagga ngoma drumming ceremonies, or be welcomed into a Swahili taarab musical evening on the Zanzibar coast.</p>
+          <div class="act-list-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>1–2 hrs</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Year-round</span>
+          </div>
+          <div class="act-list-card__foot">
+            <a href="contact.html" class="btn btn-outline btn-block" style="font-size:13.5px;">Book Activity</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== NATURE & BIRDING ==================== -->
+<section class="pad bg-cream" id="nature" data-screen-label="Nature and Birding">
+  <div class="wrap">
+    <div class="act-cat-header reveal">
+      <div class="act-cat-header__icon nature">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12m0 0C12 6 7 4 2 6c0 8 5 12 10 12z"/><path d="M12 12c0-6 5-8 10-6-1 8-6 12-10 6z"/></svg>
+      </div>
+      <div class="act-cat-header__text">
+        <h2>Nature &amp; Birding</h2>
+        <p>East Africa is one of the world's premier birding and nature destinations — over 1,000 species across Kenya and Tanzania</p>
+      </div>
+      <div class="act-cat-header__line" aria-hidden="true"></div>
+    </div>
+    <div class="act-list-grid">
+
+      <!-- Birdwatching -->
+      <article class="act-list-card reveal">
+        <div class="act-list-card__media">
+          <img src="assets/safari-group-lake.webp" alt="Bird watching safari at Lake Nakuru — flamingos and African fish eagles" loading="lazy" />
+          <span class="act-list-card__cat nature">Nature</span>
+        </div>
+        <div class="act-list-card__body">
+          <div class="act-list-card__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Kenya &amp; Tanzania
+          </div>
+          <h3>Bird Watching Safari</h3>
+          <p class="act-list-card__desc">With over 1,000 bird species across both countries — flamingos at Lake Nakuru, fish eagles over the Rift Valley lakes, secretary birds on the Serengeti — East Africa is a birder's paradise.</p>
+          <div class="act-list-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Half or full day</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Year-round</span>
+          </div>
+          <div class="act-list-card__foot">
+            <a href="contact.html" class="btn btn-outline btn-block" style="font-size:13.5px;">Book Activity</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Nature Walk -->
+      <article class="act-list-card reveal">
+        <div class="act-list-card__media">
+          <img src="assets/safari-3.webp" alt="Guided nature walk through the Arusha National Park forest" loading="lazy" />
+          <span class="act-list-card__cat nature">Nature</span>
+        </div>
+        <div class="act-list-card__body">
+          <div class="act-list-card__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Arusha NP · Forest Reserves
+          </div>
+          <h3>Guided Nature Walk</h3>
+          <p class="act-list-card__desc">A slow, deliberate walk through the forest with a ranger-naturalist — medicinal plants, tree identification, insect ecosystems and the sound of the bush at its most intimate and undisturbed.</p>
+          <div class="act-list-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>2–4 hrs</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Year-round</span>
+          </div>
+          <div class="act-list-card__foot">
+            <a href="contact.html" class="btn btn-outline btn-block" style="font-size:13.5px;">Book Activity</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Photography Safari -->
+      <article class="act-list-card reveal">
+        <div class="act-list-card__media">
+          <img src="assets/safari-couple.webp" alt="Photography safari — capturing wildlife and landscapes in golden hour light" loading="lazy" />
+          <span class="act-list-card__cat nature">Nature</span>
+        </div>
+        <div class="act-list-card__body">
+          <div class="act-list-card__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Kenya &amp; Tanzania
+          </div>
+          <h3>Photography Safari</h3>
+          <p class="act-list-card__desc">A dedicated photography-focused game drive with your guide positioning the vehicle for optimal light and angles — sunrise, golden hour, predator action and intimate portrait opportunities.</p>
+          <div class="act-list-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Full day</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Year-round</span>
+          </div>
+          <div class="act-list-card__foot">
+            <a href="contact.html" class="btn btn-outline btn-block" style="font-size:13.5px;">Book Activity</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Forest Exploration -->
+      <article class="act-list-card reveal">
+        <div class="act-list-card__media">
+          <img src="assets/safari-4.webp" alt="Rainforest exploration on the slopes of Mount Kilimanjaro" loading="lazy" />
+          <span class="act-list-card__cat nature">Nature</span>
+        </div>
+        <div class="act-list-card__body">
+          <div class="act-list-card__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Kilimanjaro · Arusha · Kenya
+          </div>
+          <h3>Forest Exploration</h3>
+          <p class="act-list-card__desc">Push into the montane rainforest on Kilimanjaro's lower slopes — colobus monkeys, hornbills, ancient figs and waterfalls, guided by a naturalist who has walked these paths their entire life.</p>
+          <div class="act-list-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Half day</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Year-round</span>
+          </div>
+          <div class="act-list-card__foot">
+            <a href="contact.html" class="btn btn-outline btn-block" style="font-size:13.5px;">Book Activity</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Waterfall Visits -->
+      <article class="act-list-card reveal">
+        <div class="act-list-card__media">
+          <img src="assets/safari-crater.webp" alt="Materuni Waterfall visit near Moshi at the base of Kilimanjaro" loading="lazy" />
+          <span class="act-list-card__cat nature">Nature</span>
+        </div>
+        <div class="act-list-card__body">
+          <div class="act-list-card__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Moshi · Arusha · Kenya
+          </div>
+          <h3>Waterfall Visits</h3>
+          <p class="act-list-card__desc">Hike to the spectacular Materuni Falls near Moshi — a 70m cascade through the rainforest, perfect for a refreshing swim after. Often combined with a coffee farm tour in the same morning.</p>
+          <div class="act-list-card__meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Half day</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Year-round</span>
+          </div>
+          <div class="act-list-card__foot">
+            <a href="contact.html" class="btn btn-outline btn-block" style="font-size:13.5px;">Book Activity</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WHY CHOOSE OUR ACTIVITIES — reusing .why2-grid ==================== -->
+<section class="pad why2" id="why" data-screen-label="Why Choose Our Activities">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow center">The Big 5 Standard</p>
+      <h2>Why Choose Our Activities?</h2>
+      <p>Every activity we offer is private, guided and crafted around your interests — never a shared-group tour, never a copy-paste excursion.</p>
+    </div>
+    <div class="why2-grid">
+      <div class="why2-card reveal">
+        <div class="why2-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Expert Local Guides</h3>
+        <p>Every guide was born in East Africa. They don't recite scripts — they share lived knowledge. From lion tracking to bird identification to Swahili storytelling, the depth of expertise is unmatched.</p>
+      </div>
+      <div class="why2-card reveal">
+        <div class="why2-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        </div>
+        <h3>Small Private Groups</h3>
+        <p>We never mix your group with strangers. Every activity is private — your vehicle, your guide, your pace. Families, couples and solo travellers all receive the same personal, dedicated attention.</p>
+      </div>
+      <div class="why2-card reveal">
+        <div class="why2-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <h3>Safety First</h3>
+        <p>All activities comply with national park and reserve safety regulations. Armed rangers accompany walking activities, all vehicles are serviced and licensed, and first-aid kits travel on every excursion.</p>
+      </div>
+      <div class="why2-card reveal">
+        <div class="why2-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>Authentic Experiences</h3>
+        <p>No staged performances, no tourist-trap village recreations. Our cultural visits and nature activities are genuine — communities we've partnered with for years, who welcome guests into their real daily lives.</p>
+      </div>
+      <div class="why2-card reveal">
+        <div class="why2-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/></svg>
+        </div>
+        <h3>Flexible Scheduling</h3>
+        <p>Activities are built around your itinerary — not the other way around. Start times, durations and combinations are all customised to your travel pace, energy levels and interests each day.</p>
+      </div>
+      <div class="why2-card reveal">
+        <div class="why2-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3>Premium Service Throughout</h3>
+        <p>Cold water and snacks on every drive. Picnic lunches on full-day activities. 24/7 WhatsApp support from our team. No detail is too small — premium service is our default, not an upgrade.</p>
+      </div>
+    </div>
+    <div class="why2-stats reveal">
+      <div class="why2-stat"><strong>20+</strong><span>Unique activities</span></div>
+      <div class="why2-stat"><strong>6+</strong><span>Years operating</span></div>
+      <div class="why2-stat"><strong>1,200+</strong><span>Guests served</span></div>
+      <div class="why2-stat"><strong>5.0★</strong><span>Average Google rating</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CTA — reusing .cta-section ==================== -->
+<section class="cta-section pad" id="cta" data-screen-label="CTA">
+  <div class="wrap">
+    <div class="cta-inner reveal">
+      <p class="eyebrow center">Build Your Perfect Day</p>
+      <h2>Ready to Add These Experiences to Your Safari?</h2>
+      <p>Tell us which activities excite you most — our team will weave them seamlessly into a private, tailor-made itinerary built around your travel dates, group size and interests. Free custom quote within 24 hours.</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn btn-primary btn-lg">Get My Free Activity Quote</a>
+        <a href="https://wa.me/255781800878?text=Hi%20Big%205%20Africa%20Safari!%20I%27d%20love%20to%20know%20more%20about%20your%20activities." target="_blank" rel="noopener" class="btn btn-ghost btn-lg">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+      <div class="cta-trust">
+        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Free quote — no obligation</span>
+        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> All activities private</span>
+        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Mix any activities freely</span>
+        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Reply within 24 hours</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer" id="contact">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/big5-logo.png" alt="Big 5 Africa Safari" />
+        <p>Private, tailor-made Kenya &amp; Tanzania safaris crafted by local experts. From the Great Migration to the Big Five — your African adventure starts here.</p>
+        <div class="foot-contact">
+          <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Big 5 Africa Safari<br />Toronto, Ontario, Canada · M4X 1G3</span>
+          </div>
+          <a href="tel:+14372172330"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +1 437 217 2330</a>
+          <a href="https://wa.me/255781800878" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg> +255 781 800 878 (WhatsApp)</a>
+          <a href="/cdn-cgi/l/email-protection#d7beb9b1b897b5beb0e2b6b1a5beb4b6a4b6b1b6a5bef9b4b8ba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> <span class="__cf_email__" data-cfemail="aac3c4ccc5eac8c3cd9fcbccd8c3c9cbd9cbcccbd8c384c9c5c7">[email&#160;protected]</span></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <div class="foot-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="destinations-listing.html">Destinations</a>
+          <a href="trekking-listing.html">Trekking</a>
+          <a href="activities-listing.html">Activities</a>
+          <a href="index.html#tours">Tours</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4>Top Activities</h4>
+        <div class="foot-links">
+          <a href="activities-listing.html#wildlife">Big Five Game Drive</a>
+          <a href="activities-listing.html#wildlife">Great Migration Safari</a>
+          <a href="activities-listing.html#adventure">Hot Air Balloon Safari</a>
+          <a href="activities-listing.html#adventure">Canoeing Safari</a>
+          <a href="activities-listing.html#culture">Maasai Village Tour</a>
+          <a href="activities-listing.html#nature">Photography Safari</a>
+        </div>
+      </div>
+      <div>
+        <h4>Working Hours</h4>
+        <div class="foot-hours">
+          <div class="row"><span>Mon – Fri</span><span>8 AM – 4 PM</span></div>
+          <div class="row"><span>Saturday</span><span>8 AM – 12 PM</span></div>
+          <div class="row closed"><span>Sunday</span><span>Closed</span></div>
+        </div>
+        <div class="foot-social-row">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 4.67a5.13 5.13 0 1 0 0 10.26 5.13 5.13 0 0 0 0-10.26zm0 8.46a3.33 3.33 0 1 1 0-6.66 3.33 3.33 0 0 1 0 6.66zm6.54-8.66a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.5a3 3 0 0 0-2.12-2.13C19.5 3.86 12 3.86 12 3.86s-7.5 0-9.38.51A3 3 0 0 0 .5 6.5C0 8.38 0 12 0 12s0 3.62.5 5.5a3 3 0 0 0 2.12 2.13c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51A3 3 0 0 0 23.5 17.5C24 15.62 24 12 24 12s0-3.62-.5-5.5zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a><span class="sep">·</span>
+      <a href="#">Terms &amp; Conditions</a><span class="sep">·</span>
+      <a href="#">Cookie Policy</a><span class="sep">·</span>
+      <a href="#">Booking &amp; Payment</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Big 5 Africa Safari. All rights reserved.</span>
+      <span class="credit">Designed &amp; Managed by <strong>DUENCY</strong></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== WHATSAPP FLOAT ==================== -->
+<div class="wa-float" id="waFloat">
+  <div class="wa-panel">
+    <div class="wa-phead">
+      <div class="wa-pavatar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg></div>
+      <div><h4>Big 5 Africa Safari</h4><span>Typically replies instantly</span></div>
+      <button class="wa-close" id="waClose" aria-label="Close chat">&times;</button>
+    </div>
+    <div class="wa-pbody">
+      <div class="wa-msg">
+        <div class="who">Big 5 Africa Safari</div>
+        Jambo! 👋 Interested in adding an activity to your safari? Tell us your dates and we'll include it in a free custom itinerary!
+        <div class="time">Online now</div>
+      </div>
+    </div>
+    <div class="wa-pfoot">
+      <a href="https://wa.me/255781800878?text=Hi%20Big%205%20Africa%20Safari!%20I%27m%20interested%20in%20your%20safari%20activities." target="_blank" rel="noopener" class="btn btn-wa" style="width:100%;justify-content:center;">Start Chat on WhatsApp</a>
+    </div>
+  </div>
+  <button class="wa-bubble" id="waBubble" aria-label="Open WhatsApp chat">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zM6.597 20.13c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.513 5.26l-.999 3.648 3.975-1.043zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </button>
+</div>
+
+<!-- NEW JS START -->
+<!-- No new JavaScript required — all interactions handled by existing js/*.js files -->
+<!-- NEW JS END -->
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

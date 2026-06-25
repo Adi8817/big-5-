@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+<head>
+<script>/* mark JS alive synchronously */</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Game Drive Safari — Big 5 Africa Safari | Expert-Led Wildlife Drives in Kenya &amp; Tanzania</title>
+<meta name="description" content="Private game drives across the Masai Mara, Serengeti, Ngorongoro and Amboseli led by born-and-raised East African naturalist guides. Big Five, Great Migration and predator encounters — book your safari now." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/main.css" />
+
+<!-- NEW CSS START -->
+<style>
+/* ============================================================
+   game-drive.html — minimal additional styles
+   All major components reused from css/components.css
+   Move to css/components.css when ready
+   ============================================================ */
+
+/* ---- What To Expect timeline (extends day-item accordion) ---- */
+.expect-num {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 17px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+/* ---- Simple 2-col info list inside overview ---- */
+.info-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 28px;
+  margin-top: 16px;
+}
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 14px;
+  color: var(--brown-deep);
+}
+.info-item svg { width: 17px; height: 17px; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+.info-item strong { display: block; font-size: 12px; font-weight: 700; color: var(--brown); text-transform: uppercase; letter-spacing: .05em; }
+
+/* ---- Responsive ---- */
+@media (max-width: 700px) {
+  .info-2col { grid-template-columns: 1fr; }
+}
+</style>
+<!-- NEW CSS END -->
+</head>
+<body>
+
+<!-- ==================== TOPBAR ==================== -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-left">
+      <a href="tel:+14372172330">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +1 437 217 2330
+      </a>
+      <a href="/cdn-cgi/l/email-protection#d4bdbab2bb94b6bdb3e1b5b2a6bdb7b5a7b5b2b5a6bdfab7bbb9" class="hide-sm">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        <span class="__cf_email__" data-cfemail="1f767179705f7d76782a7e796d767c7e6c7e797e6d76317c7072">[email&#160;protected]</span>
+      </a>
+    </div>
+    <div class="topbar-right">
+      <div class="top-socials">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 4.67a5.13 5.13 0 1 0 0 10.26 5.13 5.13 0 0 0 0-10.26zm0 8.46a3.33 3.33 0 1 1 0-6.66 3.33 3.33 0 0 1 0 6.66zm6.54-8.66a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.5a3 3 0 0 0-2.12-2.13C19.5 3.86 12 3.86 12 3.86s-7.5 0-9.38.51A3 3 0 0 0 .5 6.5C0 8.38 0 12 0 12s0 3.62.5 5.5a3 3 0 0 0 2.12 2.13c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51A3 3 0 0 0 23.5 17.5C24 15.62 24 12 24 12s0-3.62-.5-5.5zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a>
+      </div>
+      <div class="top-divider"></div>
+      <div class="lang" id="lang">
+        <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span id="langLabel">English</span>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button class="active" data-lang="English"><span class="flag">🇬🇧</span> English</button>
+          <button data-lang="Français"><span class="flag">🇫🇷</span> Français</button>
+          <button data-lang="Deutsch"><span class="flag">🇩🇪</span> Deutsch</button>
+          <button data-lang="Español"><span class="flag">🇪🇸</span> Español</button>
+          <button data-lang="Kiswahili"><span class="flag">🇹🇿</span> Kiswahili</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a href="index.html" class="brand" aria-label="Big 5 Africa Safari home">
+      <img src="assets/big5-logo.png" alt="Big 5 Africa Safari" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="destinations-listing.html">Destinations</a></li>
+      <li><a href="trekking-listing.html">Trekking</a></li>
+      <li><a href="activities-listing.html" class="active">Activities</a></li>
+      <li><a href="index.html#tours">Tours</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#activity-form" class="btn btn-primary">Book This Activity</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="drawer" id="drawer">
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer-panel">
+    <div class="drawer-head">
+      <img src="assets/big5-logo.png" alt="Big 5 Africa Safari" />
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="destinations-listing.html">Destinations</a>
+      <a href="trekking-listing.html">Trekking</a>
+      <a href="activities-listing.html">Activities</a>
+      <a href="index.html#tours">Tours</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="#activity-form" class="btn btn-primary btn-block">Book This Activity</a>
+  </div>
+</div>
+
+<!-- ==================== HERO — reusing .pkg-hero ==================== -->
+<header class="pkg-hero" id="top" data-screen-label="Hero">
+  <div class="wrap">
+    <div class="pkg-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="activities-listing.html">Activities</a><span class="breadcrumb-sep">›</span>
+        <a href="activities-listing.html#wildlife">Wildlife Safari</a><span class="breadcrumb-sep">›</span>
+        <span style="color:rgba(255,255,255,.85);">Game Drive</span>
+      </div>
+      <p class="eyebrow">🦁 Wildlife Activity · Kenya &amp; Tanzania</p>
+      <h1>Private Game Drive Safari —<br /><em>Expert-Led Wildlife Encounters</em></h1>
+      <div class="pkg-meta-row">
+        <span class="pkg-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          3–8 Hours Per Drive
+        </span>
+        <span class="pkg-badge-sep"></span>
+        <span class="pkg-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Kenya &amp; Tanzania
+        </span>
+        <span class="pkg-badge-sep"></span>
+        <span class="pkg-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          Private — All Group Sizes
+        </span>
+        <span class="pkg-badge-sep"></span>
+        <span class="pkg-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Available Year-Round
+        </span>
+        <span class="pkg-badge-sep"></span>
+        <span class="pkg-badge">
+          <div style="display:inline-flex;gap:1px;">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;color:var(--gold-bright);"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;color:var(--gold-bright);"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;color:var(--gold-bright);"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;color:var(--gold-bright);"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;color:var(--gold-bright);"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+          </div>
+          5.0 · 120+ reviews
+        </span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== PAGE BODY ==================== -->
+<!-- Reusing .page-body + .page-layout + .left-col + .right-col from css/components.css -->
+<div class="page-body">
+  <div class="wrap">
+    <div class="page-layout">
+
+      <!-- ======= LEFT COLUMN ======= -->
+      <div class="left-col">
+
+        <!-- 1. Activity Overview — reusing .trek-intro from css/components.css -->
+        <div class="trek-intro reveal">
+          <p class="eyebrow">About This Activity</p>
+          <h3>The Heart of Every East Africa Safari</h3>
+          <p class="lead">The game drive is the definitive East Africa experience — a private open-roof 4WD at dawn or dusk, a born-and-raised local naturalist at the wheel, and a landscape that has remained unchanged for millennia.</p>
+          <p>Unlike almost any other wildlife experience on earth, the East African game drive places you at eye level with the Big Five in their natural, undisturbed habitat. No fences. No feeding. No schedules imposed on the animals. Just you, your guide, and the wild world as it has always been.</p>
+          <p>Our game drives are all private — your vehicle, your guide, your pace. We stop when you want to stop, stay with a pride of lions as long as you wish, and position for photographs without compromise. Every drive is tailored to your interests, whether that's predator tracking, birdwatching, photography or simply absorbing the quiet enormity of the African bush.</p>
+          <div class="trek-why-list">
+            <div class="trek-why-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              Private open-roof 4WD — never shared with strangers
+            </div>
+            <div class="trek-why-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              Born-and-raised local guides with deep naturalist expertise
+            </div>
+            <div class="trek-why-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              Morning and afternoon timing for peak wildlife activity windows
+            </div>
+            <div class="trek-why-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              Available across the Masai Mara, Serengeti, Ngorongoro, Amboseli, Tarangire and more
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Quick Facts — reusing .overview-grid + .ov-card -->
+        <div class="reveal">
+          <div class="overview-grid">
+            <div class="ov-card">
+              <div class="ov-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+              <span class="ov-label">Duration</span>
+              <span class="ov-val">3–8 hrs per drive</span>
+            </div>
+            <div class="ov-card">
+              <div class="ov-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <span class="ov-label">Locations</span>
+              <span class="ov-val">Kenya &amp; Tanzania</span>
+            </div>
+            <div class="ov-card">
+              <div class="ov-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+              <span class="ov-label">Best Season</span>
+              <span class="ov-val">Year-round</span>
+            </div>
+            <div class="ov-card">
+              <div class="ov-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+              <span class="ov-label">Difficulty</span>
+              <span class="ov-val">Easy — All Levels</span>
+            </div>
+            <div class="ov-card">
+              <div class="ov-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+              <span class="ov-label">Family Friendly</span>
+              <span class="ov-val">Yes — All Ages</span>
+            </div>
+            <div class="ov-card">
+              <div class="ov-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+              <span class="ov-label">Group Type</span>
+              <span class="ov-val">Private Only</span>
+            </div>
+            <div class="ov-card">
+              <div class="ov-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h5a2 2 0 0 1 2 2v6H16V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+              <span class="ov-label">Vehicle</span>
+              <span class="ov-val">Open-Roof 4WD</span>
+            </div>
+            <div class="ov-card">
+              <div class="ov-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+              <span class="ov-label">Availability</span>
+              <span class="ov-val">Daily — All Year</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Experience Highlights — reusing .highlights-box + .hl-grid -->
+        <div class="highlights-box reveal">
+          <p class="eyebrow">What Makes It Special</p>
+          <h3>Experience Highlights</h3>
+          <div class="hl-grid">
+            <div class="hl-item">
+              <div class="hl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+              <div><strong>Big Five Encounters</strong><span>Lion, leopard, elephant, buffalo and rhino — tracked by a guide who knows every individual animal</span></div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg></div>
+              <div><strong>Golden Hour Light</strong><span>Dawn and dusk drives timed for spectacular photography in East Africa's legendary warm light</span></div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+              <div><strong>Expert Naturalist Guide</strong><span>Your guide narrates every sighting — behaviour, ecology, local Maasai lore and conservation context</span></div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+              <div><strong>Great Migration Timing</strong><span>July–October drives positioned at the Mara River crossing zones for the river crossing spectacle</span></div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h5a2 2 0 0 1 2 2v6H16V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+              <div><strong>Purpose-Built Safari Vehicle</strong><span>Landcruiser or Landrover 4WD with open roof, cushioned seating, charging ports and cooler box</span></div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg></div>
+              <div><strong>Bush Picnic Option</strong><span>Full-day drives can include a bush picnic lunch served in the reserve — a uniquely African dining experience</span></div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+              <div><strong>24/7 On-Trip Support</strong><span>Our base team monitors every game drive in real time and is reachable by WhatsApp throughout</span></div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+              <div><strong>Children Welcome</strong><span>Our guides are experienced with families and adapt the pace, language and focus for younger guests</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. What To Expect — reusing .day-list + .day-item accordion from css/components.css -->
+        <div class="itinerary-box reveal">
+          <p class="eyebrow">Hour by Hour</p>
+          <h3>What To Expect on a Game Drive</h3>
+          <div class="day-list" id="dayList">
+
+            <div class="day-item open">
+              <button class="day-btn" aria-expanded="true">
+                <div class="day-num" style="font-size:14px;letter-spacing:-.01em;">5:30</div>
+                <div class="day-title-wrap">
+                  <span class="day-title">Pre-Dawn Wake-Up &amp; Departure</span>
+                  <span class="day-sub">Camp or lodge pick-up · Hot coffee &amp; tea provided</span>
+                </div>
+                <div class="day-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+              </button>
+              <div class="day-body">
+                <div class="day-content">
+                  <p>Your guide arrives at your tent or room with a thermos of hot coffee, Kenyan chai or local herbal tea before first light. There's a reason we start this early — the bush comes alive at dawn in a way the afternoon never replicates. Lions return from the night hunt, cheetahs scan the open plains from termite mounds, and the golden light begins to paint the savanna.</p>
+                  <p>Your open-roof 4WD is loaded with cold water, snacks and all equipment. Your guide briefs you on the area, recent sightings from other guides in the network, and what to watch for today.</p>
+                  <div class="day-activities">
+                    <div class="day-act">Guide pick-up at your accommodation — punctual, every time</div>
+                    <div class="day-act">Hot drinks and light snacks served before departure</div>
+                    <div class="day-act">Morning briefing — recent sightings, animal behaviour, route plan</div>
+                    <div class="day-act">Enter the reserve at first light through your designated gate</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <button class="day-btn" aria-expanded="false">
+                <div class="day-num" style="font-size:14px;letter-spacing:-.01em;">6:00</div>
+                <div class="day-title-wrap">
+                  <span class="day-title">Sunrise Drive — Predator Window</span>
+                  <span class="day-sub">Peak activity hour · Lions · Cheetah · Leopard</span>
+                </div>
+                <div class="day-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+              </button>
+              <div class="day-body">
+                <div class="day-content">
+                  <p>The first hour after sunrise is the most electric time in the bush. Predators are still active from the night — a pride of lions may be finishing a kill, a cheetah scanning for prey, or a leopard dragging its meal into a fig tree as the light turns golden. Your guide uses radio contact with the wider guide network to locate the most exciting current sightings.</p>
+                  <p>The vehicle moves slowly and deliberately, your guide reading tracks, dung and vegetation to anticipate where animals will be before you see them. This is the skill that separates a great guide from a good one.</p>
+                  <div class="day-activities">
+                    <div class="day-act">Primary predator tracking — lions, cheetah and leopard zones</div>
+                    <div class="day-act">Radio network coordination with fellow guides for live sighting updates</div>
+                    <div class="day-act">Elephant family groups often moving in the early morning coolness</div>
+                    <div class="day-act">Bird activity at its peak — over 500 species possible in a single morning</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <button class="day-btn" aria-expanded="false">
+                <div class="day-num" style="font-size:14px;letter-spacing:-.01em;">8:30</div>
+                <div class="day-title-wrap">
+                  <span class="day-title">Bush Breakfast</span>
+                  <span class="day-sub">Full breakfast served in the field · Scenic stop</span>
+                </div>
+                <div class="day-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+              </button>
+              <div class="day-body">
+                <div class="day-content">
+                  <p>Your guide selects a scenic viewpoint — a riverbank, a kopje (rock outcrop), or a tree-shaded clearing — and lays out a proper full breakfast from the vehicle's storage. Scrambled eggs, toast, fruit, yoghurt, juice and more, eaten with the sounds of the bush all around you. No restaurant in the world serves a view like this.</p>
+                  <p>This is also a chance to stretch your legs briefly, use the bush facilities, and discuss what you've seen so far with your guide — who is always happy to explain behaviour, answer questions and share stories.</p>
+                  <div class="day-activities">
+                    <div class="day-act">Full hot or cold breakfast set up in the reserve at a scenic location</div>
+                    <div class="day-act">Time to stretch, photograph the scenery and debrief with your guide</div>
+                    <div class="day-act">Tea, coffee and juice refreshments throughout</div>
+                  </div>
+                  <div class="day-meals">
+                    <span class="day-meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>Bush Breakfast included</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <button class="day-btn" aria-expanded="false">
+                <div class="day-num" style="font-size:14px;letter-spacing:-.01em;">9:30</div>
+                <div class="day-title-wrap">
+                  <span class="day-title">Mid-Morning Drive — Herbivore Hour</span>
+                  <span class="day-sub">Elephant · Giraffe · Zebra · Wildebeest · Buffalo</span>
+                </div>
+                <div class="day-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+              </button>
+              <div class="day-body">
+                <div class="day-content">
+                  <p>As the predators rest in the midday warmth, the vast herds of East Africa take centre stage. Elephant family groups move between water sources with incredible deliberateness, giraffe crane impossibly elegant necks into acacia crowns, and zebra and wildebeest drift across the open plains in their thousands.</p>
+                  <p>Your guide navigates to waterholes, river crossings and grazing grounds, positioning the vehicle with expertise for photographs and extended observation. During migration season (Jul–Oct), this section of the drive focuses on the Mara River zones where the crossings are most likely to happen.</p>
+                  <div class="day-activities">
+                    <div class="day-act">Waterhole stake-outs — multiple species congregating at single water points</div>
+                    <div class="day-act">Elephant family herd tracking across their morning range</div>
+                    <div class="day-act">Jul–Oct: Mara River crossing zones — wildebeest migration</div>
+                    <div class="day-act">Hippo pools and crocodile sightings along river margins</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <button class="day-btn" aria-expanded="false">
+                <div class="day-num" style="font-size:14px;letter-spacing:-.01em;">12:30</div>
+                <div class="day-title-wrap">
+                  <span class="day-title">Return to Camp or Continue (Full-Day Option)</span>
+                  <span class="day-sub">Half-day close · OR bush picnic &amp; afternoon drive</span>
+                </div>
+                <div class="day-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+              </button>
+              <div class="day-body">
+                <div class="day-content">
+                  <p>For half-day drives, your guide returns you to camp or lodge by midday — in time for lunch, a rest and the afternoon pool. For full-day drives, we set up a proper bush picnic lunch in the reserve and continue into the afternoon. Full-day drives cover significantly more ground and consistently produce the most memorable encounters.</p>
+                  <p>The choice between half-day and full-day is entirely yours and can be decided on the day based on how you're feeling and what the morning has produced.</p>
+                  <div class="day-activities">
+                    <div class="day-act">Half-day: return to camp/lodge by 12:30 PM</div>
+                    <div class="day-act">Full-day: bush picnic lunch served in the reserve</div>
+                    <div class="day-act">Full-day: afternoon drive 2:00 PM – 6:30 PM through golden hour</div>
+                    <div class="day-act">Sundowner drinks at a scenic viewpoint to close the day</div>
+                  </div>
+                  <div class="day-meals">
+                    <span class="day-meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>Bush Picnic (full-day)</span>
+                    <span class="day-meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>Sundowner drinks</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 5. Includes / Excludes — reusing .incl-box + .incl-grid -->
+        <div class="incl-box reveal">
+          <p class="eyebrow">What's Covered</p>
+          <h3>Includes &amp; Excludes</h3>
+          <div class="incl-grid">
+            <div class="incl-col">
+              <h4 class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> What's Included</h4>
+              <div class="incl-list">
+                <div class="incl-item yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Private open-roof 4WD safari vehicle</div>
+                <div class="incl-item yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Expert licensed naturalist guide</div>
+                <div class="incl-item yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>All national park or reserve entry fees</div>
+                <div class="incl-item yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Bottled water and cold drinks throughout</div>
+                <div class="incl-item yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Bush breakfast (morning drives)</div>
+                <div class="incl-item yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Bush picnic lunch (full-day drives)</div>
+                <div class="incl-item yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sundowner drinks (afternoon drives)</div>
+                <div class="incl-item yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Binoculars for use on the drive</div>
+                <div class="incl-item yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Hotel/camp transfers (within itinerary)</div>
+                <div class="incl-item yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>24/7 WhatsApp support throughout</div>
+              </div>
+            </div>
+            <div class="incl-col">
+              <h4 class="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Not Included</h4>
+              <div class="incl-list">
+                <div class="incl-item no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>International or domestic flights</div>
+                <div class="incl-item no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Accommodation (can be added to any package)</div>
+                <div class="incl-item no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Visa and travel insurance</div>
+                <div class="incl-item no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Hot air balloon safari (add-on, from $450)</div>
+                <div class="incl-item no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Alcoholic beverages beyond sundowner</div>
+                <div class="incl-item no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Guide gratuity (discretionary, appreciated)</div>
+                <div class="incl-item no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Personal shopping and souvenirs</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Best Time — reusing .best-time-box + .month-strip from css/components.css -->
+        <div class="best-time-box reveal">
+          <p class="eyebrow">Plan Your Visit</p>
+          <h3>Best Time for Game Drives</h3>
+          <p style="font-size:14.5px;color:var(--brown);margin:0 0 20px;line-height:1.65;">Game drives are excellent year-round in East Africa — but two seasons deliver the most dramatic wildlife concentrations and the clearest conditions for photography.</p>
+          <div class="month-strip">
+            <div class="ms-cell good"><span class="ms-cell__name">Jan</span><span class="ms-cell__tag">Good</span></div>
+            <div class="ms-cell good"><span class="ms-cell__name">Feb</span><span class="ms-cell__tag">Calving</span></div>
+            <div class="ms-cell avoid"><span class="ms-cell__name">Mar</span><span class="ms-cell__tag">Rains</span></div>
+            <div class="ms-cell avoid"><span class="ms-cell__name">Apr</span><span class="ms-cell__tag">Rains</span></div>
+            <div class="ms-cell avoid"><span class="ms-cell__name">May</span><span class="ms-cell__tag">Rains</span></div>
+            <div class="ms-cell peak"><span class="ms-cell__name">Jun</span><span class="ms-cell__tag">Peak</span></div>
+            <div class="ms-cell peak"><span class="ms-cell__name">Jul</span><span class="ms-cell__tag">Migration</span></div>
+            <div class="ms-cell peak"><span class="ms-cell__name">Aug</span><span class="ms-cell__tag">Migration</span></div>
+            <div class="ms-cell peak"><span class="ms-cell__name">Sep</span><span class="ms-cell__tag">Migration</span></div>
+            <div class="ms-cell peak"><span class="ms-cell__name">Oct</span><span class="ms-cell__tag">Peak</span></div>
+            <div class="ms-cell avoid"><span class="ms-cell__name">Nov</span><span class="ms-cell__tag">Short rains</span></div>
+            <div class="ms-cell good"><span class="ms-cell__name">Dec</span><span class="ms-cell__tag">Good</span></div>
+          </div>
+          <div class="month-legend" style="margin-top:14px;">
+            <span class="ml-item"><span class="ml-dot" style="background:var(--gold);"></span> Peak — dry, excellent visibility, migration crossings (Jul–Oct)</span>
+            <span class="ml-item"><span class="ml-dot" style="background:var(--sand-deep);"></span> Good — wildlife present, possible rain showers</span>
+            <span class="ml-item"><span class="ml-dot" style="background:rgba(0,0,0,.1);"></span> Rainy — tracks muddy, fewer game drives recommended</span>
+          </div>
+        </div>
+
+        <!-- 7. Gallery — reusing .gallery-box + .trek-gallery from css/components.css -->
+        <div class="gallery-box reveal">
+          <p class="eyebrow">In the Field</p>
+          <h3>Game Drive Gallery</h3>
+          <div class="trek-gallery" id="trekGallery">
+            <div class="trek-gallery__item span2" data-src="assets/safari-1.webp">
+              <img src="assets/safari-1.webp" alt="Big Five game drive — lions on the Serengeti plains" loading="lazy" />
+              <div class="trek-gallery__item__overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            </div>
+            <div class="trek-gallery__item" data-src="assets/safari-2.webp">
+              <img src="assets/safari-2.webp" alt="Game drive vehicle positioned at sunset" loading="lazy" />
+              <div class="trek-gallery__item__overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            </div>
+            <div class="trek-gallery__item" data-src="https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=900&q=80&auto=format&fit=crop">
+              <img src="https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=900&q=80&auto=format&fit=crop" alt="Elephant herd crossing the Amboseli plains" loading="lazy" />
+              <div class="trek-gallery__item__overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            </div>
+            <div class="trek-gallery__item" data-src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=900&q=80&auto=format&fit=crop">
+              <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=900&q=80&auto=format&fit=crop" alt="Great Migration wildebeest river crossing at the Mara River" loading="lazy" />
+              <div class="trek-gallery__item__overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            </div>
+            <div class="trek-gallery__item" data-src="assets/safari-group-fun.webp">
+              <img src="assets/safari-group-fun.webp" alt="Happy guests on a Big 5 Africa Safari game drive" loading="lazy" />
+              <div class="trek-gallery__item__overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. FAQ — reusing .faq-grid + .faq-item accordion -->
+        <div style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;" class="reveal">
+          <p class="eyebrow">Common Questions</p>
+          <h3 style="font-size:22px;margin-bottom:22px;">Frequently Asked Questions</h3>
+          <div class="faq-grid">
+
+            <div class="faq-item">
+              <button class="faq-btn" aria-expanded="false">
+                What time do game drives start and finish?
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-body">Morning drives depart between 5:30–6:00 AM and return to camp by 12:00–12:30 PM. Afternoon drives depart at 2:00–3:00 PM and return at sunset around 6:30–7:00 PM. Full-day drives cover both windows and stay out for picnic lunch. Exact timings are flexible and adjusted daily based on wildlife activity and your preferences.</div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-btn" aria-expanded="false">
+                Is a game drive suitable for young children?
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-body">Absolutely — game drives are ideal for families with children of all ages. Our guides are experienced with younger guests and adapt their language, pacing and focus to engage children. Many of our most enthusiastic reviewers are families whose children discovered a lifelong passion for wildlife on their first game drive. Most parks have no minimum age requirement.</div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-btn" aria-expanded="false">
+                What should I wear and bring on a game drive?
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-body">Wear neutral or earth-toned clothing (khaki, beige, olive, grey) — avoid bright colours and white which can unsettle wildlife. Mornings are cool, so bring a warm layer for early starts. A wide-brimmed hat, sunscreen, sunglasses and insect repellent are essential. Your camera and any binoculars are welcome — we provide binoculars if you don't have your own.</div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-btn" aria-expanded="false">
+                Are game drives safe? Can we get out of the vehicle?
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-body">Game drives are very safe when guided by experienced professionals — your guide knows exactly how to behave around wildlife and never places guests in any risk. Guests remain in the vehicle around dangerous animals. Designated picnic areas and scenic stops allow you to leave the vehicle in safe locations. Your guide follows all park safety regulations strictly.</div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-btn" aria-expanded="false">
+                Is it guaranteed we'll see the Big Five on one drive?
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-body">No wildlife experience can be 100% guaranteed — nature doesn't follow a schedule, which is precisely what makes it thrilling. However, the Masai Mara and Serengeti consistently rank among the world's best parks for Big Five sightings, and our experienced guides use radio networks and deep local knowledge to maximise your chances. The majority of our guests see all five in 3–4 drives.</div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-btn" aria-expanded="false">
+                Can we combine a game drive with other activities?
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-body">Yes — game drives combine perfectly with walking safaris, Maasai village visits, hot air balloon safari add-ons, night game drives and sundowner experiences. We can build any combination into your daily programme. Many guests do a morning game drive + Maasai village visit + sundowner drive in a single day, for example.</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 9. Related Activities — reusing .other-pkg + .other-grid + .op-card -->
+        <div class="other-pkg reveal">
+          <p class="eyebrow">More Wildlife Experiences</p>
+          <h3>Related Activities You May Love</h3>
+          <div class="other-grid">
+
+            <a href="activities-listing.html#wildlife" class="op-card">
+              <div class="op-img">
+                <img src="assets/safari-group-lake.webp" alt="Walking safari — tracking wildlife on foot in the bush" loading="lazy" />
+                <span class="op-badge">Wildlife</span>
+              </div>
+              <div class="op-body">
+                <div class="op-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Tanzania Parks</div>
+                <h4>Guided Walking Safari</h4>
+                <div class="op-meta">
+                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>2–4 hrs</span>
+                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Jun – Oct</span>
+                </div>
+                <div class="op-foot">
+                  <div class="op-price"><span>From</span><strong>$80/person</strong></div>
+                  <span class="btn btn-outline" style="padding:8px 16px;font-size:13px;">View Details</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="activities-listing.html#wildlife" class="op-card">
+              <div class="op-img">
+                <img src="assets/safari-3.webp" alt="Night game drive under a star-filled East African sky" loading="lazy" />
+                <span class="op-badge">Wildlife</span>
+              </div>
+              <div class="op-body">
+                <div class="op-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Select Reserves</div>
+                <h4>Night Game Drive</h4>
+                <div class="op-meta">
+                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>2–3 hrs</span>
+                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Year-round</span>
+                </div>
+                <div class="op-foot">
+                  <div class="op-price"><span>From</span><strong>$95/person</strong></div>
+                  <span class="btn btn-outline" style="padding:8px 16px;font-size:13px;">View Details</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="activities-listing.html#adventure" class="op-card">
+              <div class="op-img">
+                <img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=800&q=80&auto=format&fit=crop" alt="Hot air balloon safari over the Masai Mara at sunrise" loading="lazy" />
+                <span class="op-badge">Adventure</span>
+              </div>
+              <div class="op-body">
+                <div class="op-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Masai Mara · Serengeti</div>
+                <h4>Hot Air Balloon Safari</h4>
+                <div class="op-meta">
+                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>~1 hr flight</span>
+                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Year-round</span>
+                </div>
+                <div class="op-foot">
+                  <div class="op-price"><span>From</span><strong>$450/person</strong></div>
+                  <span class="btn btn-outline" style="padding:8px 16px;font-size:13px;">View Details</span>
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+      </div><!-- /left-col -->
+
+      <!-- ======= RIGHT SIDEBAR — reusing .right-col + .price-box + .sdb-form + .sdb-offer + .sdb-trust ======= -->
+      <div class="right-col" id="activity-form">
+
+        <!-- Price Box -->
+        <div class="price-box">
+          <div class="price-head">
+            <div class="from">Activity price per person</div>
+            <div class="price-main">
+              <span class="price-amt">$160</span>
+              <span class="price-pp">/ person</span>
+            </div>
+            <div class="price-orig">Full-day from $260/person</div>
+            <div class="price-save">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              Groups 4+ save 15%
+            </div>
+            <div class="price-quick-stats">
+              <div class="pqs"><span class="pqs-label">Half Day</span><span class="pqs-val">From $160</span></div>
+              <div class="pqs"><span class="pqs-label">Full Day</span><span class="pqs-val">From $260</span></div>
+              <div class="pqs"><span class="pqs-label">Min Group</span><span class="pqs-val">1 Person</span></div>
+              <div class="pqs"><span class="pqs-label">Group 4+</span><span class="pqs-val">-15% discount</span></div>
+            </div>
+          </div>
+          <div class="price-body">
+            <p class="sdb-form-head">Reserve Your Game Drive</p>
+            <p class="sdb-form-sub">Fill in your details — we'll confirm dates and include it in your tailored itinerary within 24 hrs.</p>
+            <form class="sdb-form" id="sidebarForm" novalidate>
+              <div class="sf">
+                <label for="sb-name">Full Name</label>
+                <input type="text" id="sb-name" placeholder="Jane Doe" autocomplete="name" />
+              </div>
+              <div class="sf">
+                <label for="sb-email">Email Address</label>
+                <input type="email" id="sb-email" placeholder="jane@email.com" autocomplete="email" />
+              </div>
+              <div class="sf">
+                <label for="sb-phone">Phone / WhatsApp</label>
+                <input type="tel" id="sb-phone" placeholder="+1 437 000 0000" autocomplete="tel" />
+              </div>
+              <div class="sf-row">
+                <div class="sf">
+                  <label for="sb-dates">Preferred Date</label>
+                  <input type="text" id="sb-dates" placeholder="e.g. Aug 10, 2026" />
+                </div>
+                <div class="sf">
+                  <label for="sb-pax">Guests</label>
+                  <select id="sb-pax">
+                    <option value="">Select…</option>
+                    <option>1 (Solo)</option>
+                    <option>2</option>
+                    <option>3 – 4</option>
+                    <option>5 – 8</option>
+                    <option>9+</option>
+                  </select>
+                </div>
+              </div>
+              <div class="sf">
+                <label for="sb-drive">Drive Type</label>
+                <select id="sb-drive">
+                  <option value="">Select…</option>
+                  <option>Morning Drive (Half Day)</option>
+                  <option>Afternoon Drive (Half Day)</option>
+                  <option>Full Day Drive</option>
+                  <option>Not Sure — Need Advice</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Send My Activity Inquiry
+              </button>
+              <div id="sbSuccess" style="display:none;text-align:center;padding:14px 0;font-size:14px;color:var(--olive);font-weight:700;">✔ Sent! We'll reply within 24 hrs.</div>
+            </form>
+            <p class="form-note-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              100% free · No spam · No obligation
+            </p>
+            <a href="https://wa.me/255781800878?text=Hi!%20I'm%20interested%20in%20booking%20a%20game%20drive%20safari." target="_blank" rel="noopener" class="btn btn-wa btn-block" style="margin-top:14px;">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>
+              Chat on WhatsApp Instead
+            </a>
+          </div>
+        </div>
+
+        <!-- Sidebar offer -->
+        <div class="sdb-offer">
+          <div class="sdb-offer-tag">🎈 Popular Add-On</div>
+          <h4>Add a Balloon Safari at Dawn</h4>
+          <p>Combine your morning game drive with a hot air balloon flight the same day. The balloon lands for a champagne breakfast — then straight onto the game drive while the excitement is still fresh.</p>
+        </div>
+
+        <!-- Trust badges -->
+        <div class="sdb-trust">
+          <div class="sdb-trust-items">
+            <div class="st-item">
+              <div class="st-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+              <span>All park entry fees included</span>
+            </div>
+            <div class="st-item">
+              <div class="st-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div>
+              <span>5.0 ★ · 120+ Google reviews</span>
+            </div>
+            <div class="st-item">
+              <div class="st-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+              <span>Private — never shared</span>
+            </div>
+            <div class="st-item">
+              <div class="st-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+              <span>Family friendly — all ages</span>
+            </div>
+            <div class="st-item">
+              <div class="st-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+              <span>24/7 WhatsApp support</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /right-col -->
+
+    </div><!-- /page-layout -->
+  </div>
+</div>
+
+<!-- ==================== CTA SECTION ==================== -->
+<section class="cta-section pad" id="cta" data-screen-label="CTA">
+  <div class="wrap">
+    <div class="cta-inner reveal">
+      <p class="eyebrow center">The Bush Is Calling</p>
+      <h2>Ready for Your First Game Drive?</h2>
+      <p>Tell us your destination, travel dates and group size — our guides will build a private, tailor-made safari programme around your interests. Free custom itinerary within 24 hours.</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn btn-primary btn-lg">Get My Free Safari Quote</a>
+        <a href="https://wa.me/255781800878?text=Hi%20Big%205!%20I%27m%20interested%20in%20a%20private%20game%20drive%20safari." target="_blank" rel="noopener" class="btn btn-ghost btn-lg">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>
+          WhatsApp Our Team
+        </a>
+      </div>
+      <div class="cta-trust">
+        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Private game drives only</span>
+        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> All park fees included</span>
+        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Free quote — no obligation</span>
+        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Reply within 24 hours</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer" id="contact">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/big5-logo.png" alt="Big 5 Africa Safari" />
+        <p>Private, tailor-made Kenya &amp; Tanzania safaris crafted by local experts. From the Great Migration to the Big Five — your African adventure starts here.</p>
+        <div class="foot-contact">
+          <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Big 5 Africa Safari<br />Toronto, Ontario, Canada · M4X 1G3</span>
+          </div>
+          <a href="tel:+14372172330"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +1 437 217 2330</a>
+          <a href="https://wa.me/255781800878" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg> +255 781 800 878 (WhatsApp)</a>
+          <a href="/cdn-cgi/l/email-protection#86efe8e0e9c6e4efe1b3e7e0f4efe5e7f5e7e0e7f4efa8e5e9eb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> <span class="__cf_email__" data-cfemail="b8d1d6ded7f8dad1df8dd9decad1dbd9cbd9ded9cad196dbd7d5">[email&#160;protected]</span></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <div class="foot-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="destinations-listing.html">Destinations</a>
+          <a href="trekking-listing.html">Trekking</a>
+          <a href="activities-listing.html">Activities</a>
+          <a href="index.html#tours">Tours</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4>Top Activities</h4>
+        <div class="foot-links">
+          <a href="game-drive.html">Game Drive Safari</a>
+          <a href="activities-listing.html#wildlife">Walking Safari</a>
+          <a href="activities-listing.html#wildlife">Night Game Drive</a>
+          <a href="activities-listing.html#adventure">Hot Air Balloon</a>
+          <a href="activities-listing.html#culture">Maasai Village Tour</a>
+          <a href="activities-listing.html#nature">Photography Safari</a>
+        </div>
+      </div>
+      <div>
+        <h4>Working Hours</h4>
+        <div class="foot-hours">
+          <div class="row"><span>Mon – Fri</span><span>8 AM – 4 PM</span></div>
+          <div class="row"><span>Saturday</span><span>8 AM – 12 PM</span></div>
+          <div class="row closed"><span>Sunday</span><span>Closed</span></div>
+        </div>
+        <div class="foot-social-row">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 4.67a5.13 5.13 0 1 0 0 10.26 5.13 5.13 0 0 0 0-10.26zm0 8.46a3.33 3.33 0 1 1 0-6.66 3.33 3.33 0 0 1 0 6.66zm6.54-8.66a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.5a3 3 0 0 0-2.12-2.13C19.5 3.86 12 3.86 12 3.86s-7.5 0-9.38.51A3 3 0 0 0 .5 6.5C0 8.38 0 12 0 12s0 3.62.5 5.5a3 3 0 0 0 2.12 2.13c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51A3 3 0 0 0 23.5 17.5C24 15.62 24 12 24 12s0-3.62-.5-5.5zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a><span class="sep">·</span>
+      <a href="#">Terms &amp; Conditions</a><span class="sep">·</span>
+      <a href="#">Cookie Policy</a><span class="sep">·</span>
+      <a href="#">Booking &amp; Payment</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Big 5 Africa Safari. All rights reserved.</span>
+      <span class="credit">Designed &amp; Managed by <strong>DUENCY</strong></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== WHATSAPP FLOAT ==================== -->
+<div class="wa-float" id="waFloat">
+  <div class="wa-panel">
+    <div class="wa-phead">
+      <div class="wa-pavatar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg></div>
+      <div><h4>Big 5 Africa Safari</h4><span>Typically replies instantly</span></div>
+      <button class="wa-close" id="waClose" aria-label="Close chat">&times;</button>
+    </div>
+    <div class="wa-pbody">
+      <div class="wa-msg">
+        <div class="who">Big 5 Africa Safari</div>
+        Jambo! 👋 Interested in a private game drive? Tell us your dates and destination — we'll send a custom quote right away!
+        <div class="time">Online now</div>
+      </div>
+    </div>
+    <div class="wa-pfoot">
+      <a href="https://wa.me/255781800878?text=Hi!%20I'm%20interested%20in%20booking%20a%20private%20game%20drive%20safari." target="_blank" rel="noopener" class="btn btn-wa" style="width:100%;justify-content:center;">Start Chat on WhatsApp</a>
+    </div>
+  </div>
+  <button class="wa-bubble" id="waBubble" aria-label="Open WhatsApp chat">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zM6.597 20.13c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.513 5.26l-.999 3.648 3.975-1.043zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </button>
+</div>
+
+<!-- Lightbox (reused from machame-route.html) -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Close image viewer">&times;</button>
+  <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" class="lightbox__img" id="lightboxImg" />
+</div>
+
+<!-- NEW JS START -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+(function () {
+  'use strict';
+  // ---- Gallery lightbox (same as machame-route.html) ----
+  var lightbox      = document.getElementById('lightbox');
+  var lightboxImg   = document.getElementById('lightboxImg');
+  var lightboxClose = document.getElementById('lightboxClose');
+  if (!lightbox || !lightboxImg) return;
+
+  document.querySelectorAll('.trek-gallery__item').forEach(function (item) {
+    item.addEventListener('click', function () {
+      var src = item.dataset.src || item.querySelector('img').src;
+      var alt = item.querySelector('img').alt || '';
+      lightboxImg.src = src;
+      lightboxImg.alt = alt;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    lightboxImg.src = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+    document.body.style.overflow = '';
+  }
+
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
+}());
+</script>
+<!-- NEW JS END -->
+
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/forms.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
