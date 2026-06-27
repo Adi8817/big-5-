@@ -9,6 +9,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+ <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+/>
 <link rel="stylesheet" href="assets/css/main.css" />
 
 
@@ -99,7 +103,7 @@
 </div>
 
 <!-- ==================== HERO — reusing .about-hero ==================== -->
-<header class="about-hero" id="top" data-screen-label="Hero">
+<!-- <header class="about-hero" id="top" data-screen-label="Hero">
   <div class="wrap">
     <div style="position:relative;z-index:2;padding:68px 0 80px;">
       <div class="breadcrumb">
@@ -129,57 +133,113 @@
       </div>
     </div>
   </div>
-</header>
-
-<!-- ==================== FEATURED ACTIVITIES ==================== -->
-<section class="pad bg-cream" id="featured" data-screen-label="Featured Activities">
+</header> -->
+<header class="about-hero" id="top" data-screen-label="Hero">
   <div class="wrap">
-    <div class="section-head center reveal">
-      <p class="eyebrow center">Not to Be Missed</p>
-      <h2>Our Signature Experiences</h2>
-      <p>Three activities our guests name as the highlights of their entire East Africa journey — each completely unique, each unforgettable.</p>
-    </div>
-    <div class="act-featured-grid">
+    <div class="about-hero-inner">
 
-      <!-- Featured 1 — Game Drive -->
-      <article class="act-featured-card reveal">
-        <img src="assets/safari-1.webp" alt="Big Five game drive across the Serengeti plains at sunset" loading="lazy" />
-        <div class="act-featured-card__shade"></div>
-        <div class="act-featured-card__body">
-          <span class="act-featured-card__tag">🦁 Wildlife</span>
-          <h3>Big Five Game Drive</h3>
-          <p>Track lion, leopard, elephant, buffalo and rhino across the Serengeti and Masai Mara with our expert naturalist guides.</p>
-          <a href="contact.html" class="btn btn-primary" style="padding:12px 22px;font-size:14px;">Book This Activity</a>
-        </div>
-      </article>
+      <!-- Left Content -->
+      <div class="about-hero-copy">
 
-      <!-- Featured 2 — Hot Air Balloon -->
-      <article class="act-featured-card reveal">
-        <img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=1100&q=80&auto=format&fit=crop" alt="Hot air balloon safari drifting over the Masai Mara at golden sunrise" loading="lazy" />
-        <div class="act-featured-card__shade"></div>
-        <div class="act-featured-card__body">
-          <span class="act-featured-card__tag" style="background:rgba(185,64,48,.85);">🎈 Adventure</span>
-          <h3>Hot Air Balloon Safari</h3>
-          <p>Drift silently above the Mara at sunrise, watching the savanna wake below you. Ends with a champagne bush breakfast — pure magic.</p>
-          <a href="contact.html" class="btn btn-primary" style="padding:12px 22px;font-size:14px;">Book This Activity</a>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">›</span>
+          <span style="color: rgba(255,255,255,.85);">Activities</span>
         </div>
-      </article>
 
-      <!-- Featured 3 — Maasai Village -->
-      <article class="act-featured-card reveal">
-        <img src="assets/safari-group-fun.webp" alt="Maasai village cultural visit — traditional welcome dance and ceremony" loading="lazy" />
-        <div class="act-featured-card__shade"></div>
-        <div class="act-featured-card__body">
-          <span class="act-featured-card__tag" style="background:rgba(110,118,81,.88);">🏺 Culture</span>
-          <h3>Maasai Village Experience</h3>
-          <p>Step inside a genuine Maasai boma — meet the elders, share stories around the fire and leave with a deep understanding of one of Africa's most iconic communities.</p>
-          <a href="contact.html" class="btn btn-primary" style="padding:12px 22px;font-size:14px;">Book This Activity</a>
+        <p class="eyebrow">Wildlife • Adventure • Culture • Nature</p>
+
+        <h1>
+          Extraordinary <em>Activities</em><br>
+          Across East Africa
+        </h1>
+
+        <p class="about-hero-sub">
+          Discover unforgettable experiences beyond the traditional safari.
+          Walk alongside Maasai warriors, soar above the Serengeti in a hot air
+          balloon, enjoy thrilling game drives, explore hidden nature trails,
+          and immerse yourself in authentic cultural encounters across Tanzania
+          and Kenya with our expert local guides.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#wildlife" class="btn btn-primary btn-lg">
+            Explore All Activities
+          </a>
+
+          <a
+            href="contact.html"
+            class="btn btn-ghost btn-lg"
+          >
+            Get a Free Quote
+          </a>
         </div>
-      </article>
+
+        <!-- Optional Trust Pills -->
+
+        <!--
+        <div class="hero-trust">
+
+          <div class="trust-pill">
+            20+ Unique Activities
+          </div>
+
+          <div class="trust-pill">
+            Private Experiences
+          </div>
+
+          <div class="trust-pill">
+            Kenya & Tanzania
+          </div>
+
+          <div class="trust-pill">
+            Local Expert Guides
+          </div>
+
+        </div>
+        -->
+
+      </div>
+
+      <!-- Right Side Collage -->
+
+      <div class="hero-collage" aria-hidden="true">
+
+        <div class="hc-img hc-span">
+          <img
+            src="assets/safari-group-lake.webp"
+            alt="Guests enjoying safari activities"
+          />
+        </div>
+
+        <div class="hc-img">
+          <img
+            src="assets/safari-3.webp"
+            alt="Wildlife game drive"
+          />
+        </div>
+
+        <div class="hc-img" style="position: relative;">
+
+          <img
+            src="assets/safari-group-fun.webp"
+            alt="Adventure activities in East Africa"
+          />
+
+          <div class="hc-badge">
+            <strong>20+</strong>
+            <span>Unique Activities</span>
+          </div>
+
+        </div>
+
+      </div>
 
     </div>
   </div>
-</section>
+</header>
+<!-- ==================== FEATURED ACTIVITIES ==================== -->
+
 
 <!-- ==================== WILDLIFE SAFARI ACTIVITIES ==================== -->
 <section class="pad bg-sand" id="wildlife" data-screen-label="Wildlife Safari Activities">
@@ -769,17 +829,17 @@
         <p>Cold water and snacks on every drive. Picnic lunches on full-day activities. 24/7 WhatsApp support from our team. No detail is too small — premium service is our default, not an upgrade.</p>
       </div>
     </div>
-    <div class="why2-stats reveal">
+    <!-- <div class="why2-stats reveal">
       <div class="why2-stat"><strong>20+</strong><span>Unique activities</span></div>
       <div class="why2-stat"><strong>6+</strong><span>Years operating</span></div>
       <div class="why2-stat"><strong>1,200+</strong><span>Guests served</span></div>
       <div class="why2-stat"><strong>5.0★</strong><span>Average Google rating</span></div>
-    </div>
+    </div> -->
   </div>
 </section>
 
 <!-- ==================== CTA — reusing .cta-section ==================== -->
-<section class="cta-section pad" id="cta" data-screen-label="CTA">
+<!-- <section class="cta-section pad" id="cta" data-screen-label="CTA">
   <div class="wrap">
     <div class="cta-inner reveal">
       <p class="eyebrow center">Build Your Perfect Day</p>
@@ -800,8 +860,73 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
+<section class="cta-section pad" id="cta" data-screen-label="CTA">
+  <div class="wrap">
+    <div class="cta-inner reveal">
+
+      <p class="eyebrow center">Create Your Perfect Safari Experience</p>
+
+      <h2>Ready to Plan Your Dream Safari Activities?</h2>
+
+      <p>
+        Tell us which experiences you'd love to enjoy — from thrilling game
+        drives and hot air balloon safaris to cultural encounters and nature
+        adventures. We'll create a personalised itinerary that perfectly matches
+        your interests, travel dates, and budget. Free custom quote within
+        24 hours.
+      </p>
+
+      <div class="cta-btns">
+
+        <a href="contact.html" class="btn btn-primary btn-lg">
+          Get My Free Activity Quote
+        </a>
+
+        <a
+          href="https://wa.me/255781800878"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-ghost btn-lg"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+          Chat on WhatsApp
+        </a>
+
+      </div>
+
+      <!-- Optional Trust Pills -->
+
+      <!--
+      <div class="cta-trust">
+
+        <span class="cta-trust-item">
+          <i class="fa-solid fa-circle-check"></i>
+          Free Custom Itinerary
+        </span>
+
+        <span class="cta-trust-item">
+          <i class="fa-solid fa-circle-check"></i>
+          Private Experiences Only
+        </span>
+
+        <span class="cta-trust-item">
+          <i class="fa-solid fa-circle-check"></i>
+          Reply Within 24 Hours
+        </span>
+
+        <span class="cta-trust-item">
+          <i class="fa-solid fa-circle-check"></i>
+          Local Safari Experts
+        </span>
+
+      </div>
+      -->
+
+    </div>
+  </div>
+</section>
 <!-- ==================== FOOTER ==================== -->
 <footer class="footer" id="contact">
   <div class="wrap">

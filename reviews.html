@@ -1,886 +1,2370 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="js">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Guest Reviews &amp; Testimonials — Lund Big5 Tours Limited</title>
-<meta name="description" content="Read genuine reviews from 1,200+ travellers who experienced Kenya and Tanzania with Lund Big5 Tours Limited. Rated 5.0 stars on Google." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/main.css" />
+  <head>
+    <script>
+      /* mark JS alive synchronously */
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Reviews — Big 5 Africa Safari | 120+ Verified Five-Star Guest Reviews
+    </title>
+    <meta
+      name="description"
+      content="Read 120+ verified five-star reviews from Big 5 Africa Safari guests across 30+ countries — Kilimanjaro summits, Great Migration crossings, Zanzibar honeymoons and family safaris."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+/>
+    <link rel="stylesheet" href="assets/css/main.css" />
 
-<!-- NEW CSS START -->
+    <!-- NEW CSS START -->
+    <style>
+      /* ============================================================
+   reviews.html — page-specific styles
+   Move to css/components.css + css/utilities.css when ready
+   ============================================================ */
 
+      /* ---- Static 3-col reviews grid ---- */
+      .reviews-static-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
 
-</head>
-<body>
+      /* ---- Review stat cells (dark strip, extends .stats-grid pattern) ---- */
+      .review-stat-strip {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+      }
+      .review-stat-cell {
+        text-align: center;
+        padding: 52px 20px;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .review-stat-cell:last-child {
+        border-right: 0;
+      }
+      .review-stat-cell strong {
+        font-family: var(--font-display);
+        font-size: clamp(34px, 4.5vw, 56px);
+        color: var(--gold-bright);
+        display: block;
+        line-height: 1;
+      }
+      .review-stat-cell h4 {
+        font-size: 15px;
+        color: #fff;
+        margin: 10px 0 5px;
+      }
+      .review-stat-cell span {
+        font-size: 12.5px;
+        color: rgba(251, 247, 239, 0.5);
+        font-weight: 500;
+      }
 
-<!-- ==================== TOP UTILITY BAR ==================== -->
-<div class="topbar">
-  <div class="wrap">
-    <div class="topbar-left">
-      <a href="tel:+14372172330">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-       +255 781 800 878 
-      </a>
-      <a href="/cdn-cgi/l/email-protection#1e777078715e7c77792b7f786c777d7f6d7f787f6c77307d7173" class="hide-sm">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-        <span class="__cf_email__" data-cfemail="422b2c242d02202b25772324302b212331232423302b6c212d2f">info@lundbig5africasafari.com</span>
-      </a>
-    </div>
-    <div class="topbar-right">
-      <div class="top-socials">
-        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 4.67a5.13 5.13 0 1 0 0 10.26 5.13 5.13 0 0 0 0-10.26zm0 8.46a3.33 3.33 0 1 1 0-6.66 3.33 3.33 0 0 1 0 6.66zm6.54-8.66a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg></a>
-        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
-        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.5a3 3 0 0 0-2.12-2.13C19.5 3.86 12 3.86 12 3.86s-7.5 0-9.38.51A3 3 0 0 0 .5 6.5C0 8.38 0 12 0 12s0 3.62.5 5.5a3 3 0 0 0 2.12 2.13c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51A3 3 0 0 0 23.5 17.5C24 15.62 24 12 24 12s0-3.62-.5-5.5zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a>
-      </div>
-      <div class="top-divider"></div>
-      <div class="lang" id="lang">
-        <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          <span id="langLabel">English</span>
-          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-        </button>
-        <div class="lang-menu" id="langMenu" role="menu">
-          <button class="active" data-lang="English"><span class="flag">🇬🇧</span> English</button>
-          <button data-lang="Français"><span class="flag">🇫🇷</span> Français</button>
-          <button data-lang="Deutsch"><span class="flag">🇩🇪</span> Deutsch</button>
-          <button data-lang="Español"><span class="flag">🇪🇸</span> Español</button>
-          <button data-lang="Kiswahili"><span class="flag">🇹🇿</span> Kiswahili</button>
+      /* ---- Video testimonial cards ---- */
+      .video-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      .video-card {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+        transition:
+          transform 0.28s,
+          box-shadow 0.28s;
+      }
+      .video-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+      }
+      .video-thumb {
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .video-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.45s;
+      }
+      .video-card:hover .video-thumb img {
+        transform: scale(1.05);
+      }
+      .video-play-overlay {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        background: rgba(0, 0, 0, 0.28);
+        transition: background 0.2s;
+      }
+      .video-card:hover .video-play-overlay {
+        background: rgba(0, 0, 0, 0.4);
+      }
+      .video-play-btn {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.94);
+        display: grid;
+        place-items: center;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+        transition: transform 0.2s;
+      }
+      .video-card:hover .video-play-btn {
+        transform: scale(1.1);
+        background: #fff;
+      }
+      .video-play-btn svg {
+        width: 26px;
+        height: 26px;
+        color: var(--brown-deep);
+        margin-left: 3px;
+      }
+      .video-body {
+        padding: 18px 20px 22px;
+      }
+      .video-body h4 {
+        font-size: 16px;
+        margin: 0 0 8px;
+        color: var(--brown-deep);
+      }
+      .video-meta {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-size: 13px;
+        color: var(--brown);
+        flex-wrap: wrap;
+      }
+      .video-meta .dur {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .video-meta .dur svg {
+        width: 13px;
+        height: 13px;
+        color: var(--gold);
+      }
+
+      /* ---- Guest stories ---- */
+      .guest-stories {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+      }
+      .guest-story {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 52px;
+        align-items: center;
+      }
+      .guest-story__img {
+        border-radius: 20px;
+        overflow: hidden;
+        height: 420px;
+        box-shadow: var(--shadow-md);
+        position: relative;
+      }
+      .guest-story__img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .guest-story__img-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(28, 22, 14, 0.65),
+          transparent 55%
+        );
+        pointer-events: none;
+      }
+      .guest-story__badge {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        z-index: 2;
+        background: rgba(251, 247, 239, 0.96);
+        border-radius: 14px;
+        padding: 12px 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        box-shadow: var(--shadow-sm);
+        max-width: calc(100% - 40px);
+      }
+      .gsb-ava {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--gold);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        font-family: var(--font-display);
+        font-weight: 800;
+        font-size: 16px;
+        flex-shrink: 0;
+      }
+      .gsb-ava.green {
+        background: var(--olive);
+      }
+      .gsb-name {
+        font-family: var(--font-display);
+        font-size: 14px;
+        font-weight: 800;
+        color: var(--brown-deep);
+        display: block;
+      }
+      .gsb-trip {
+        font-size: 11.5px;
+        color: var(--brown);
+        display: block;
+        margin-top: 2px;
+      }
+      .guest-story__copy h2 {
+        font-size: clamp(22px, 2.8vw, 32px);
+        margin-bottom: 16px;
+      }
+      .guest-story__copy .pull-quote {
+        font-size: 17px;
+        color: var(--brown-deep);
+        font-style: italic;
+        line-height: 1.65;
+        margin: 0 0 16px;
+        padding: 0 0 0 18px;
+        border-left: 3px solid var(--gold);
+      }
+      .guest-story__copy p {
+        font-size: 15px;
+        color: var(--brown);
+        line-height: 1.72;
+        margin: 0 0 12px;
+      }
+
+      /* ---- Google highlight ---- */
+      .google-section {
+        background: linear-gradient(
+          135deg,
+          #2a2017 0%,
+          #3b342c 60%,
+          #574836 100%
+        );
+        padding: 80px 0;
+        position: relative;
+        overflow: hidden;
+      }
+      .google-section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          70% 60% at 50% -10%,
+          rgba(216, 162, 63, 0.22),
+          transparent 60%
+        );
+        pointer-events: none;
+      }
+      .google-inner {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 72px;
+        align-items: center;
+      }
+      .google-score-block {
+        text-align: center;
+      }
+      .g-logo-text {
+        font-family: var(--font-display);
+        font-size: 26px;
+        font-weight: 800;
+        display: inline-block;
+        margin-bottom: 14px;
+      }
+      .g-b {
+        color: #4285f4;
+      }
+      .g-r {
+        color: #ea4335;
+      }
+      .g-y {
+        color: #fbbc05;
+      }
+      .g-g {
+        color: #34a853;
+      }
+      .google-big {
+        font-family: var(--font-display);
+        font-size: 88px;
+        font-weight: 800;
+        color: #fff;
+        line-height: 1;
+        display: block;
+      }
+      .google-stars-big {
+        display: inline-flex;
+        gap: 5px;
+        margin: 12px 0 8px;
+      }
+      .google-stars-big svg {
+        width: 28px;
+        height: 28px;
+        color: #fbbc05;
+      }
+      .google-count {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 15px;
+        font-weight: 600;
+        display: block;
+        margin-top: 4px;
+      }
+      .google-trust-list {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+      }
+      .gti {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .gti-ic {
+        width: 50px;
+        height: 50px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.08);
+        display: grid;
+        place-items: center;
+        color: var(--gold-bright);
+        flex-shrink: 0;
+      }
+      .gti-ic svg {
+        width: 24px;
+        height: 24px;
+      }
+      .gti-text h4 {
+        color: #fff;
+        font-size: 16px;
+        margin: 0 0 4px;
+      }
+      .gti-text p {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+        margin: 0;
+        line-height: 1.55;
+      }
+
+      /* ---- Review categories ---- */
+      .category-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 18px;
+      }
+      .category-card {
+        background: #fff;
+        border: 1.5px solid var(--line);
+        border-radius: 16px;
+        padding: 28px 16px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s,
+          border-color 0.25s;
+      }
+      .category-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--gold-soft);
+      }
+      .category-card__ic {
+        width: 54px;
+        height: 54px;
+        border-radius: 15px;
+        background: var(--sand);
+        display: grid;
+        place-items: center;
+        color: var(--gold);
+      }
+      .category-card__ic svg {
+        width: 27px;
+        height: 27px;
+      }
+      .category-card h4 {
+        font-size: 14px;
+        margin: 0;
+        color: var(--brown-deep);
+        line-height: 1.3;
+      }
+      .category-card .cat-count {
+        font-size: 12px;
+        color: var(--brown);
+        font-weight: 600;
+      }
+      .cat-stars-sm {
+        display: inline-flex;
+        gap: 1px;
+      }
+      .cat-stars-sm svg {
+        width: 12px;
+        height: 12px;
+        color: var(--gold);
+      }
+
+      /* ---- Responsive ---- */
+      @media (max-width: 1100px) {
+        .reviews-static-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .category-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .review-stat-strip {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+        .review-stat-cell:nth-child(3) {
+          border-right: 0;
+        }
+        .review-stat-cell:nth-child(4) {
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .review-stat-cell:nth-child(5) {
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          border-right: 0;
+        }
+      }
+      @media (max-width: 960px) {
+        .guest-story {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+        .guest-story__img {
+          height: 320px;
+        }
+        .video-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .google-inner {
+          grid-template-columns: 1fr;
+          gap: 44px;
+          text-align: center;
+        }
+        .google-trust-list {
+          max-width: 520px;
+          margin: 0 auto;
+          text-align: left;
+        }
+      }
+      @media (max-width: 700px) {
+        .reviews-static-grid {
+          grid-template-columns: 1fr;
+        }
+        .video-grid {
+          grid-template-columns: 1fr;
+        }
+        .category-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .guest-story__img {
+          height: 260px;
+        }
+        .review-stat-strip {
+          grid-template-columns: 1fr 1fr;
+        }
+        .review-stat-cell {
+          border-right: 0 !important;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .review-stat-cell:nth-child(odd) {
+          border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+        .review-stat-cell:last-child,
+        .review-stat-cell:nth-last-child(2):nth-child(odd) {
+          border-bottom: 0;
+        }
+        .review-stat-cell {
+          border-top: none !important;
+        }
+      }
+    </style>
+    <!-- NEW CSS END -->
+  </head>
+  <body>
+    <!-- ==================== TOPBAR ==================== -->
+    <div class="topbar">
+      <div class="wrap">
+        <div class="topbar-left">
+          <a href="tel:+14372172330">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"
+              />
+            </svg>
+            +1 437 217 2330
+          </a>
+          <a
+            href="/cdn-cgi/l/email-protection#88e1e6eee7c8eae1efbde9eefae1ebe9fbe9eee9fae1a6ebe7e5"
+            class="hide-sm"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-10 6L2 7" />
+            </svg>
+            <span
+              class="__cf_email__"
+              data-cfemail="88e1e6eee7c8eae1efbde9eefae1ebe9fbe9eee9fae1a6ebe7e5"
+              >[email&#160;protected]</span
+            >
+          </a>
+        </div>
+        <div class="topbar-right">
+          <div class="top-socials">
+            <a href="#" aria-label="Instagram"
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 4.67a5.13 5.13 0 1 0 0 10.26 5.13 5.13 0 0 0 0-10.26zm0 8.46a3.33 3.33 0 1 1 0-6.66 3.33 3.33 0 0 1 0 6.66zm6.54-8.66a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"
+                /></svg
+            ></a>
+            <a href="#" aria-label="Facebook"
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"
+                /></svg
+            ></a>
+            <a href="#" aria-label="YouTube"
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23.5 6.5a3 3 0 0 0-2.12-2.13C19.5 3.86 12 3.86 12 3.86s-7.5 0-9.38.51A3 3 0 0 0 .5 6.5C0 8.38 0 12 0 12s0 3.62.5 5.5a3 3 0 0 0 2.12 2.13c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51A3 3 0 0 0 23.5 17.5C24 15.62 24 12 24 12s0-3.62-.5-5.5zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"
+                /></svg
+            ></a>
+          </div>
+          <div class="top-divider"></div>
+          <div class="lang" id="lang">
+            <button
+              class="lang-btn"
+              id="langBtn"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path
+                  d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                />
+              </svg>
+              <span id="langLabel">English</span>
+              <svg
+                class="chev"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+            <div class="lang-menu" id="langMenu" role="menu">
+              <button class="active" data-lang="English">
+                <span class="flag">🇬🇧</span> English
+              </button>
+              <button data-lang="Français">
+                <span class="flag">🇫🇷</span> Français
+              </button>
+              <button data-lang="Deutsch">
+                <span class="flag">🇩🇪</span> Deutsch
+              </button>
+              <button data-lang="Español">
+                <span class="flag">🇪🇸</span> Español
+              </button>
+              <button data-lang="Kiswahili">
+                <span class="flag">🇹🇿</span> Kiswahili
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- ==================== NAVBAR ==================== -->
-<nav class="nav" id="nav">
-  <div class="wrap">
-    <a href="index.html" class="brand" aria-label="Lund Big5 Tours Limited home">
-      <img src="assets/uploads/logo.png" alt="Lund Big5 Tours Limited" />
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="index.html#destinations">Destinations</a></li>
-      <!-- <li><a href="index.html#trekking">Trekking</a></li> -->
-        <li class="has-dropdown">
-            <a href="trekking.html">
-              Trekking
-
-              <svg
-                class="dropdown-arrow"
-                xmlns="http://www.w3.org/2000/svg"
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </a>
-
-            <ul class="dropdown-menu">
-              <li>
-                <a href="kilimanjaro-trekking.html">
-                  Mt. Kilimanjaro Trekking
-                </a>
-              </li>
-            </ul>
-          </li>
-      <li><a href="index.html#activities">Activities</a></li>
-      <!-- <li><a href="index.html#tours">Tours</a></li> -->
-         <li class="has-dropdown">
-            <a href="tours.html">
-              Tours
-
-              <svg
-                class="dropdown-arrow"
-                xmlns="http://www.w3.org/2000/svg"
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </a>
-
-            <ul class="dropdown-menu">
-              <li>
-                <a href="wildlife-safari.html"> Wildlife Safari </a>
-              </li>
-
-              <li>
-                <a href="zanzibar-vacation.html"> Zanzibar Vacation </a>
-              </li>
-            </ul>
-          </li>
-      <li><a href="reviews.html" class="active">Reviews</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="nav-cta">
-      <a href="contact.html#inquiry" class="btn btn-primary">Plan My Safari</a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
-    </div>
-  </div>
-</nav>
-
-<!-- Mobile drawer -->
-<div class="drawer" id="drawer">
-  <div class="drawer-overlay" id="drawerOverlay"></div>
-  <div class="drawer-panel">
-    <div class="drawer-head">
-      <img src="assets/uploads/logo.png" alt="Lund Big5 Tours Limited" />
-      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
-    </div>
-    <nav class="drawer-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="index.html#destinations">Destinations</a>
-      <!-- <a href="index.html#trekking">Trekking</a> -->
-           <li class="has-dropdown">
-            <div class="dropdown-trigger">
-              <a href="trekking.html">Trekking</a>
-
-              <button class="submenu-toggle" type="button">
-                <svg
-                  class="dropdown-arrow"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-            </div>
-
-            <ul class="dropdown-menu">
-              <li>
-                <a href="kilimanjaro-trekking.html">
-                  Mt. Kilimanjaro Trekking
-                </a>
-              </li>
-            </ul>
-          </li>
-      <a href="index.html#activities">Activities</a>
-      <!-- <a href="index.html#tours">Tours</a> -->
-        <li class="has-dropdown">
-            <div class="dropdown-trigger">
-              <a href="tours.html">Tours</a>
-
-              <button class="submenu-toggle" type="button">
-                <svg
-                  class="dropdown-arrow"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-            </div>
-
-            <ul class="dropdown-menu">
-              <li><a href="wildlife-safari.html">Wildlife Safari</a></li>
-              <li><a href="zanzibar-vacation.html">Zanzibar Vacation</a></li>
-            </ul>
-          </li>
-      <a href="reviews.html">Reviews</a>
-      <a href="contact.html">Contact</a>
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="nav" id="nav">
+      <div class="wrap">
+        <a
+          href="index.html"
+          class="brand"
+          aria-label="Big 5 Africa Safari home"
+        >
+          <img src="assets/big5-logo.png" alt="Big 5 Africa Safari" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="destinations-listing.html">Destinations</a></li>
+          <li><a href="trekking-listing.html">Trekking</a></li>
+          <li><a href="activities-listing.html">Activities</a></li>
+          <li><a href="tours-listing.html">Tours</a></li>
+          <li><a href="reviews.html" class="active">Reviews</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="contact.html" class="btn btn-primary">Plan My Safari</a>
+          <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
     </nav>
-    <a href="contact.html#inquiry" class="btn btn-primary" style="width:100%;justify-content:center;">Plan My Safari</a>
-  </div>
-</div>
 
-<!-- ==================== 1. HERO ==================== -->
-<header class="rv-hero" id="top">
-  <div class="rv-hero-bg">
-    <img src="assets/safari-group-lake.webp" alt="Safari guests enjoying East Africa" loading="eager" />
-  </div>
+    <div class="drawer" id="drawer">
+      <div class="drawer-overlay" id="drawerOverlay"></div>
+      <div class="drawer-panel">
+        <div class="drawer-head">
+          <img src="assets/big5-logo.png" alt="Big 5 Africa Safari" />
+          <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+            &times;
+          </button>
+        </div>
+        <nav class="drawer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="destinations-listing.html">Destinations</a>
+          <a href="trekking-listing.html">Trekking</a>
+          <a href="activities-listing.html">Activities</a>
+          <a href="tours-listing.html">Tours</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a href="contact.html" class="btn btn-primary btn-block"
+          >Plan My Safari</a
+        >
+      </div>
+    </div>
+
+    <!-- ==================== HERO ==================== -->
+    <!-- <header class="about-hero" id="top" data-screen-label="Hero">
+      <div class="wrap">
+        <div style="position: relative; z-index: 2; padding: 68px 0 80px">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+            <span style="color: rgba(255, 255, 255, 0.85)">Guest Reviews</span>
+          </div>
+          <p class="eyebrow" style="color: var(--gold-bright)">
+            Verified Guest Reviews
+          </p>
+          <h1
+            style="
+              color: #fff;
+              font-size: clamp(32px, 5vw, 60px);
+              max-width: 740px;
+            "
+          >
+            Real People. Real Safaris.<br /><em
+              style="color: var(--gold-bright); font-style: normal"
+              >Real East Africa.</em
+            >
+          </h1>
+          <p
+            style="
+              color: rgba(255, 255, 255, 0.85);
+              font-size: clamp(16px, 1.6vw, 19px);
+              margin: 20px 0 34px;
+              max-width: 560px;
+              line-height: 1.65;
+            "
+          >
+            Every review below is written by a genuine Big 5 Africa Safari guest
+            — from first-time wildlife watchers to seasoned Kilimanjaro
+            summiteers. 120+ five-star stories and counting.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 14px">
+            <a href="#reviews" class="btn btn-primary btn-lg"
+              >Read All Reviews</a
+            >
+            <a href="contact.html" class="btn btn-ghost btn-lg"
+              >Start My Safari</a
+            >
+          </div>
+          <div
+            class="hero-trust"
+            style="
+              margin-top: 36px;
+              padding-top: 28px;
+              border-top: 1px solid rgba(255, 255, 255, 0.18);
+            "
+          >
+            <span class="trust-pill"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                style="width: 16px; height: 16px; color: var(--gold-bright)"
+              >
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              >5.0 Average Rating</span
+            >
+            <span class="trust-pill"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 6 9 17l-5-5" /></svg
+              >120+ Verified Reviews</span
+            >
+            <span class="trust-pill"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 6 9 17l-5-5" /></svg
+              >98% Satisfaction</span
+            >
+            <span class="trust-pill"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 6 9 17l-5-5" /></svg
+              >30+ Countries</span
+            >
+          </div>
+
+          
+
+
+        </div>
+      </div>
+    </header> -->
+
+    <header class="about-hero" id="top" data-screen-label="Hero">
   <div class="wrap">
-    <div class="rv-hero-inner">
-      <div class="breadcrumb">
-        <a href="index.html">Home</a>
-        <span class="breadcrumb-sep">›</span>
-        <span style="color:rgba(255,255,255,.85);">Guest Reviews</span>
+    <div class="about-hero-inner">
+
+      <!-- Left Content -->
+      <div class="about-hero-copy">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">›</span>
+          <span style="color: rgba(255,255,255,.85);">Guest Reviews</span>
+        </div>
+
+        <p class="eyebrow">Verified Guest Reviews</p>
+
+        <h1>
+          Real People. Real <em>Safaris</em>
+        </h1>
+
+        <p class="about-hero-sub">
+          Every review below is written by genuine Big 5 Africa Safari guests —
+          from unforgettable wildlife adventures to successful Kilimanjaro
+          summits. Discover why travellers from around the world trust us to
+          create life-changing safari experiences.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#reviews" class="btn btn-primary btn-lg">
+            Read All Reviews
+          </a>
+
+          <a
+            href="contact.html"
+            class="btn btn-ghost btn-lg"
+          >
+            Start My Safari
+          </a>
+        </div>
+
+        <!-- <div class="hero-trust">
+          <div class="trust-pill">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+            </svg>
+            5.0 Average Rating
+          </div>
+
+          <div class="trust-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+            120+ Verified Reviews
+          </div>
+
+          <div class="trust-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+            98% Guest Satisfaction
+          </div>
+
+          <div class="trust-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+            Guests from 30+ Countries
+          </div>
+        </div> -->
       </div>
-      <p class="eyebrow">Real Voices, Real Journeys</p>
-      <h1>What Our Guests Say About<br><em>East Africa with Us</em></h1>
-      <p class="rv-hero-sub">Every review you read below is genuine — written by real travellers who trusted us with one of the most important trips of their lives. We're proud of each and every one.</p>
-      <div class="rv-hero-pills">
-        <span class="rv-hero-pill">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          5.0 Average Rating
-        </span>
-        <span class="rv-hero-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          120+ Google Reviews
-        </span>
-        <span class="rv-hero-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          1,200+ Happy Travellers
-        </span>
-        <span class="rv-hero-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          98% Satisfaction Rate
-        </span>
+
+      <!-- Right Side Collage -->
+      <div class="hero-collage" aria-hidden="true">
+
+        <div class="hc-img hc-span">
+          <img
+            src="assets/safari-group-lake.webp"
+            alt="Happy safari guests"
+          />
+        </div>
+
+        <div class="hc-img">
+          <img
+            src="assets/safari-3.webp"
+            alt="Safari game drive"
+          />
+        </div>
+
+        <div class="hc-img" style="position: relative;">
+          <img
+            src="assets/safari-group-fun.webp"
+            alt="Guests enjoying their safari"
+          />
+
+          <div class="hc-badge">
+            <strong>5.0★</strong>
+            <span>120+ Reviews</span>
+          </div>
+        </div>
+
       </div>
+
     </div>
   </div>
 </header>
 
-<!-- ==================== 2. STATS STRIP ==================== -->
-<section class="bg-dark stats-strip" aria-label="Review statistics">
-  <div class="wrap">
-    <div class="stats-grid">
-      <div class="stat-cell reveal">
-        <strong>5.0★</strong>
-        <h4>Average Rating</h4>
-        <span>Across all verified review platforms</span>
-      </div>
-      <!-- <div class="stat-cell reveal">
-        <strong>120+</strong>
-        <h4>Google Reviews</h4>
-        <span>All five-star, all genuine travellers</span>
-      </div> -->
-      <div class="stat-cell reveal">
-        <strong>98%</strong>
-        <h4>Satisfaction Rate</h4>
-        <span>Of guests say they'd recommend us</span>
-      </div>
-      <div class="stat-cell reveal">
-        <strong>1,200+</strong>
-        <h4>Guests Hosted</h4>
-        <span>From 40+ countries, since 2019</span>
-      </div>
-      <div class="stat-cell reveal">
-        <strong>6+</strong>
-        <h4>Years of Experience</h4>
-        <span>Perfecting East African safari journeys</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== 3. FEATURED REVIEWS ==================== -->
-<section class="pad bg-cream" id="reviews" aria-labelledby="featured-reviews-title">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <p class="eyebrow center">Verified Guest Experiences</p>
-      <h2 id="featured-reviews-title">Featured Safari Reviews</h2>
-      <p>These are unedited, unfiltered words from real people who travelled with us across Kenya and Tanzania.</p>
-    </div>
-    <div class="rv-reviews-grid">
-
-      <!-- Featured large card -->
-      <article class="rv-card featured reveal" aria-label="Review by Sarah and James Whitfield">
-        <div class="rv-card-img">
-          <img src="assets/safari-couple.webp" alt="Sarah and James Whitfield on safari in the Masai Mara" loading="lazy" />
+    <!-- ==================== REVIEW STATISTICS ==================== -->
+    <!-- <section class="bg-dark" id="stats" data-screen-label="Statistics">
+      <div class="wrap">
+        <div class="review-stat-strip">
+          <div class="review-stat-cell reveal">
+            <strong>5.0★</strong>
+            <h4>Average Rating</h4>
+            <span>Across all platforms</span>
+          </div>
+          <div class="review-stat-cell reveal">
+            <strong>120+</strong>
+            <h4>Verified Reviews</h4>
+            <span>Google, TripAdvisor &amp; SafariBookings</span>
+          </div>
+          <div class="review-stat-cell reveal">
+            <strong>98%</strong>
+            <h4>Satisfaction Rate</h4>
+            <span>Would recommend to friends</span>
+          </div>
+          <div class="review-stat-cell reveal">
+            <strong>6+</strong>
+            <h4>Years of Service</h4>
+            <span>5 stars every year since 2019</span>
+          </div>
+          <div class="review-stat-cell reveal">
+            <strong>30+</strong>
+            <h4>Countries Served</h4>
+            <span>Guests from every continent</span>
+          </div>
         </div>
-        <div class="rv-card-body">
-          <span class="rv-quote-mark">&ldquo;</span>
-          <div class="rv-card-stars" aria-label="5 out of 5 stars">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+      </div>
+    </section> -->
+
+    <!-- ==================== FEATURED REVIEWS — reusing .testi-card ==================== -->
+    <section
+      class="pad bg-cream"
+      id="reviews"
+      data-screen-label="Featured Reviews"
+    >
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <p class="eyebrow center">What Our Guests Say</p>
+          <h2>Featured Guest Reviews</h2>
+          <p>
+            A selection of our most detailed and recent reviews — real accounts
+            from real travellers who trusted us with their East Africa
+            adventure.
+          </p>
+        </div>
+        <div class="reviews-static-grid">
+          <article class="testi-card reveal">
+            <div class="quote-mark">&ldquo;</div>
+            <div class="stars">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <p class="testi-text">
+              We saw all of the Big Five on day one. Day one! The level of
+              knowledge our guide brought was extraordinary. From the very first
+              email to our final game drive, Big 5 Africa Safari handled
+              everything flawlessly. We will never use another company.
+            </p>
+            <div class="testi-person">
+              <div class="testi-ava">ST</div>
+              <div>
+                <h4>Sarah &amp; Mark Thompson</h4>
+                <span>🇨🇦 Canada · 5-Day Masai Mara · April 2025</span>
+              </div>
+              <div class="testi-src">
+                <svg viewBox="0 0 24 24" style="width: 22px; height: 22px">
+                  <path
+                    fill="#4285F4"
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.76h3.56c2.08-1.92 3.28-4.74 3.28-8.09z"
+                  />
+                  <path
+                    fill="#34A853"
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.76c-.98.66-2.23 1.06-3.72 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"
+                  />
+                  <path
+                    fill="#FBBC05"
+                    d="M5.84 14.11a6.6 6.6 0 0 1 0-4.22V7.05H2.18a11 11 0 0 0 0 9.9l3.66-2.84z"
+                  />
+                  <path
+                    fill="#EA4335"
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.05l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <article class="testi-card reveal">
+            <div class="quote-mark">&ldquo;</div>
+            <div class="stars">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <p class="testi-text">
+              Summited Uhuru Peak at 5,895m on the 8-Day Machame Route. Our
+              guide monitored our oxygen levels twice daily, paced us perfectly
+              and motivated us through the brutal summit night. Everything was
+              handled impeccably. Truly the experience of a lifetime.
+            </p>
+            <div class="testi-person">
+              <div class="testi-ava">JO</div>
+              <div>
+                <h4>Dr. James Okafor</h4>
+                <span>🇬🇧 UK · Machame Route · July 2025</span>
+              </div>
+              <div class="testi-src">
+                <svg viewBox="0 0 24 24" style="width: 22px; height: 22px">
+                  <path
+                    fill="#4285F4"
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.76h3.56c2.08-1.92 3.28-4.74 3.28-8.09z"
+                  />
+                  <path
+                    fill="#34A853"
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.76c-.98.66-2.23 1.06-3.72 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"
+                  />
+                  <path
+                    fill="#FBBC05"
+                    d="M5.84 14.11a6.6 6.6 0 0 1 0-4.22V7.05H2.18a11 11 0 0 0 0 9.9l3.66-2.84z"
+                  />
+                  <path
+                    fill="#EA4335"
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.05l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <article class="testi-card reveal">
+            <div class="quote-mark">&ldquo;</div>
+            <div class="stars">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <p class="testi-text">
+              Our honeymoon was absolutely perfect — safari by day in the
+              Serengeti, then four dreamy days on Zanzibar's white sand beaches.
+              The seamless combination was the magic of Big 5 Africa Safari.
+              Every transfer, every lodge, every sunrise was exactly as
+              promised. We are already planning our return.
+            </p>
+            <div class="testi-person">
+              <div class="testi-ava">AM</div>
+              <div>
+                <h4>Amélie &amp; Louis Martin</h4>
+                <span>🇫🇷 France · Honeymoon Safari + Zanzibar · Sep 2025</span>
+              </div>
+              <div class="testi-src">
+                <svg viewBox="0 0 24 24" style="width: 22px; height: 22px">
+                  <path
+                    fill="#4285F4"
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.76h3.56c2.08-1.92 3.28-4.74 3.28-8.09z"
+                  />
+                  <path
+                    fill="#34A853"
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.76c-.98.66-2.23 1.06-3.72 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"
+                  />
+                  <path
+                    fill="#FBBC05"
+                    d="M5.84 14.11a6.6 6.6 0 0 1 0-4.22V7.05H2.18a11 11 0 0 0 0 9.9l3.66-2.84z"
+                  />
+                  <path
+                    fill="#EA4335"
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.05l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <article class="testi-card reveal">
+            <div class="quote-mark">&ldquo;</div>
+            <div class="stars">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <p class="testi-text">
+              Travelling with children can be stressful — but Big 5 made it
+              completely effortless. Our kids aged 7 and 10 were engaged every
+              minute of every drive. The guides were patient, educational and
+              brilliant with children. The Henderson family is forever changed
+              by this experience.
+            </p>
+            <div class="testi-person">
+              <div class="testi-ava">HF</div>
+              <div>
+                <h4>The Henderson Family</h4>
+                <span>🇦🇺 Australia · Family Safari Tanzania · June 2025</span>
+              </div>
+              <div class="testi-src">
+                <svg viewBox="0 0 24 24" style="width: 22px; height: 22px">
+                  <path
+                    fill="#4285F4"
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.76h3.56c2.08-1.92 3.28-4.74 3.28-8.09z"
+                  />
+                  <path
+                    fill="#34A853"
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.76c-.98.66-2.23 1.06-3.72 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"
+                  />
+                  <path
+                    fill="#FBBC05"
+                    d="M5.84 14.11a6.6 6.6 0 0 1 0-4.22V7.05H2.18a11 11 0 0 0 0 9.9l3.66-2.84z"
+                  />
+                  <path
+                    fill="#EA4335"
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.05l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <article class="testi-card reveal">
+            <div class="quote-mark">&ldquo;</div>
+            <div class="stars">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <p class="testi-text">
+              The Great Migration river crossing was beyond anything I could
+              have imagined. Our guide positioned us at the perfect spot at the
+              perfect time — 2,000 wildebeest charging into crocodile-filled
+              water, right in front of us. I sat in total silence, tears on my
+              face. Unforgettable.
+            </p>
+            <div class="testi-person">
+              <div class="testi-ava">PN</div>
+              <div>
+                <h4>Priya Nair</h4>
+                <span>🇮🇳 India · Great Migration Safari · August 2025</span>
+              </div>
+              <div class="testi-src">
+                <svg viewBox="0 0 24 24" style="width: 22px; height: 22px">
+                  <path
+                    fill="#4285F4"
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.76h3.56c2.08-1.92 3.28-4.74 3.28-8.09z"
+                  />
+                  <path
+                    fill="#34A853"
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.76c-.98.66-2.23 1.06-3.72 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"
+                  />
+                  <path
+                    fill="#FBBC05"
+                    d="M5.84 14.11a6.6 6.6 0 0 1 0-4.22V7.05H2.18a11 11 0 0 0 0 9.9l3.66-2.84z"
+                  />
+                  <path
+                    fill="#EA4335"
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.05l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <article class="testi-card reveal">
+            <div class="quote-mark">&ldquo;</div>
+            <div class="stars">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <p class="testi-text">
+              Ngorongoro und die Serengeti in 5 Tagen — unglaublich! Unser
+              Fahrer und Guide war außergewöhnlich. Er kannte jeden Winkel des
+              Parks. Perfekte Organisation, kein einziger Stress. Wir empfehlen
+              Big 5 Africa Safari aus ganzem Herzen!
+            </p>
+            <div class="testi-person">
+              <div class="testi-ava">WB</div>
+              <div>
+                <h4>Wolfgang &amp; Anna Bauer</h4>
+                <span>🇩🇪 Germany · Ngorongoro &amp; Serengeti · Oct 2025</span>
+              </div>
+              <div class="testi-src">
+                <svg viewBox="0 0 24 24" style="width: 22px; height: 22px">
+                  <path
+                    fill="#4285F4"
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.76h3.56c2.08-1.92 3.28-4.74 3.28-8.09z"
+                  />
+                  <path
+                    fill="#34A853"
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.76c-.98.66-2.23 1.06-3.72 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"
+                  />
+                  <path
+                    fill="#FBBC05"
+                    d="M5.84 14.11a6.6 6.6 0 0 1 0-4.22V7.05H2.18a11 11 0 0 0 0 9.9l3.66-2.84z"
+                  />
+                  <path
+                    fill="#EA4335"
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.05l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIDEO TESTIMONIALS ==================== -->
+    <section
+      class="pad bg-sand"
+      id="videos"
+      data-screen-label="Video Testimonials"
+    >
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <p class="eyebrow center">Guest Video Stories</p>
+          <h2>Watch Our Guests Share Their Experience</h2>
+          <p>
+            Video stories recorded by real guests — in their own words, from the
+            savanna to the summit.
+          </p>
+        </div>
+        <div class="video-grid">
+          <article class="video-card reveal">
+            <div class="video-thumb">
+              <img
+                src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800&q=80&auto=format&fit=crop"
+                alt="Kilimanjaro summit video testimonial"
+                loading="lazy"
+              />
+              <div class="video-play-overlay">
+                <div class="video-play-btn">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="video-body">
+              <h4>"From Toronto to Uhuru Peak"</h4>
+              <div class="video-meta">
+                <span class="dur"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" /></svg
+                  >4 min 22 sec</span
+                ><span>🇨🇦 Michael B. · Machame Route</span>
+              </div>
+            </div>
+          </article>
+          <article class="video-card reveal">
+            <div class="video-thumb">
+              <img
+                src="https://images.unsplash.com/photo-1572431447238-425af66a273b?w=800&q=80&auto=format&fit=crop"
+                alt="Zanzibar honeymoon video testimonial"
+                loading="lazy"
+              />
+              <div class="video-play-overlay">
+                <div class="video-play-btn">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="video-body">
+              <h4>"Our Zanzibar Honeymoon Story"</h4>
+              <div class="video-meta">
+                <span class="dur"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" /></svg
+                  >3 min 45 sec</span
+                ><span>🇫🇷 Amélie &amp; Louis · Zanzibar</span>
+              </div>
+            </div>
+          </article>
+          <article class="video-card reveal">
+            <div class="video-thumb">
+              <img
+                src="assets/safari-group-fun.webp"
+                alt="Family safari video testimonial Tanzania"
+                loading="lazy"
+              />
+              <div class="video-play-overlay">
+                <div class="video-play-btn">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="video-body">
+              <h4>"Our Family Safari Memories"</h4>
+              <div class="video-meta">
+                <span class="dur"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" /></svg
+                  >5 min 10 sec</span
+                ><span>🇦🇺 Henderson Family · Tanzania</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== GUEST STORIES ==================== -->
+    <!-- <section
+      class="pad bg-cream"
+      id="stories"
+      data-screen-label="Guest Stories"
+    >
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <p class="eyebrow center">In-Depth Experiences</p>
+          <h2>Extended Guest Stories</h2>
+          <p>Two of our most memorable guest journeys — told in full.</p>
+        </div>
+        <div class="guest-stories">
+          <div class="guest-story reveal">
+            <div class="guest-story__img">
+              <img
+                src="assets/safari-couple.webp"
+                alt="Robert and Claire Davidson — Kenya, Tanzania and Zanzibar 10-day safari"
+                loading="lazy"
+              />
+              <div class="guest-story__img-overlay"></div>
+              <div class="guest-story__badge">
+                <div class="gsb-ava">RD</div>
+                <div>
+                  <span class="gsb-name">Robert &amp; Claire Davidson</span
+                  ><span class="gsb-trip"
+                    >🇬🇧 UK · Kenya + Tanzania + Zanzibar · 10 Days</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="guest-story__copy">
+              <p class="eyebrow">Guest Story</p>
+              <h2>"We Said We'd Do It Once. We're Already Booking Again."</h2>
+              <p class="pull-quote">
+                "Standing on the edge of the Ngorongoro Crater at dawn, with the
+                mist rising below us and Kilimanjaro on the horizon — I
+                genuinely could not speak."
+              </p>
+              <p>
+                Robert and Claire booked a 10-day private combination safari
+                covering the Masai Mara, the Serengeti and Ngorongoro, finishing
+                with three nights on Zanzibar's white sand beaches.
+              </p>
+              <p>
+                "Big 5 handled every detail — airport to airport. Every lodge
+                was exceptional, every transfer was seamless, and our guide
+                James was simply the finest human being we have ever met on any
+                trip anywhere in the world."
+              </p>
+              <p>
+                Their verdict: they have already re-booked for the following
+                year with their grown children.
+              </p>
+              <a
+                href="contact.html"
+                class="btn btn-primary"
+                style="margin-top: 8px"
+                >Plan a Safari Like This</a
+              >
+            </div>
           </div>
-          <div class="rv-card-pkg">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            5-Day Masai Mara Classic Safari
-          </div>
-          <p class="rv-card-text">From the very first email to our final game drive, Lund Big5 Tours Limited handled everything flawlessly. We saw all of the Lund Big5 in two days — something we never thought possible. Our guide James had this extraordinary ability to find lions before anyone else. His knowledge, patience and genuine warmth made this the most special trip of our lives. We cannot recommend them highly enough and are already planning our return for the Great Migration.</p>
-          <div class="rv-card-top" style="margin-bottom:0;margin-top:auto;padding-top:16px;border-top:1px solid var(--line);">
-            <div class="rv-avatar" style="background:var(--brown-deep);">SW</div>
-            <div class="rv-person">
-              <h4>Sarah &amp; James Whitfield</h4>
-              <div class="rv-person-meta">
-                <span>🇬🇧 United Kingdom</span>
-                <span class="sep">·</span>
-                <span>March 2026</span>
+          <div class="guest-story reveal">
+            <div class="guest-story__copy">
+              <p class="eyebrow">Guest Story</p>
+              <h2>"Africa Gave Our Family Something No School Ever Could."</h2>
+              <p class="pull-quote">
+                "Our 12-year-old daughter announced at dinner on day three that
+                she wants to be a wildlife biologist. That is the power of a
+                great guide."
+              </p>
+              <p>
+                The Nakamura family from Tokyo travelled with three children
+                aged 9, 12 and 15 on a 7-day private safari covering Tarangire,
+                Lake Manyara and the Serengeti.
+              </p>
+              <p>
+                "We were nervous about bringing the children to Africa. Big 5
+                reassured us at every stage. The guides adapted everything — the
+                pace, the explanations, even the meal choices. It was the most
+                educational and joyful thing our family has ever shared
+                together."
+              </p>
+              <p>
+                The Nakamuras flew home with 3,000 wildlife photographs and one
+                firm family decision: the Great Migration is next.
+              </p>
+              <a
+                href="contact.html"
+                class="btn btn-primary"
+                style="margin-top: 8px"
+                >Plan a Family Safari</a
+              >
+            </div>
+            <div class="guest-story__img">
+              <img
+                src="assets/safari-group-lake.webp"
+                alt="The Nakamura family on their Tanzania family safari"
+                loading="lazy"
+              />
+              <div class="guest-story__img-overlay"></div>
+              <div class="guest-story__badge">
+                <div class="gsb-ava green">NK</div>
+                <div>
+                  <span class="gsb-name">The Nakamura Family</span
+                  ><span class="gsb-trip"
+                    >🇯🇵 Japan · Tanzania Family Safari · 7 Days</span
+                  >
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </article>
+      </div>
+    </section> -->
 
-      <!-- Standard card 1 -->
-      <article class="rv-card reveal" aria-label="Review by Dr. Michael Brenner">
-        <span class="rv-quote-mark">&ldquo;</span>
-        <div class="rv-card-stars" aria-label="5 out of 5 stars">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-        </div>
-        <div class="rv-card-pkg">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          8-Day Machame Route — Kilimanjaro
-        </div>
-        <p class="rv-card-text">Summited Uhuru Peak at 5,895 m — a lifetime goal. The crew was extraordinary: professional, safety-focused and incredibly encouraging on the hard days. Everything was arranged to the last detail. The porters carried our spirits as much as our bags. I cannot recommend Big 5 highly enough.</p>
-        <div class="rv-card-top" style="margin-top:auto;padding-top:16px;border-top:1px solid var(--line);">
-          <div class="rv-avatar" style="background:var(--olive);">MB</div>
-          <div class="rv-person">
-            <h4>Dr. Michael Brenner</h4>
-            <div class="rv-person-meta"><span>🇩🇪 Germany</span><span class="sep">·</span><span>January 2026</span></div>
+    <!-- ==================== GOOGLE REVIEWS HIGHLIGHT ==================== -->
+    <!-- <section
+      class="google-section"
+      id="google"
+      data-screen-label="Google Reviews"
+    >
+      <div class="wrap">
+        <div class="google-inner">
+          <div class="google-score-block reveal">
+            <div class="g-logo-text">
+              <span class="g-b">G</span><span class="g-r">o</span
+              ><span class="g-y">o</span><span class="g-b">g</span
+              ><span class="g-g">l</span><span class="g-r">e</span> Reviews
+            </div>
+            <span class="google-big">5.0</span>
+            <div class="google-stars-big">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <span class="google-count"
+              >Based on 120+ verified Google reviews</span
+            >
           </div>
-        </div>
-      </article>
-
-      <!-- Standard card 2 -->
-      <article class="rv-card reveal" aria-label="Review by Amélie Laurent">
-        <span class="rv-quote-mark">&ldquo;</span>
-        <div class="rv-card-stars" aria-label="5 out of 5 stars">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-        </div>
-        <div class="rv-card-pkg">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Family Safari + Zanzibar
-        </div>
-        <p class="rv-card-text">Travelling with three children (ages 6, 9 and 12) can be stressful, but the team made it completely effortless. They planned every single detail around the kids — comfortable vehicles, perfect pace, child-friendly lodges. The children are still talking about the baby elephants.</p>
-        <div class="rv-card-top" style="margin-top:auto;padding-top:16px;border-top:1px solid var(--line);">
-          <div class="rv-avatar" style="background:#8B6F47;">AL</div>
-          <div class="rv-person">
-            <h4>Amélie Laurent</h4>
-            <div class="rv-person-meta"><span>🇫🇷 France</span><span class="sep">·</span><span>April 2026</span></div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Standard card 3 -->
-      <article class="rv-card reveal" aria-label="Review by Robert Tanaka">
-        <span class="rv-quote-mark">&ldquo;</span>
-        <div class="rv-card-stars" aria-label="5 out of 5 stars">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-        </div>
-        <div class="rv-card-pkg">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Great Migration — Masai Mara
-        </div>
-        <p class="rv-card-text">Witnessing the river crossing was beyond words. Thousands of wildebeest charging across the Mara River — I cried. Our guide knew exactly where to position us and when. Transparent pricing, zero surprises, and the most personalised service I've experienced anywhere in the world.</p>
-        <div class="rv-card-top" style="margin-top:auto;padding-top:16px;border-top:1px solid var(--line);">
-          <div class="rv-avatar" style="background:var(--brown);">RT</div>
-          <div class="rv-person">
-            <h4>Robert Tanaka</h4>
-            <div class="rv-person-meta"><span>🇨🇦 Canada</span><span class="sep">·</span><span>August 2025</span></div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Standard card 4 -->
-      <article class="rv-card reveal" aria-label="Review by Priya and Anil Sharma">
-        <span class="rv-quote-mark">&ldquo;</span>
-        <div class="rv-card-stars" aria-label="5 out of 5 stars">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-        </div>
-        <div class="rv-card-pkg">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Honeymoon — Serengeti &amp; Zanzibar
-        </div>
-        <p class="rv-card-text">An absolutely perfect honeymoon. Gorgeous lodges, exceptional food, and a driver-guide who felt like family by the end of the trip. The Ngorongoro Crater was unlike anything on Earth. We'll be back for our 10th anniversary — no question.</p>
-        <div class="rv-card-top" style="margin-top:auto;padding-top:16px;border-top:1px solid var(--line);">
-          <div class="rv-avatar" style="background:#7C5CBF;">PS</div>
-          <div class="rv-person">
-            <h4>Priya &amp; Anil Sharma</h4>
-            <div class="rv-person-meta"><span>🇺🇸 United States</span><span class="sep">·</span><span>February 2026</span></div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Standard card 5 -->
-      <article class="rv-card reveal" aria-label="Review by Greta Hoffmann">
-        <span class="rv-quote-mark">&ldquo;</span>
-        <div class="rv-card-stars" aria-label="5 out of 5 stars">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-        </div>
-        <div class="rv-card-pkg">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Tarangire &amp; Ngorongoro Camping
-        </div>
-        <p class="rv-card-text">Fantastic value and a wonderful solo experience. Sleeping under canvas in Tarangire with elephants grazing 30 metres away — I still get shivers. The food was delicious, the team were attentive, and the Maasai cultural visit added something truly meaningful.</p>
-        <div class="rv-card-top" style="margin-top:auto;padding-top:16px;border-top:1px solid var(--line);">
-          <div class="rv-avatar" style="background:var(--gold);">GH</div>
-          <div class="rv-person">
-            <h4>Greta Hoffmann</h4>
-            <div class="rv-person-meta"><span>🇦🇺 Australia</span><span class="sep">·</span><span>October 2025</span></div>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ==================== 4. VIDEO TESTIMONIALS ==================== -->
-<section class="pad bg-sand" id="video-testimonials" aria-labelledby="video-title">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <p class="eyebrow center">Hear It Directly</p>
-      <h2 id="video-title">Guest Video Testimonials</h2>
-      <p>Watch our guests share their East African safari stories in their own words — from the Serengeti to the summit of Kilimanjaro.</p>
-    </div>
-    <div class="rv-video-grid">
-
-      <article class="rv-video-card reveal" aria-label="Video testimonial: Migration Safari">
-        <img src="assets/safari-1.webp" alt="Sarah and James on game drive — video testimonial thumbnail" loading="lazy" />
-        <div class="rv-video-shade"></div>
-        <div class="rv-video-play" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-        </div>
-        <div class="rv-video-body">
-          <h4>The Migration Changed Our Lives</h4>
-          <span>Sarah &amp; James · Masai Mara · 5 mins</span>
-        </div>
-      </article>
-
-      <article class="rv-video-card reveal" aria-label="Video testimonial: Kilimanjaro Summit">
-        <img src="assets/safari-4.webp" alt="Michael at Uhuru Peak — video testimonial thumbnail" loading="lazy" />
-        <div class="rv-video-shade"></div>
-        <div class="rv-video-play" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-        </div>
-        <div class="rv-video-body">
-          <h4>Reaching Uhuru Peak — My Story</h4>
-          <span>Dr. Michael B. · Kilimanjaro · 7 mins</span>
-        </div>
-      </article>
-
-      <article class="rv-video-card reveal" aria-label="Video testimonial: Family Safari">
-        <img src="assets/safari-group-fun.webp" alt="Laurent family on safari — video testimonial thumbnail" loading="lazy" />
-        <div class="rv-video-shade"></div>
-        <div class="rv-video-play" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-        </div>
-        <div class="rv-video-body">
-          <h4>A Family Safari to Remember</h4>
-          <span>The Laurent Family · Kenya &amp; Tanzania · 6 mins</span>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ==================== 5. GUEST STORIES ==================== -->
-<section class="pad bg-cream" id="guest-stories" aria-labelledby="stories-title">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <p class="eyebrow center">In Their Own Words</p>
-      <h2 id="stories-title">Guest Stories from the Field</h2>
-      <p>Extended stories from guests who wanted to share more than a quick review — because some experiences deserve a proper telling.</p>
-    </div>
-    <div class="rv-stories-grid">
-
-      <!-- Wide featured story -->
-      <article class="rv-story wide reveal" aria-label="Guest story: Robert Tanaka">
-        <div class="rv-story-img">
-          <img src="assets/safari-group-lake.webp" alt="Robert Tanaka watching the Great Migration river crossing" loading="lazy" />
-        </div>
-        <div class="rv-story-body">
-          <div class="stars" aria-label="5 stars">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          </div>
-          <h3>Standing at the Mara River: A Moment I'll Never Forget</h3>
-          <p>I've travelled to over 60 countries. Nothing — not the temples of Kyoto, not the Norwegian fjords, not the canals of Venice — has ever moved me the way watching 40,000 wildebeest surge into the crocodile-infested Mara River did. Our guide had studied the herd movements all morning. He positioned us at a small bend, away from the tourist convoy, just as the lead animals committed. The sound alone was seismic. I stood there, camera forgotten, just breathing it in.</p>
-          <div class="rv-story-meta">
-            <span>Robert Tanaka · 🇨🇦 Canada</span>
-            <span class="dot"></span>
-            <span>Great Migration Safari · August 2025</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Half-width story 1 -->
-      <article class="rv-story reveal" aria-label="Guest story: Priya and Anil Sharma">
-        <div class="rv-story-img">
-          <img src="assets/safari-couple.webp" alt="Priya and Anil Sharma on their honeymoon safari" loading="lazy" />
-        </div>
-        <div class="rv-story-body">
-          <div class="stars" aria-label="5 stars">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          </div>
-          <h3>Our Honeymoon: Serengeti, Crater &amp; Zanzibar</h3>
-          <p>We asked the team to design a honeymoon that mixed adventure with luxury. What they delivered exceeded every expectation. Private sundowners, a champagne surprise in the crater, and three perfect days on Zanzibar's North Coast.</p>
-          <div class="rv-story-meta">
-            <span>Priya &amp; Anil · 🇺🇸 USA</span>
-            <span class="dot"></span>
-            <span>February 2026</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Half-width story 2 -->
-      <article class="rv-story reveal" aria-label="Guest story: Greta Hoffmann">
-        <div class="rv-story-img">
-          <img src="assets/safari-crater.webp" alt="Ngorongoro Crater seen from the rim at sunrise" loading="lazy" />
-        </div>
-        <div class="rv-story-body">
-          <div class="stars" aria-label="5 stars">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          </div>
-          <h3>Solo in the Crater: Travelling Alone, Never Lonely</h3>
-          <p>As a solo female traveller, I was nervous. Within an hour on my first game drive I felt completely safe and genuinely looked after. The Ngorongoro Crater floor is one of the most spectacular places on the planet — I had it almost to myself at dawn.</p>
-          <div class="rv-story-meta">
-            <span>Greta Hoffmann · 🇦🇺 Australia</span>
-            <span class="dot"></span>
-            <span>October 2025</span>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ==================== 6. GOOGLE REVIEWS HIGHLIGHT ==================== -->
-<section class="pad bg-sand" id="google-reviews" aria-labelledby="google-title">
-  <div class="wrap">
-    <div class="rv-google-inner">
-
-      <div class="rv-google-badge reveal">
-        <div class="rv-google-logo" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="38" height="38"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.76h3.56c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.56-2.76c-.98.66-2.23 1.06-3.72 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.11a6.6 6.6 0 0 1 0-4.22V7.05H2.18a11 11 0 0 0 0 9.9l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.05l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg>
-          <span>Google</span>
-        </div>
-        <div class="rv-google-score" aria-label="Rated 5.0 out of 5">5.0</div>
-        <div class="rv-google-stars" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-        </div>
-        <p class="rv-google-count">Based on 120+ verified Google reviews</p>
-        <div class="rv-rating-bars">
-          <div class="rv-rating-row"><span class="label">5 stars</span><div class="rv-rating-bar-track"><div class="rv-rating-bar-fill" style="width:96%"></div></div><span class="pct">96%</span></div>
-          <div class="rv-rating-row"><span class="label">4 stars</span><div class="rv-rating-bar-track"><div class="rv-rating-bar-fill" style="width:3%;background:var(--sand-deep);"></div></div><span class="pct">3%</span></div>
-          <div class="rv-rating-row"><span class="label">3 stars</span><div class="rv-rating-bar-track"><div class="rv-rating-bar-fill" style="width:1%;background:var(--sand-deep);"></div></div><span class="pct">1%</span></div>
-          <div class="rv-rating-row"><span class="label">2 stars</span><div class="rv-rating-bar-track"><div class="rv-rating-bar-fill" style="width:0%;background:var(--sand-deep);"></div></div><span class="pct">0%</span></div>
-          <div class="rv-rating-row"><span class="label">1 star</span><div class="rv-rating-bar-track"><div class="rv-rating-bar-fill" style="width:0%;background:var(--sand-deep);"></div></div><span class="pct">0%</span></div>
-        </div>
-        <div style="margin-top:24px;">
-          <div class="rv-google-trust">
-            <div class="rv-google-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> All reviews independently verified by Google</div>
-            <div class="rv-google-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Zero fake or incentivised reviews policy</div>
-            <div class="rv-google-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Listed on SafariBookings &amp; TripAdvisor</div>
+          <div class="google-trust-list reveal">
+            <div class="gti">
+              <div class="gti-ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              </div>
+              <div class="gti-text">
+                <h4>Every Review is Real &amp; Verified</h4>
+                <p>
+                  We never ask for, incentivise or fabricate reviews. Every
+                  rating is an unprompted, authentic guest experience posted
+                  directly on Google.
+                </p>
+              </div>
+            </div>
+            <div class="gti">
+              <div class="gti-ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+              </div>
+              <div class="gti-text">
+                <h4>We Respond to Every Review</h4>
+                <p>
+                  Our team personally reads and responds to every Google review
+                  within 48 hours — critical feedback is welcomed as an
+                  opportunity to improve.
+                </p>
+              </div>
+            </div>
+            <div class="gti">
+              <div class="gti-ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                  <polyline points="17 6 23 6 23 12" />
+                </svg>
+              </div>
+              <div class="gti-text">
+                <h4>Consistent 5 Stars Since 2019</h4>
+                <p>
+                  Six years of continuous five-star service — our rating has
+                  never dropped below 5.0. Consistency is our standard, not our
+                  exception.
+                </p>
+              </div>
+            </div>
+            <div class="gti">
+              <div class="gti-ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <div class="gti-text">
+                <h4>Also on TripAdvisor &amp; SafariBookings</h4>
+                <p>
+                  Our five-star reputation extends across every major travel
+                  review platform. Find us, verify us and trust us — wherever
+                  you look.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section> -->
 
-      <div class="rv-google-copy reveal">
-        <p class="eyebrow">Rated #1 by Our Guests</p>
-        <h2 id="google-title">120+ Five-Star Reviews — Every Single One Earned</h2>
-        <p>We've never asked a guest to leave a review. Every five-star rating we've received was left voluntarily by someone who had an experience worth sharing. That's the only kind of review we want.</p>
-        <p>Our reputation is the most important thing we own — more important than any marketing. It's built one safari at a time, one family at a time, one honest interaction at a time.</p>
-        <div class="rv-google-cta">
-          <a href="https://g.page/r/big5africasafari" target="_blank" rel="noopener" class="btn btn-primary">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Read on Google
+    <!-- ==================== WHY TRAVELLERS TRUST US — reusing .why2-grid ==================== -->
+    <section
+      class="pad why2"
+      id="trust"
+      data-screen-label="Why Travelers Trust Us"
+    >
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <p class="eyebrow center">The Big 5 Difference</p>
+          <h2>Why Travellers Trust Us — Every Time</h2>
+          <p>
+            Five things our guests consistently highlight as the reasons they
+            booked with us, stayed with us, and come back to us.
+          </p>
+        </div>
+        <div class="why2-grid">
+          <div class="why2-card reveal">
+            <div class="why2-ic">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h3>Born-and-Raised Local Guides</h3>
+            <p>
+              Our guides grew up in the parks they escort you through. They
+              don't read about the Serengeti — they live it. That depth of
+              knowledge is consistently the most-cited reason guests rate us 5
+              stars.
+            </p>
+          </div>
+          <div class="why2-card reveal">
+            <div class="why2-ic">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="1" y="4" width="22" height="16" rx="2" />
+                <line x1="1" y1="10" x2="23" y2="10" />
+              </svg>
+            </div>
+            <h3>Total Pricing Transparency</h3>
+            <p>
+              Every quote is fully itemised. No surprise fees on arrival, no
+              upselling pressure, no hidden extras. What you see in writing is
+              exactly what you pay — guests repeatedly cite this as a major
+              differentiator.
+            </p>
+          </div>
+          <div class="why2-card reveal">
+            <div class="why2-ic">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3>Safety Is Never Negotiable</h3>
+            <p>
+              We operate with full park safety compliance, maintain licensed and
+              insured vehicles, carry first-aid equipment on every trip, and
+              monitor every trekker for altitude symptoms daily.
+            </p>
+          </div>
+          <div class="why2-card reveal">
+            <div class="why2-ic">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <h3>Private, Tailor-Made Only</h3>
+            <p>
+              We never sell shared-group package tours. Every itinerary is built
+              privately around your travel style, pace and budget. You never
+              share your vehicle with strangers.
+            </p>
+          </div>
+          <div class="why2-card reveal">
+            <div class="why2-ic">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+            </div>
+            <h3>24/7 Support Before, During &amp; After</h3>
+            <p>
+              Our team is reachable from the moment you submit your first
+              inquiry. During your trip, a dedicated support person monitors
+              your progress and is reachable by WhatsApp at any hour.
+            </p>
+          </div>
+          <div class="why2-card reveal">
+            <div class="why2-ic">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                />
+              </svg>
+            </div>
+            <h3>Family &amp; Honeymoon Specialists</h3>
+            <p>
+              Our guides adapt entirely to your group — child-friendly pacing
+              and briefings, romantic sundowner setups, or solo traveller
+              introductions. Every group is treated as unique.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== REVIEW CATEGORIES ==================== -->
+    <!-- <section
+      class="pad bg-sand"
+      id="categories"
+      data-screen-label="Review Categories"
+    >
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <p class="eyebrow center">Browse by Type</p>
+          <h2>Reviews by Safari Category</h2>
+          <p>
+            Whether you're planning a family safari, a honeymoon, a luxury
+            escape or a migration adventure — read what guests in your situation
+            experienced.
+          </p>
+        </div>
+        <div class="category-grid">
+          <a href="tours-listing.html#tanzania" class="category-card reveal">
+            <div class="category-card__ic">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h4>Family Safari Reviews</h4>
+            <div class="cat-stars-sm">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <span class="cat-count">28 reviews</span>
           </a>
-          <a href="contact.html#inquiry" class="btn btn-outline">Plan My Safari</a>
+          <a href="tours-listing.html#tanzania" class="category-card reveal">
+            <div class="category-card__ic">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                />
+              </svg>
+            </div>
+            <h4>Honeymoon Safari Reviews</h4>
+            <div class="cat-stars-sm">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <span class="cat-count">19 reviews</span>
+          </a>
+          <a href="tours-listing.html#tanzania" class="category-card reveal">
+            <div class="category-card__ic">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+            </div>
+            <h4>Luxury Safari Reviews</h4>
+            <div class="cat-stars-sm">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <span class="cat-count">24 reviews</span>
+          </a>
+          <a href="tours-listing.html#combined" class="category-card reveal">
+            <div class="category-card__ic">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>
+            </div>
+            <h4>Group Safari Reviews</h4>
+            <div class="cat-stars-sm">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <span class="cat-count">31 reviews</span>
+          </a>
+          <a href="tours-listing.html#combined" class="category-card reveal">
+            <div class="category-card__ic">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                <polyline points="17 6 23 6 23 12" />
+              </svg>
+            </div>
+            <h4>Migration Safari Reviews</h4>
+            <div class="cat-stars-sm">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                /></svg
+              ><svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <span class="cat-count">18 reviews</span>
+          </a>
         </div>
       </div>
+    </section> -->
 
-    </div>
-  </div>
-</section>
-
-<!-- ==================== 7. WHY TRAVELLERS TRUST US ==================== -->
-<section class="pad bg-cream" id="why-trust" aria-labelledby="trust-title">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <p class="eyebrow center">Why 1,200+ Guests Choose Us</p>
-      <h2 id="trust-title">What Makes Our Guests Come Back</h2>
-      <p>Every five-star review points to the same five things. This is what we obsess over — so you never have to.</p>
-    </div>
-    <!-- Reuses existing .why2-grid .why2-card .why2-ic from components.css -->
-    <div class="why2-grid">
-      <article class="why2-card reveal">
-        <div class="why2-ic">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <h3>6+ Years of Experience</h3>
-        <p>Every safari we run is backed by over six years of field knowledge across Kenya and Tanzania. We know the parks, the seasons, the animals and the people — deeply and intimately.</p>
-      </article>
-      <article class="why2-card reveal">
-        <div class="why2-ic">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h3>Safety Above All Else</h3>
-        <p>Our vehicles are fully serviced, our guides are first-aid certified, and every itinerary includes a 24/7 emergency contact. Your safety is never an afterthought — it's the foundation.</p>
-      </article>
-      <article class="why2-card reveal">
-        <div class="why2-ic">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-        </div>
-        <h3>Born-and-Raised Local Guides</h3>
-        <p>Our guides grew up beside these national parks. Their knowledge isn't learned from textbooks — it's inherited from the landscapes themselves. Every drive feels like a private masterclass.</p>
-      </article>
-      <article class="why2-card reveal">
-        <div class="why2-ic">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        </div>
-        <h3>Truly Custom Itineraries</h3>
-        <p>No copy-paste packages. We build every itinerary from scratch around your dates, your budget and your dream — whether that's the Great Migration or a quiet week in the Crater.</p>
-      </article>
-      <article class="why2-card reveal">
-        <div class="why2-ic">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        </div>
-        <h3>24/7 Human Support</h3>
-        <p>Before, during and after your trip — we're reachable by WhatsApp around the clock. You're never left waiting for an auto-reply when something needs a real answer.</p>
-      </article>
-      <article class="why2-card reveal">
-        <div class="why2-ic">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-        </div>
-        <h3>Transparent, Fair Pricing</h3>
-        <p>No hidden fees. No surprise surcharges. Every quote is itemised clearly so you know exactly what you're paying for and why. We'd rather lose a booking than earn distrust.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== 8. REVIEW CATEGORIES ==================== -->
-<section class="pad bg-sand" id="review-categories" aria-labelledby="cats-title">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <p class="eyebrow center">Reviews by Safari Type</p>
-      <h2 id="cats-title">Find Reviews for Your Safari Style</h2>
-      <p>Browse experiences by the type of trip that matches yours — from romantic honeymoons to multi-generational family adventures.</p>
-    </div>
-    <div class="rv-cats-grid">
-
-      <article class="rv-cat-card reveal" aria-label="Family Safari Reviews">
-        <span class="rv-cat-ic" aria-hidden="true">👨‍👩‍👧‍👦</span>
-        <h3>Family Safaris</h3>
-        <p>Reviews from families with children who experienced East Africa together safely and joyfully.</p>
-        <span class="rv-cat-count">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          32 Reviews
-        </span>
-      </article>
-
-      <article class="rv-cat-card reveal" aria-label="Honeymoon Safari Reviews">
-        <span class="rv-cat-ic" aria-hidden="true">💑</span>
-        <h3>Honeymoon Safaris</h3>
-        <p>Couples who chose East Africa for their most romantic and unforgettable first trip together.</p>
-        <span class="rv-cat-count">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          28 Reviews
-        </span>
-      </article>
-
-      <article class="rv-cat-card reveal" aria-label="Luxury Safari Reviews">
-        <span class="rv-cat-ic" aria-hidden="true">🏕️</span>
-        <h3>Luxury Safaris</h3>
-        <p>Premium lodge and tented-camp experiences, sundowners and once-in-a-lifetime service reviews.</p>
-        <span class="rv-cat-count">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          24 Reviews
-        </span>
-      </article>
-
-      <article class="rv-cat-card reveal" aria-label="Group Safari Reviews">
-        <span class="rv-cat-ic" aria-hidden="true">🌍</span>
-        <h3>Group Safaris</h3>
-        <p>Corporate retreats, friend groups and extended families who explored Africa together.</p>
-        <span class="rv-cat-count">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          19 Reviews
-        </span>
-      </article>
-
-      <article class="rv-cat-card reveal" aria-label="Great Migration Safari Reviews">
-        <span class="rv-cat-ic" aria-hidden="true">�GNU</span>
-        <h3>Migration Safaris</h3>
-        <p>Guests who timed their visit to witness the greatest wildlife spectacle on the planet.</p>
-        <span class="rv-cat-count">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-          17 Reviews
-        </span>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ==================== 9. CTA ==================== -->
-<!-- Reuses .cta-section .cta-inner from components.css -->
-<section class="cta-section pad" aria-labelledby="cta-title">
-  <div class="wrap">
-    <div class="cta-inner reveal">
-      <p class="eyebrow center">Ready to Write Your Own Story?</p>
-      <h2 id="cta-title">Start Planning Your East Africa Safari</h2>
-      <p>Join over 1,200 travellers who trusted us with the journey of a lifetime. Our team will build your free custom itinerary within 24 hours — no obligation, no booking fees.</p>
-      <div class="cta-btns">
-        <a href="contact.html#inquiry" class="btn btn-primary btn-lg">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-          Get My Free Custom Quote
-        </a>
-        <a href="https://wa.me/255781800878?text=Hi!%20I%20read%20your%20reviews%20and%20I%27d%20love%20to%20plan%20a%20safari." target="_blank" rel="noopener" class="btn btn-wa btn-lg">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>
-          Chat on WhatsApp
-        </a>
-        <a href="contact.html" class="btn btn-ghost btn-lg">Contact Our Team</a>
-      </div>
-      <div class="cta-trust">
-        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 100% free itinerary</span>
-        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> No booking fees</span>
-        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Reply within 24 hours</span>
-        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 24/7 on-trip support</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== FOOTER ==================== -->
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <span class="footer-logo"
-              ><img src="assets/uploads/logo.png" alt="Lund Big5 Tours Limited"
-            /></span>
-        
-        <p>Private, tailor-made Kenya &amp; Tanzania safaris crafted by local experts. From the Great Migration to the Lund Big5 — your African adventure starts here.</p>
-        <div class="foot-contact">
-          <div>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>East Africa Road AICC -Serengeti Wing 4th floor Unit S-435 Sekei, Arusha, Tanzania</span>
+    <!-- ==================== CTA ==================== -->
+    <section class="cta-section pad" id="cta" data-screen-label="CTA">
+      <div class="wrap">
+        <div class="cta-inner reveal">
+          <p class="eyebrow center">Join 120+ Happy Guests</p>
+          <h2>Ready to Write Your Own Safari Story?</h2>
+          <p>
+            Tell us your travel dates and what excites you most — our team will
+            build a personalised free itinerary within 24 hours. No obligation,
+            no spam.
+          </p>
+          <div class="cta-btns">
+            <a href="contact.html" class="btn btn-primary btn-lg"
+              >Start Planning My Safari</a
+            >
+            <!-- <a
+              href="https://wa.me/255781800878?text=Hi%20Big%205!%20I%27ve%20read%20your%20reviews%20and%20I%27d%20love%20to%20plan%20a%20safari."
+              target="_blank"
+              rel="noopener"
+              class="btn btn-ghost btn-lg"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"
+                />
+              </svg>
+              Ask on WhatsApp
+            </a> -->
+            <a
+  href="https://wa.me/255781800878"
+  target="_blank"
+  rel="noopener"
+  class="btn btn-ghost btn-lg"
+>
+  <i class="fa-brands fa-whatsapp"></i>
+  Chat on WhatsApp
+</a>
           </div>
-          <a href="tel:+14372172330"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +255 781 800 878 </a>
-          <a href="https://wa.me/255781800878" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg> +255 670 441 617  (WhatsApp)</a>
-          <a href="/cdn-cgi/l/email-protection#244d4a424b64464d43114542564d474557454245564d0a474b49"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> <span class="__cf_email__" data-cfemail="e78e898188a7858e80d28681958e848694868186958ec984888a">info@lundbig5africasafari.com</span></a>
-        </div>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <div class="foot-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About Us</a>
-          <a href="index.html#destinations">Destinations</a>
-          <a href="index.html#trekking">Trekking</a>
-          <a href="index.html#activities">Activities</a>
-          <a href="index.html#tours">Tours</a>
-          <a href="reviews.html">Reviews</a>
-        </div>
-      </div>
-      <div>
-        <h4>Top Packages</h4>
-        <div class="foot-links">
-          <a href="index.html#trekking">5-Day Marangu Route</a>
-          <a href="index.html#trekking">8-Day Machame Route</a>
-          <a href="index.html#tours">Mnemba Island Day Tour</a>
-          <a href="index.html#tours">Zanzibar Holidays 4 Days</a>
-          <a href="index.html#tours">5-Day Serengeti (Camping)</a>
-          <a href="index.html#tours">5-Day Serengeti &amp; Crater</a>
-        </div>
-      </div>
-      <div>
-        <h4>Working Hours</h4>
-        <div class="foot-hours">
-          <div class="row"><span>Mon – Fri</span><span>8 AM – 4 PM</span></div>
-          <div class="row"><span>Saturday</span><span>8 AM – 12 PM</span></div>
-          <div class="row closed"><span>Sunday</span><span>Closed</span></div>
-        </div>
-        <div class="foot-social-row">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 4.67a5.13 5.13 0 1 0 0 10.26 5.13 5.13 0 0 0 0-10.26zm0 8.46a3.33 3.33 0 1 1 0-6.66 3.33 3.33 0 0 1 0 6.66zm6.54-8.66a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.5a3 3 0 0 0-2.12-2.13C19.5 3.86 12 3.86 12 3.86s-7.5 0-9.38.51A3 3 0 0 0 .5 6.5C0 8.38 0 12 0 12s0 3.62.5 5.5a3 3 0 0 0 2.12 2.13c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51A3 3 0 0 0 23.5 17.5C24 15.62 24 12 24 12s0-3.62-.5-5.5zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-legal">
-      <a href="#">Privacy Policy</a><span class="sep">·</span>
-      <a href="#">Terms &amp; Conditions</a><span class="sep">·</span>
-      <a href="#">Cookie Policy</a><span class="sep">·</span>
-      <a href="#">Booking &amp; Payment</a>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Lund Big5 Tours Limited. All rights reserved.</span>
-      <span class="credit">Designed &amp; Managed by <strong>DUENCY</strong></span>
-    </div>
-  </div>
-</footer>
 
-<!-- ==================== WHATSAPP FLOAT ==================== -->
-<div class="wa-float" id="waFloat">
-  <div class="wa-panel">
-    <div class="wa-phead">
-      <div class="wa-pavatar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg></div>
-      <div>
-        <h4>Lund Big5 Tours Limited</h4>
-        <span>Typically replies instantly</span>
+          <!-- <div class="cta-trust">
+            <span class="cta-trust-item"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 6 9 17l-5-5" /></svg
+              >Free custom itinerary</span
+            >
+            <span class="cta-trust-item"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 6 9 17l-5-5" /></svg
+              >No deposit until confirmed</span
+            >
+            <span class="cta-trust-item"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 6 9 17l-5-5" /></svg
+              >Reply within 24 hours</span
+            >
+            <span class="cta-trust-item"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 6 9 17l-5-5" /></svg
+              >5.0 ★ · 120+ verified reviews</span
+            >
+          </div> -->
+        </div>
       </div>
-      <button class="wa-close" id="waClose" aria-label="Close chat">&times;</button>
-    </div>
-    <div class="wa-pbody">
-      <div class="wa-msg">
-        <div class="who">Lund Big5 Tours Limited</div>
-        Jambo! 👋 Loved reading our reviews? Let's plan your safari — tell us your dates and we'll craft a free quote!
-        <div class="time">Online now</div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" id="footer">
+      <div class="wrap">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="assets/big5-logo.png" alt="Big 5 Africa Safari" />
+            <p>
+              Private, tailor-made Kenya &amp; Tanzania safaris crafted by local
+              experts. From the Great Migration to the Big Five — your African
+              adventure starts here.
+            </p>
+            <div class="foot-contact">
+              <div>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" /></svg
+                ><span>Toronto, Ontario, Canada · M4X 1G3</span>
+              </div>
+              <a href="tel:+14372172330"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"
+                  /></svg
+                >+1 437 217 2330</a
+              >
+              <a
+                href="https://wa.me/255781800878"
+                target="_blank"
+                rel="noopener"
+                ><svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"
+                  /></svg
+                >+255 781 800 878 (WhatsApp)</a
+              >
+              <a
+                href="/cdn-cgi/l/email-protection#81e8efe7eec1e3e8e6b4e0e7f3e8e2e0f2e0e7e0f3e8afe2eeec"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-10 6L2 7" /></svg
+                ><span
+                  class="__cf_email__"
+                  data-cfemail="96fff8f0f9d6f4fff1a3f7f0e4fff5f7e5f7f0f7e4ffb8f5f9fb"
+                  >[email&#160;protected]</span
+                ></a
+              >
+            </div>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <div class="foot-links">
+              <a href="index.html">Home</a>
+              <a href="about.html">About Us</a>
+              <a href="destinations-listing.html">Destinations</a>
+              <a href="trekking-listing.html">Trekking</a>
+              <a href="activities-listing.html">Activities</a>
+              <a href="tours-listing.html">Tours</a>
+              <a href="reviews.html">Reviews</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+          <div>
+            <h4>Popular Tours</h4>
+            <div class="foot-links">
+              <a href="northern-circuit-safari.html">Northern Circuit</a>
+              <a href="tours-listing.html#combined">Great Migration</a>
+              <a href="tours-listing.html#kenya">Masai Mara Safari</a>
+              <a href="tours-listing.html#tanzania">Luxury Tanzania</a>
+              <a href="tours-listing.html#combined">Wildlife &amp; Beach</a>
+              <a href="machame-route.html">Machame Route</a>
+            </div>
+          </div>
+          <div>
+            <h4>Working Hours</h4>
+            <div class="foot-hours">
+              <div class="row">
+                <span>Mon – Fri</span><span>8 AM – 4 PM</span>
+              </div>
+              <div class="row">
+                <span>Saturday</span><span>8 AM – 12 PM</span>
+              </div>
+              <div class="row closed">
+                <span>Sunday</span><span>Closed</span>
+              </div>
+            </div>
+            <div class="foot-social-row">
+              <a href="#" aria-label="Instagram"
+                ><svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 4.67a5.13 5.13 0 1 0 0 10.26 5.13 5.13 0 0 0 0-10.26zm0 8.46a3.33 3.33 0 1 1 0-6.66 3.33 3.33 0 0 1 0 6.66zm6.54-8.66a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"
+                  /></svg
+              ></a>
+              <a href="#" aria-label="Facebook"
+                ><svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"
+                  /></svg
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M23.5 6.5a3 3 0 0 0-2.12-2.13C19.5 3.86 12 3.86 12 3.86s-7.5 0-9.38.51A3 3 0 0 0 .5 6.5C0 8.38 0 12 0 12s0 3.62.5 5.5a3 3 0 0 0 2.12 2.13c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51A3 3 0 0 0 23.5 17.5C24 15.62 24 12 24 12s0-3.62-.5-5.5zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"
+                  /></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a><span class="sep">·</span>
+          <a href="#">Terms &amp; Conditions</a><span class="sep">·</span>
+          <a href="#">Cookie Policy</a><span class="sep">·</span>
+          <a href="#">Booking &amp; Payment</a>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Big 5 Africa Safari. All rights reserved.</span>
+          <span class="credit"
+            >Designed &amp; Managed by <strong>DUENCY</strong></span
+          >
+        </div>
       </div>
-    </div>
-    <div class="wa-pfoot">
-      <a href="https://wa.me/255781800878?text=Hi!%20I%20read%20your%20reviews%20and%20I%27d%20love%20to%20plan%20a%20safari." target="_blank" rel="noopener" class="btn btn-wa" style="width:100%;justify-content:center;">Start Chat on WhatsApp</a>
-    </div>
-  </div>
-  <button class="wa-bubble" id="waBubble" aria-label="Open WhatsApp chat">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zM6.597 20.13c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.513 5.26l-.999 3.648 3.975-1.043zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-  </button>
-</div>
+    </footer>
 
-<!-- No new JS required — all interactions handled by existing js/ files -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
- <script src="assets/js/navigation.js"></script>
-<script src="assets/big5-logo.png"></script>
-<script src="assets/js/animations.js"></script>
-<script src="assets/js/main.js"></script>
+    <!-- ==================== WA FLOAT ==================== -->
+    <div class="wa-float" id="waFloat">
+      <div class="wa-panel">
+        <div class="wa-phead">
+          <div class="wa-pavatar">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"
+              />
+            </svg>
+          </div>
+          <div>
+            <h4>Big 5 Africa Safari</h4>
+            <span>Typically replies instantly</span>
+          </div>
+          <button class="wa-close" id="waClose" aria-label="Close">
+            &times;
+          </button>
+        </div>
+        <div class="wa-pbody">
+          <div class="wa-msg">
+            <div class="who">Big 5 Africa Safari</div>
+            Jambo! 👋 Ready to plan your safari? Tell us your dates and we'll
+            send a free custom itinerary!
+            <div class="time">Online now</div>
+          </div>
+        </div>
+        <div class="wa-pfoot">
+          <a
+            href="https://wa.me/255781800878?text=Hi%20Big%205!%20I%27d%20like%20to%20plan%20a%20safari."
+            target="_blank"
+            rel="noopener"
+            class="btn btn-wa"
+            style="width: 100%; justify-content: center"
+            >Start Chat on WhatsApp</a
+          >
+        </div>
+      </div>
+      <button class="wa-bubble" id="waBubble" aria-label="Open WhatsApp chat">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zM6.597 20.13c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.513 5.26l-.999 3.648 3.975-1.043zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+          />
+        </svg>
+      </button>
+    </div>
 
-</body>
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

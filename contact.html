@@ -16,8 +16,18 @@
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+/>
 
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      .ccard-ic i {
+    font-size: 26px;
+    line-height: 1;
+}
+    </style>
   </head>
   <body>
     <!-- ==================== TOP UTILITY BAR ==================== -->
@@ -304,7 +314,7 @@
     </div>
 
     <!-- ==================== HERO ==================== -->
-    <header class="contact-hero">
+    <!-- <header class="contact-hero">
       <div class="wrap">
         <div class="contact-hero-inner">
           <div class="breadcrumb">
@@ -372,7 +382,125 @@
           </div>
         </div>
       </div>
-    </header>
+    </header> -->
+
+
+
+
+    <header class="about-hero" id="top" data-screen-label="Hero">
+  <div class="wrap">
+    <div class="about-hero-inner">
+
+      <!-- Left Content -->
+      <div class="about-hero-copy">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">›</span>
+          <span style="color: rgba(255,255,255,.85);">Contact Us</span>
+        </div>
+
+        <p class="eyebrow">Let's Start Planning Your Adventure</p>
+
+        <h1>
+          Get in Touch With Our <em>Safari Experts</em>
+        </h1>
+
+        <p class="about-hero-sub">
+          Whether you're planning your first African safari, climbing Mount
+          Kilimanjaro, or looking for a tailor-made travel experience, our
+          experienced local team is here to help. Share your travel ideas and
+          we'll create a personalised itinerary designed around your budget,
+          interests, and schedule.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#contact-form" class="btn btn-primary btn-lg">
+            Plan My Safari
+          </a>
+
+          <a
+            href="tel:+255781800878"
+            class="btn btn-ghost btn-lg"
+          >
+            Call Our Team
+          </a>
+        </div>
+
+        <!-- Optional Trust Pills -->
+
+        <!--
+        <div class="hero-trust">
+
+          <div class="trust-pill">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/>
+            </svg>
+            Local Safari Specialists
+          </div>
+
+          <div class="trust-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+            Reply Within 24 Hours
+          </div>
+
+          <div class="trust-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+            Tailor-Made Safari Planning
+          </div>
+
+          <div class="trust-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+            Trusted by Global Travellers
+          </div>
+
+        </div>
+        -->
+
+      </div>
+
+      <!-- Right Side Collage -->
+      <div class="hero-collage" aria-hidden="true">
+
+        <div class="hc-img hc-span">
+          <img
+            src="assets/safari-group-lake.webp"
+            alt="Guests enjoying a safari in Tanzania"
+          />
+        </div>
+
+        <div class="hc-img">
+          <img
+            src="assets/safari-3.webp"
+            alt="Luxury safari game drive"
+          />
+        </div>
+
+        <div class="hc-img" style="position: relative;">
+          <img
+            src="assets/safari-group-fun.webp"
+            alt="Happy guests after their safari adventure"
+          />
+
+          <div class="hc-badge">
+            <strong>24H</strong>
+            <span>Average Response</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+
 
     <!-- ==================== CONTACT CARDS ==================== -->
     <section class="contact-cards">
@@ -402,7 +530,7 @@
               >  +255 781 800 878</a
             >
           </div>
-          <div class="ccard">
+          <!-- <div class="ccard">
             <div
               class="ccard-ic"
               style="background: rgba(37, 211, 102, 0.12); color: #128c5e"
@@ -426,7 +554,32 @@
               style="color: #128c5e"
               >+255 670 441 617 <span>Tanzania</span></a
             >
-          </div>
+          </div> -->
+          
+          <div class="ccard">
+  <div
+    class="ccard-ic"
+    style="background: rgba(37, 211, 102, 0.12); color: #25D366;"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+  </div>
+
+  <h3>WhatsApp</h3>
+
+  <p>
+    Our East Africa field team responds instantly — available 7 days a week.
+  </p>
+
+  <a
+    href="https://wa.me/255670441617"
+    target="_blank"
+    rel="noopener"
+    class="ccard-val"
+    style="color: #128C7E;"
+  >
+    +255 670 441 617 <span>Tanzania</span>
+  </a>
+</div>
           <div class="ccard">
             <div class="ccard-ic">
               <svg
@@ -1042,7 +1195,7 @@
     </section> -->
 
     <!-- ==================== FAQ ==================== -->
-    <section class="pad" style="background: var(--sand)" id="faq">
+    <!-- <section class="pad" style="background: var(--sand)" id="faq">
       <div class="wrap">
         <div
           class="section-head center reveal"
@@ -1251,10 +1404,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- ==================== SOCIAL CONNECT ==================== -->
-    <section class="social-strip">
+    <!-- <section class="social-strip">
       <div class="wrap">
         <div class="social-inner">
           <div class="social-copy">
@@ -1323,8 +1476,86 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
+    <section class="social-strip">
+  <div class="wrap">
+    <div class="social-inner">
+
+      <div class="social-copy">
+        <p class="eyebrow" style="color: var(--gold-bright);">
+          Follow the Journey
+        </p>
+
+        <h2>Stay Connected With Us</h2>
+
+        <p>
+          Follow us on social media for daily wildlife sightings, guest
+          stories, safari tips, travel inspiration, and exclusive offers
+          directly from Tanzania & Kenya.
+        </p>
+      </div>
+
+      <div class="social-icons">
+
+        <!-- Instagram -->
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener"
+          class="soc-btn"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <!-- Facebook -->
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener"
+          class="soc-btn"
+          aria-label="Facebook"
+        >
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <!-- YouTube -->
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener"
+          class="soc-btn"
+          aria-label="YouTube"
+        >
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <!-- WhatsApp -->
+        <a
+          href="https://wa.me/255670441617"
+          target="_blank"
+          rel="noopener"
+          class="soc-btn"
+          aria-label="WhatsApp"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <!-- Email -->
+        <a
+          href="mailto:info@lundbig5africasafari.com"
+          class="soc-btn"
+          aria-label="Email"
+        >
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
     <!-- ==================== FOOTER ==================== -->
     <footer class="footer">
       <div class="wrap">
@@ -1528,7 +1759,7 @@
       src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
     ></script>
     <script src="assets/js/navigation.js"></script>
-    <script src="assets/uploads/logo.png"></script>
+    
     <script src="assets/js/forms.js"></script>
     <script src="assets/js/animations.js"></script>
     <script src="assets/js/main.js"></script>

@@ -7,7 +7,7 @@ section {
   position: relative;
 }
 .pad {
-  padding: 96px 0;
+  padding: 60px 0;
 }
 .bg-cream {
   background: var(--cream);

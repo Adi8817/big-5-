@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+<head>
+<script>/* mark JS alive synchronously */</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Safari Tours — Big 5 Africa Safari | Kenya &amp; Tanzania Safari Packages</title>
+<meta name="description" content="Browse 20+ private, tailor-made safari tours across Kenya and Tanzania. Northern Circuit, Great Migration, Luxury Lodge, Family Safari, Photography Safari and more — all private, all customisable." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+ <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+/>
+<link rel="stylesheet" href="assets/css/main.css" />
+
+<!-- NEW CSS START -->
+<style>
+/* ============================================================
+   tours-listing.html — minimal additional styles
+   Almost all components reused from css/components.css
+   Move to css/components.css + css/utilities.css when ready
+   ============================================================ */
+
+/* ---- Tour category section header (extends act-cat-header pattern) ---- */
+/* Reusing .act-cat-header from activities-listing.html NEW CSS */
+/* Duplicated here temporarily until global CSS consolidation pass */
+.tour-cat-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 32px;
+}
+.tour-cat-header__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--sand);
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.tour-cat-header__icon svg { width: 26px; height: 26px; }
+.tour-cat-header__icon.kenya   { background: rgba(185,64,48,.1);  color: #b94030; }
+.tour-cat-header__icon.combine { background: rgba(110,118,81,.12); color: var(--olive); }
+.tour-cat-header__icon.special { background: rgba(42,125,79,.1);  color: #2a7d4f; }
+.tour-cat-header__text h2 { font-size: clamp(22px, 3vw, 32px); margin-bottom: 4px; }
+.tour-cat-header__text p  { font-size: 14.5px; color: var(--brown); margin: 0; }
+.tour-cat-header__line { flex: 1; height: 1px; background: var(--line); }
+
+/* ---- Tour type pill (on card) ---- */
+.tour-type-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--sand);
+  color: var(--brown-deep);
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 700px) {
+  .tour-cat-header__line { display: none; }
+}
+</style>
+<!-- NEW CSS END -->
+</head>
+<body>
+
+<!-- ==================== TOPBAR ==================== -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-left">
+      <a href="tel:+14372172330">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +1 437 217 2330
+      </a>
+      <a href="/cdn-cgi/l/email-protection#771e19111837151e10421611051e141604161116051e5914181a" class="hide-sm">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        <span class="__cf_email__" data-cfemail="4a23242c250a28232d7f2b2c3823292b392b2c2b382364292527">[email&#160;protected]</span>
+      </a>
+    </div>
+    <div class="topbar-right">
+      <div class="top-socials">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 4.67a5.13 5.13 0 1 0 0 10.26 5.13 5.13 0 0 0 0-10.26zm0 8.46a3.33 3.33 0 1 1 0-6.66 3.33 3.33 0 0 1 0 6.66zm6.54-8.66a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.5a3 3 0 0 0-2.12-2.13C19.5 3.86 12 3.86 12 3.86s-7.5 0-9.38.51A3 3 0 0 0 .5 6.5C0 8.38 0 12 0 12s0 3.62.5 5.5a3 3 0 0 0 2.12 2.13c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51A3 3 0 0 0 23.5 17.5C24 15.62 24 12 24 12s0-3.62-.5-5.5zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a>
+      </div>
+      <div class="top-divider"></div>
+      <div class="lang" id="lang">
+        <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span id="langLabel">English</span>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button class="active" data-lang="English"><span class="flag">🇬🇧</span> English</button>
+          <button data-lang="Français"><span class="flag">🇫🇷</span> Français</button>
+          <button data-lang="Deutsch"><span class="flag">🇩🇪</span> Deutsch</button>
+          <button data-lang="Español"><span class="flag">🇪🇸</span> Español</button>
+          <button data-lang="Kiswahili"><span class="flag">🇹🇿</span> Kiswahili</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a href="index.html" class="brand" aria-label="Big 5 Africa Safari home">
+      <img src="assets/big5-logo.png" alt="Big 5 Africa Safari" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="destinations-listing.html">Destinations</a></li>
+      <li><a href="trekking-listing.html">Trekking</a></li>
+      <li><a href="activities-listing.html">Activities</a></li>
+      <li><a href="tours-listing.html" class="active">Tours</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary">Plan My Safari</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="drawer" id="drawer">
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer-panel">
+    <div class="drawer-head">
+      <img src="assets/big5-logo.png" alt="Big 5 Africa Safari" />
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="destinations-listing.html">Destinations</a>
+      <a href="trekking-listing.html">Trekking</a>
+      <a href="activities-listing.html">Activities</a>
+      <a href="tours-listing.html">Tours</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="btn btn-primary btn-block">Plan My Safari</a>
+  </div>
+</div>
+
+<!-- ==================== HERO — reusing .about-hero ==================== -->
+<!-- <header class="about-hero" id="top" data-screen-label="Hero">
+  <div class="wrap">
+    <div style="position:relative;z-index:2;padding:68px 0 80px;">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span style="color:rgba(255,255,255,.85);">Safari Tours</span>
+      </div>
+      <p class="eyebrow" style="color:var(--gold-bright);">🌍 Tanzania · Kenya · East Africa</p>
+      <h1 style="color:#fff;font-size:clamp(32px,5vw,60px);max-width:740px;">
+        Private Safari Tours Crafted <em style="color:var(--gold-bright);font-style:normal;">Around You</em>
+      </h1>
+      <p style="color:rgba(255,255,255,.85);font-size:clamp(16px,1.6vw,19px);margin:20px 0 34px;max-width:580px;line-height:1.65;">
+        From a 4-day Zanzibar getaway to a 14-day Great Migration odyssey — every tour is private, fully customisable and guided by local East Africans who have lived these landscapes their entire lives.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;">
+        <a href="#featured" class="btn btn-primary btn-lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Browse All Tours
+        </a>
+        <a href="contact.html" class="btn btn-ghost btn-lg">Get a Custom Quote</a>
+      </div>
+      <div class="hero-trust" style="margin-top:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,.18);">
+        <span class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 20+ Tour Packages</span>
+        <span class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> All Private Groups</span>
+        <span class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Fully Customisable</span>
+        <span class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 5.0 ★ · 120+ Reviews</span>
+      </div>
+    </div>
+  </div>
+</header> -->
+
+<header class="about-hero" id="top" data-screen-label="Hero">
+  <div class="wrap">
+    <div class="about-hero-inner">
+
+      <!-- Left Content -->
+      <div class="about-hero-copy">
+
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">›</span>
+          <span style="color: rgba(255,255,255,.85);">Safari Tours</span>
+        </div>
+
+        <p class="eyebrow">Tanzania • Kenya • East Africa</p>
+
+        <h1>
+          Private Safari <em>Tours</em><br>
+          Crafted Around You
+        </h1>
+
+        <p class="about-hero-sub">
+          Explore expertly crafted safari tours across Tanzania and Kenya — from
+          the Great Migration and Big Five adventures to luxury escapes,
+          family holidays, honeymoon safaris, and tailor-made journeys.
+          Every itinerary is designed by local safari specialists to deliver an
+          unforgettable African experience.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#featured" class="btn btn-primary btn-lg">
+            Browse All Tours
+          </a>
+
+          <a
+            href="contact.html"
+            class="btn btn-ghost btn-lg"
+          >
+            Get a Custom Quote
+          </a>
+        </div>
+
+        <!-- Optional Trust Pills -->
+
+        <!--
+        <div class="hero-trust">
+
+          <div class="trust-pill">
+            20+ Safari Tours
+          </div>
+
+          <div class="trust-pill">
+            Private & Customisable
+          </div>
+
+          <div class="trust-pill">
+            Local Safari Experts
+          </div>
+
+          <div class="trust-pill">
+            5★ Rated Experiences
+          </div>
+
+        </div>
+        -->
+
+      </div>
+
+      <!-- Right Side Collage -->
+
+      <div class="hero-collage" aria-hidden="true">
+
+        <div class="hc-img hc-span">
+          <img
+            src="assets/safari-group-lake.webp"
+            alt="Guests enjoying a luxury safari"
+          />
+        </div>
+
+        <div class="hc-img">
+          <img
+            src="assets/safari-3.webp"
+            alt="Safari game drive"
+          />
+        </div>
+
+        <div class="hc-img" style="position:relative;">
+
+          <img
+            src="assets/safari-group-fun.webp"
+            alt="Happy safari travellers"
+          />
+
+          <div class="hc-badge">
+            <strong>20+</strong>
+            <span>Safari Tours</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</header>
+<!-- ==================== FEATURED TOURS — reusing .act-featured-grid + .act-featured-card ==================== -->
+<!-- <section class="pad bg-cream" id="featured" data-screen-label="Featured Tours">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow center">Not to Be Missed</p>
+      <h2>Our Most Popular Safari Tours</h2>
+      <p>Three tours our guests book more than any others — the most spectacular wildlife experiences in East Africa, now with private guides and fully customisable itineraries.</p>
+    </div>
+    <div class="act-featured-grid">
+
+      <article class="act-featured-card reveal">
+        <img src="https://images.unsplash.com/photo-1559521783-1d1599583485?w=1100&q=80&auto=format&fit=crop" alt="Great Migration Safari — wildebeest crossing the Mara River at peak season" loading="lazy" />
+        <div class="act-featured-card__shade"></div>
+        <div class="act-featured-card__body">
+          <span class="act-featured-card__tag">⭐ Most Popular</span>
+          <h3>Great Migration Safari</h3>
+          <p>Witness 1.5 million wildebeest thunder across the Mara River in crocodile-infested waters — the greatest wildlife spectacle on Earth.</p>
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px;">
+            <span style="font-size:12.5px;color:rgba(255,255,255,.8);display:inline-flex;align-items:center;gap:5px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>7–10 Days</span>
+            <span style="font-size:12.5px;color:rgba(255,255,255,.8);">·</span>
+            <span style="font-size:12.5px;color:rgba(255,255,255,.8);">Jul – Oct</span>
+            <span style="font-size:12.5px;color:rgba(255,255,255,.8);">·</span>
+            <span style="font-size:12.5px;color:rgba(255,255,255,.8);">from $2,100/person</span>
+          </div>
+          <a href="destinations.html" class="btn btn-primary" style="padding:12px 22px;font-size:14px;">View Tour Details</a>
+        </div>
+      </article>
+
+      <article class="act-featured-card reveal">
+        <img src="assets/safari-1.webp" alt="Northern Circuit Tanzania — Serengeti, Ngorongoro Crater and Tarangire" loading="lazy" />
+        <div class="act-featured-card__shade"></div>
+        <div class="act-featured-card__body">
+          <span class="act-featured-card__tag">🦁 Best Seller</span>
+          <h3>Northern Circuit Tanzania</h3>
+          <p>The definitive Tanzania safari — Serengeti plains, the magnificent Ngorongoro Crater and Tarangire's elephant herds in one seamless journey.</p>
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px;">
+            <span style="font-size:12.5px;color:rgba(255,255,255,.8);display:inline-flex;align-items:center;gap:5px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>5–8 Days</span>
+            <span style="font-size:12.5px;color:rgba(255,255,255,.8);">·</span>
+            <span style="font-size:12.5px;color:rgba(255,255,255,.8);">Year-round</span>
+            <span style="font-size:12.5px;color:rgba(255,255,255,.8);">·</span>
+            <span style="font-size:12.5px;color:rgba(255,255,255,.8);">from $1,150/person</span>
+          </div>
+          <a href="destinations.html" class="btn btn-primary" style="padding:12px 22px;font-size:14px;">View Tour Details</a>
+        </div>
+      </article>
+
+      <article class="act-featured-card reveal">
+        <img src="assets/safari-crater.webp" alt="Luxury Tanzania Safari — private lodge, exclusive game drives and champagne sundowners" loading="lazy" />
+        <div class="act-featured-card__shade"></div>
+        <div class="act-featured-card__body">
+          <span class="act-featured-card__tag">✨ Luxury</span>
+          <h3>Luxury Tanzania Safari</h3>
+          <p>Private camps, exclusive conservancy access, gourmet bush dining and a bespoke itinerary designed around exactly what you want to see and experience.</p>
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px;">
+            <span style="font-size:12.5px;color:rgba(255,255,255,.8);display:inline-flex;align-items:center;gap:5px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px;"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>7–12 Days</span>
+            <span style="font-size:12.5px;color:rgba(255,255,255,.8);">·</span>
+            <span style="font-size:12.5px;color:rgba(255,255,255,.8);">Year-round</span>
+            <span style="font-size:12.5px;color:rgba(255,255,255,.8);">·</span>
+            <span style="font-size:12.5px;color:rgba(255,255,255,.8);">from $3,200/person</span>
+          </div>
+          <a href="contact.html" class="btn btn-primary" style="padding:12px 22px;font-size:14px;">Request Custom Quote</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section> -->
+
+<!-- ==================== TANZANIA SAFARI TOURS — reusing .tour-grid + .tour-card ==================== -->
+<section class="pad bg-sand" id="tanzania" data-screen-label="Tanzania Safari Tours">
+  <div class="wrap">
+    <div class="tour-cat-header reveal">
+      <div class="tour-cat-header__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div class="tour-cat-header__text">
+        <h2> Tanzania Safari Tours</h2>
+        <p>The Serengeti, Ngorongoro Crater, Kilimanjaro and Zanzibar — Tanzania delivers East Africa's most iconic wildlife encounters</p>
+      </div>
+      <div class="tour-cat-header__line" aria-hidden="true"></div>
+    </div>
+    <div class="tour-grid">
+
+      <!-- Northern Circuit -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge">Safari</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="assets/safari-1.webp" alt="Northern Circuit Tanzania — Serengeti, Ngorongoro and Tarangire" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Northern Tanzania</div>
+          <span class="tour-type-pill">Classic Safari</span>
+          <h3>Northern Circuit Safari</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>5–8 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Private</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$1,150</strong>/person</div>
+            <a href="destinations.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Southern Circuit -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge">Safari</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="assets/safari-2.webp" alt="Southern Circuit Tanzania — Ruaha, Selous and Mikumi" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Southern Tanzania</div>
+          <span class="tour-type-pill">Off the Beaten Track</span>
+          <h3>Southern Circuit Safari</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>7–10 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Private</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$1,380</strong>/person</div>
+            <a href="contact.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Serengeti Migration -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge" style="background:#b94030;">Migration</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="https://images.unsplash.com/photo-1559521783-1d1599583485?w=800&q=80&auto=format&fit=crop" alt="Serengeti Migration Safari — wildebeest herds on the Serengeti plains" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Serengeti, Tanzania</div>
+          <span class="tour-type-pill">Migration Specialist</span>
+          <h3>Serengeti Migration Safari</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>6–8 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Private</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$1,650</strong>/person</div>
+            <a href="contact.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Luxury Tanzania -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge" style="background:var(--brown-deep);">Luxury</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="assets/safari-crater.webp" alt="Luxury Tanzania Safari — exclusive private camp in the Ngorongoro highlands" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Tanzania</div>
+          <span class="tour-type-pill">Luxury Lodge</span>
+          <h3>Luxury Tanzania Safari</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>7–12 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Private</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$3,200</strong>/person</div>
+            <a href="contact.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Family Tanzania -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge" style="background:var(--olive);">Family</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="assets/safari-group-fun.webp" alt="Family Safari Tanzania — children and adults on an open-vehicle game drive" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Tanzania</div>
+          <span class="tour-type-pill">Family Friendly</span>
+          <h3>Family Safari Tanzania</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>6–8 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Private</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$1,280</strong>/person</div>
+            <a href="contact.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Honeymoon Tanzania -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge" style="background:#b94030;">Honeymoon</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="https://images.unsplash.com/photo-1572431447238-425af66a273b?w=800&q=80&auto=format&fit=crop" alt="Honeymoon Safari Tanzania — romantic lodge and Zanzibar beach extension" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Tanzania &amp; Zanzibar</div>
+          <span class="tour-type-pill">Honeymoon</span>
+          <h3>Honeymoon Safari Tanzania</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>8–12 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Couples</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$2,200</strong>/person</div>
+            <a href="contact.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== KENYA SAFARI TOURS ==================== -->
+<section class="pad bg-cream" id="kenya" data-screen-label="Kenya Safari Tours">
+  <div class="wrap">
+    <div class="tour-cat-header reveal">
+      <div class="tour-cat-header__icon kenya">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div class="tour-cat-header__text">
+        <h2> Kenya Safari Tours</h2>
+        <p>The Masai Mara, Amboseli, Lake Nakuru and Samburu — Kenya's diversity of landscapes and wildlife is unrivalled</p>
+      </div>
+      <div class="tour-cat-header__line" aria-hidden="true"></div>
+    </div>
+    <div class="tour-grid">
+
+      <!-- Masai Mara -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge">Safari</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="assets/safari-3.webp" alt="Masai Mara Classic Safari — lions and wildebeest on the Mara plains" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Masai Mara, Kenya</div>
+          <span class="tour-type-pill">Classic Safari</span>
+          <h3>Masai Mara Safari</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>4–6 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Private</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$980</strong>/person</div>
+            <a href="destinations.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Amboseli -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge">Safari</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=800&q=80&auto=format&fit=crop" alt="Amboseli Safari Kenya — elephants with Kilimanjaro backdrop" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Amboseli, Kenya</div>
+          <span class="tour-type-pill">Elephant Safari</span>
+          <h3>Amboseli Safari</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3–5 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Private</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$820</strong>/person</div>
+            <a href="contact.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Lake Nakuru -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge">Safari</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="assets/safari-group-lake.webp" alt="Lake Nakuru Safari — flamingos and rhinos in the Rift Valley" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Lake Nakuru, Kenya</div>
+          <span class="tour-type-pill">Birding &amp; Rhino</span>
+          <h3>Lake Nakuru Safari</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>2–3 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Private</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$620</strong>/person</div>
+            <a href="contact.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Samburu -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge">Safari</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="assets/safari-4.webp" alt="Samburu Safari Kenya — grevy's zebra and reticulated giraffe" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Samburu, Kenya</div>
+          <span class="tour-type-pill">Rare Species</span>
+          <h3>Samburu Safari</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>4–5 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Private</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$1,050</strong>/person</div>
+            <a href="contact.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Kenya Family -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge" style="background:var(--olive);">Family</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="assets/safari-couple.webp" alt="Kenya Family Safari — family game drives in the Masai Mara" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Kenya</div>
+          <span class="tour-type-pill">Family Friendly</span>
+          <h3>Kenya Family Safari</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>5–7 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Private</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$1,120</strong>/person</div>
+            <a href="contact.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Kenya Luxury -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge" style="background:var(--brown-deep);">Luxury</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=800&q=80&auto=format&fit=crop" alt="Kenya Luxury Safari — private conservancy lodge and exclusive game drives" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Kenya</div>
+          <span class="tour-type-pill">Luxury Lodge</span>
+          <h3>Kenya Luxury Safari</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>6–10 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Private</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$2,800</strong>/person</div>
+            <a href="contact.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== COMBINED KENYA & TANZANIA ==================== -->
+<section class="pad bg-sand" id="combined" data-screen-label="Combined Kenya and Tanzania">
+  <div class="wrap">
+    <div class="tour-cat-header reveal">
+      <div class="tour-cat-header__icon combine">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      </div>
+      <div class="tour-cat-header__text">
+        <h2>Combined Kenya &amp; Tanzania Tours</h2>
+        <p>Cross the border and experience the best of both countries in one seamless private journey</p>
+      </div>
+      <div class="tour-cat-header__line" aria-hidden="true"></div>
+    </div>
+    <div class="tour-grid">
+
+      <!-- Great Migration -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge" style="background:#b94030;">Migration</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80&auto=format&fit=crop" alt="Great Migration Safari — wildebeest river crossing at peak July-October season" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Kenya &amp; Tanzania</div>
+          <span class="tour-type-pill">Migration Specialist</span>
+          <h3>Great Migration Safari</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>7–10 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Private</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$2,100</strong>/person</div>
+            <a href="destinations.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Best of Both -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge">Combined</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="assets/safari-1.webp" alt="Best of Kenya and Tanzania combined safari tour" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Kenya &amp; Tanzania</div>
+          <span class="tour-type-pill">Classic Combined</span>
+          <h3>Best of Kenya &amp; Tanzania</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>10–14 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Private</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$2,450</strong>/person</div>
+            <a href="contact.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Big Five Explorer -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge">Big Five</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="assets/safari-2.webp" alt="Big Five Explorer tour — tracking lion, leopard, elephant, buffalo and rhino" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Kenya &amp; Tanzania</div>
+          <span class="tour-type-pill">Big Five</span>
+          <h3>Big Five Explorer</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>8–12 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Private</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$1,920</strong>/person</div>
+            <a href="contact.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Wildlife & Beach -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge" style="background:var(--olive);">Beach Combo</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="https://images.unsplash.com/photo-1572431447238-425af66a273b?w=800&q=80&auto=format&fit=crop" alt="Wildlife and Beach Safari — safari then Zanzibar beach extension" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Tanzania &amp; Zanzibar</div>
+          <span class="tour-type-pill">Safari + Beach</span>
+          <h3>Wildlife &amp; Beach Safari</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>8–12 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Private</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$2,100</strong>/person</div>
+            <a href="contact.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Luxury East Africa -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge" style="background:var(--brown-deep);">Luxury</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="assets/safari-crater.webp" alt="Luxury East Africa Safari — private jets, exclusive lodges and bespoke service" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Kenya &amp; Tanzania</div>
+          <span class="tour-type-pill">Ultra Luxury</span>
+          <h3>Luxury East Africa Safari</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>10–16 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Private</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$4,500</strong>/person</div>
+            <a href="contact.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SPECIAL INTEREST TOURS ==================== -->
+<section class="pad bg-cream" id="special" data-screen-label="Special Interest Tours">
+  <div class="wrap">
+    <div class="tour-cat-header reveal">
+      <div class="tour-cat-header__icon special">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      </div>
+      <div class="tour-cat-header__text">
+        <h2>Special Interest Tours</h2>
+        <p>Safari designed around your specific passion — photography, birding, culture, privacy or the freedom to fly</p>
+      </div>
+      <div class="tour-cat-header__line" aria-hidden="true"></div>
+    </div>
+    <div class="tour-grid">
+
+      <!-- Photography -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge" style="background:var(--brown-deep);">Photography</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="assets/safari-couple.webp" alt="Photography Safari — golden hour wildlife photography in the Serengeti" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Kenya &amp; Tanzania</div>
+          <span class="tour-type-pill">Photography Focus</span>
+          <h3>Photography Safari</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>7–10 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Private</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$1,750</strong>/person</div>
+            <a href="contact.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Birding -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge" style="background:#2a7d4f;">Birding</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="assets/safari-group-lake.webp" alt="Bird Watching Safari — flamingos at Lake Nakuru in the Rift Valley" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Kenya &amp; Tanzania</div>
+          <span class="tour-type-pill">Birding Specialist</span>
+          <h3>Bird Watching Safari</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>7–12 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Private</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$1,580</strong>/person</div>
+            <a href="contact.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Cultural Safari -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge" style="background:var(--olive);">Cultural</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="assets/safari-group-fun.webp" alt="Cultural Safari — Maasai village visit and Hadzabe tribe experience" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Kenya &amp; Tanzania</div>
+          <span class="tour-type-pill">Culture &amp; Wildlife</span>
+          <h3>Cultural Safari</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>7–10 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Private</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$1,350</strong>/person</div>
+            <a href="contact.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Private Safari -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge" style="background:var(--brown-deep);">Exclusive</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="assets/safari-4.webp" alt="Private Safari — exclusive vehicle and bespoke itinerary" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Fully Customisable</div>
+          <span class="tour-type-pill">100% Private</span>
+          <h3>Bespoke Private Safari</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Any Duration</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Your Group Only</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>POA</strong></div>
+            <a href="contact.html" class="btn btn-primary">Request Quote</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Group Safari -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge" style="background:var(--olive);">Group</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="assets/safari-3.webp" alt="Group Safari — corporate or incentive group safari in East Africa" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Kenya &amp; Tanzania</div>
+          <span class="tour-type-pill">Groups 8+</span>
+          <h3>Group Safari Package</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>5–10 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>8+ Guests</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$890</strong>/person</div>
+            <a href="contact.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Fly-In Safari -->
+      <article class="tour-card reveal">
+        <div class="tour-media">
+          <span class="tour-badge" style="background:#b94030;">Fly-In</span>
+          <button class="tour-fav" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          <img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=800&q=80&auto=format&fit=crop" alt="Fly-In Safari — light aircraft transfers between remote reserves" loading="lazy" />
+        </div>
+        <div class="tour-body">
+          <div class="tour-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Kenya &amp; Tanzania</div>
+          <span class="tour-type-pill">Private Air Charter</span>
+          <h3>Fly-In Safari</h3>
+          <div class="tour-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>5–10 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Private</span>
+          </div>
+          <div class="tour-foot">
+            <div class="tour-price">from <strong>$3,800</strong>/person</div>
+            <a href="contact.html" class="btn btn-primary">View Tour</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WHY TRAVEL WITH US — reusing .why2-grid + .why2-card ==================== -->
+<section class="pad why2" id="why" data-screen-label="Why Travel With Us">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow center">The Big 5 Difference</p>
+      <h2>Why Travel With Big 5 Africa Safari?</h2>
+      <p>Six things that set every Big 5 Africa Safari tour apart from every other option in East Africa.</p>
+    </div>
+    <div class="why2-grid">
+      <div class="why2-card reveal">
+        <div class="why2-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Experienced Safari Guides</h3>
+        <p>Born-and-raised local guides who grew up in the parks and reserves they escort you through. The level of ecological knowledge, language fluency and wildlife intuition is unmatched by any foreign-operated company.</p>
+      </div>
+      <div class="why2-card reveal">
+        <div class="why2-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3>Fully Custom Itineraries</h3>
+        <p>No two Big 5 Africa Safari itineraries are ever identical. Every tour is built from scratch around your specific travel dates, interests, budget and group composition. You choose — we execute perfectly.</p>
+      </div>
+      <div class="why2-card reveal">
+        <div class="why2-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Premium Accommodation</h3>
+        <p>We partner only with lodges, tented camps and beach resorts that meet our own quality standard — well-located, well-managed and genuinely immersed in the natural environment rather than isolated from it.</p>
+      </div>
+      <div class="why2-card reveal">
+        <div class="why2-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3>24/7 On-Trip Support</h3>
+        <p>Our base team monitors your safari in real time from the moment you land to the moment you depart. Any issue, any question, any change of plan — we are one WhatsApp message away, any hour of the day or night.</p>
+      </div>
+      <div class="why2-card reveal">
+        <div class="why2-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        </div>
+        <h3>Transparent Pricing</h3>
+        <p>Every quote is fully itemised — park fees, transfers, accommodation, guide, meals and all activities. No hidden charges on arrival, no upselling pressure on the ground. What you see in writing is exactly what you pay.</p>
+      </div>
+      <div class="why2-card reveal">
+        <div class="why2-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <h3>Trusted Local Experts</h3>
+        <p>Six years of continuous five-star reviews across Google, TripAdvisor and SafariBookings. Over 1,200 guests served across 30+ countries. Our reputation is built entirely on delivering exactly what we promise.</p>
+      </div>
+    </div>
+    <!-- <div class="why2-stats reveal">
+      <div class="why2-stat"><strong>20+</strong><span>Tour packages</span></div>
+      <div class="why2-stat"><strong>6+</strong><span>Years operating</span></div>
+      <div class="why2-stat"><strong>1,200+</strong><span>Guests served</span></div>
+      <div class="why2-stat"><strong>5.0★</strong><span>Google rating</span></div>
+    </div> -->
+  </div>
+</section>
+
+<!-- ==================== CTA — reusing .cta-section ==================== -->
+<section class="cta-section pad" id="cta" data-screen-label="CTA">
+  <div class="wrap">
+    <div class="cta-inner reveal">
+      <p class="eyebrow center">Your Safari Starts Here</p>
+      <h2>Not Sure Which Tour Is Right for You?</h2>
+      <p>Tell us your travel dates, how many people are travelling and what excites you most — our team will build a personalised recommendation and custom itinerary within 24 hours. Free, no obligation.</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn btn-primary btn-lg">Get My Free Custom Quote</a>
+        <!-- <a href="https://wa.me/255781800878?text=Hi%20Big%205%20Africa%20Safari!%20I%27d%20like%20help%20choosing%20the%20right%20safari%20tour." target="_blank" rel="noopener" class="btn btn-ghost btn-lg">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>
+          Ask on WhatsApp
+        </a> -->
+       <a
+  href="https://wa.me/255781800878"
+  target="_blank"
+  rel="noopener"
+  class="btn btn-ghost btn-lg"
+>
+  <i class="fa-brands fa-whatsapp"></i>
+  Chat on WhatsApp
+</a>
+      </div>
+      <!-- <div class="cta-trust">
+        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Free custom itinerary</span>
+        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> No booking deposit until confirmed</span>
+        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Reply within 24 hours</span>
+        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 5.0 ★ · 120+ verified reviews</span>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer" id="contact">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/big5-logo.png" alt="Big 5 Africa Safari" />
+        <p>Private, tailor-made Kenya &amp; Tanzania safaris crafted by local experts. From the Great Migration to the Big Five — your African adventure starts here.</p>
+        <div class="foot-contact">
+          <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Big 5 Africa Safari<br />Toronto, Ontario, Canada · M4X 1G3</span>
+          </div>
+          <a href="tel:+14372172330"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +1 437 217 2330</a>
+          <a href="https://wa.me/255781800878" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg> +255 781 800 878 (WhatsApp)</a>
+          <a href="/cdn-cgi/l/email-protection#a4cdcac2cbe4c6cdc391c5c2d6cdc7c5d7c5c2c5d6cd8ac7cbc9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> <span class="__cf_email__" data-cfemail="3950575f56795b505e0c585f4b505a584a585f584b50175a5654">[email&#160;protected]</span></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <div class="foot-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="destinations-listing.html">Destinations</a>
+          <a href="trekking-listing.html">Trekking</a>
+          <a href="activities-listing.html">Activities</a>
+          <a href="tours-listing.html">Tours</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4>Popular Tours</h4>
+        <div class="foot-links">
+          <a href="tours-listing.html#tanzania">Northern Circuit Safari</a>
+          <a href="tours-listing.html#combined">Great Migration Safari</a>
+          <a href="tours-listing.html#kenya">Masai Mara Safari</a>
+          <a href="tours-listing.html#tanzania">Luxury Tanzania Safari</a>
+          <a href="tours-listing.html#combined">Wildlife &amp; Beach Safari</a>
+          <a href="tours-listing.html#special">Photography Safari</a>
+        </div>
+      </div>
+      <div>
+        <h4>Working Hours</h4>
+        <div class="foot-hours">
+          <div class="row"><span>Mon – Fri</span><span>8 AM – 4 PM</span></div>
+          <div class="row"><span>Saturday</span><span>8 AM – 12 PM</span></div>
+          <div class="row closed"><span>Sunday</span><span>Closed</span></div>
+        </div>
+        <div class="foot-social-row">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 4.67a5.13 5.13 0 1 0 0 10.26 5.13 5.13 0 0 0 0-10.26zm0 8.46a3.33 3.33 0 1 1 0-6.66 3.33 3.33 0 0 1 0 6.66zm6.54-8.66a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.5a3 3 0 0 0-2.12-2.13C19.5 3.86 12 3.86 12 3.86s-7.5 0-9.38.51A3 3 0 0 0 .5 6.5C0 8.38 0 12 0 12s0 3.62.5 5.5a3 3 0 0 0 2.12 2.13c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51A3 3 0 0 0 23.5 17.5C24 15.62 24 12 24 12s0-3.62-.5-5.5zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a><span class="sep">·</span>
+      <a href="#">Terms &amp; Conditions</a><span class="sep">·</span>
+      <a href="#">Cookie Policy</a><span class="sep">·</span>
+      <a href="#">Booking &amp; Payment</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Big 5 Africa Safari. All rights reserved.</span>
+      <span class="credit">Designed &amp; Managed by <strong>DUENCY</strong></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== WHATSAPP FLOAT ==================== -->
+<div class="wa-float" id="waFloat">
+  <div class="wa-panel">
+    <div class="wa-phead">
+      <div class="wa-pavatar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg></div>
+      <div><h4>Big 5 Africa Safari</h4><span>Typically replies instantly</span></div>
+      <button class="wa-close" id="waClose" aria-label="Close chat">&times;</button>
+    </div>
+    <div class="wa-pbody">
+      <div class="wa-msg">
+        <div class="who">Big 5 Africa Safari</div>
+        Jambo! 👋 Looking for the perfect safari tour? Tell us your dates and budget — we'll build a free custom itinerary for you!
+        <div class="time">Online now</div>
+      </div>
+    </div>
+    <div class="wa-pfoot">
+      <a href="https://wa.me/255781800878?text=Hi%20Big%205!%20I%27m%20browsing%20your%20tour%20packages%20and%20would%20like%20a%20recommendation." target="_blank" rel="noopener" class="btn btn-wa" style="width:100%;justify-content:center;">Start Chat on WhatsApp</a>
+    </div>
+  </div>
+  <button class="wa-bubble" id="waBubble" aria-label="Open WhatsApp chat">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zM6.597 20.13c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.513 5.26l-.999 3.648 3.975-1.043zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </button>
+</div>
+
+<!-- NEW JS START -->
+<!-- No new JavaScript required — all interactions handled by existing js/*.js files -->
+<!-- NEW JS END -->
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

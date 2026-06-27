@@ -77,6 +77,13 @@
   transform: translateY(-2px);
 }
 
+
+.btn .fa-whatsapp {
+    font-size: 24px;
+    color: #25D366;
+}
+
+
 /* ============================================================
    PHOTO FALLBACK (.ph — homepage tour/activity tiles)
    ============================================================ */
@@ -1534,7 +1541,7 @@
   grid-template-columns: 1.05fr 0.95fr;
   gap: 64px;
   align-items: center;
-  padding: 76px 0 96px;
+  padding: 50px 0 60px;
 }
 .about-hero-copy {
   color: #fff;
@@ -1547,7 +1554,7 @@
 }
 .about-hero-copy h1 {
   color: #fff;
-  font-size: clamp(36px, 5vw, 62px);
+  font-size: clamp(36px, 5vw, 46px);
   line-height: 1.02;
 }
 .about-hero-copy h1 em {
@@ -1574,6 +1581,8 @@
   padding-top: 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
+
+
 .trust-pill {
   display: flex;
   align-items: center;
@@ -1639,7 +1648,7 @@
 .story-grid {
   display: grid;
   grid-template-columns: 1fr 1.08fr;
-  gap: 72px;
+  gap: 52px;
   align-items: center;
 }
 .story-collage {
@@ -1696,8 +1705,8 @@
 }
 .story-copy p {
   color: var(--brown);
-  margin: 0 0 16px;
-  font-size: 16.5px;
+  margin: 10px 0 16px;
+  font-size: 18px;
   line-height: 1.7;
 }
 .story-sign {
@@ -1715,11 +1724,11 @@
 .sign-text strong {
   display: block;
   font-family: var(--font-display);
-  font-size: 16px;
+  font-size: 22px;
   color: var(--brown-deep);
 }
 .sign-text span {
-  font-size: 13.5px;
+  font-size: 16px;
   color: var(--brown);
 }
 /* Values */
@@ -1775,14 +1784,17 @@
   height: 32px;
 }
 .value-card h3 {
-  font-size: 21px;
+  font-size: 24px;
   margin-bottom: 12px;
+  font-weight: 600;
 }
 .value-card p {
   color: var(--brown);
-  font-size: 15.5px;
+  font-size: 16px;
   margin: 0;
   line-height: 1.68;
+  font-weight: 500;
+  
 }
 /* Stats strip */
 .stats-strip {
@@ -2028,7 +2040,7 @@
 }
 .cta-inner h2 {
   color: #fff;
-  font-size: clamp(30px, 4.5vw, 52px);
+  font-size: clamp(30px, 4.5vw, 46px);
 }
 .cta-inner p {
   color: rgba(255, 255, 255, 0.8);
@@ -2164,7 +2176,7 @@
 /* Contact cards */
 .contact-cards {
   background: var(--cream);
-  padding: 0;
+  padding: 60px;
 }
 .cards-inner {
   display: grid;

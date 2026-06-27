@@ -9,6 +9,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+ <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+/>
 <link rel="stylesheet" href="assets/css/main.css" />
 
 <!-- CSS moved to css/components.css and css/utilities.css -->
@@ -99,7 +103,7 @@
 </div>
 
 <!-- ==================== HERO ==================== -->
-<header class="about-hero" id="top" data-screen-label="Hero">
+<!-- <header class="about-hero" id="top" data-screen-label="Hero">
   <div class="wrap">
     <div style="position:relative;z-index:2;padding:68px 0 80px;">
       <div class="breadcrumb">
@@ -126,78 +130,118 @@
       </div>
     </div>
   </div>
-</header>
+</header> -->
 
-<!-- ==================== FEATURED DESTINATIONS ==================== -->
-<section class="pad bg-cream" id="featured" data-screen-label="Featured Destinations">
+<header class="about-hero" id="top" data-screen-label="Hero">
   <div class="wrap">
-    <div class="section-head center reveal">
-      <p class="eyebrow center">Our Two Countries</p>
-      <h2>The Heart of East Africa</h2>
-      <p>Two extraordinary countries. Countless unforgettable experiences. Every safari we design is private and built entirely around you.</p>
-    </div>
-    <div class="dest-featured-grid">
+    <div class="about-hero-inner">
 
-      <!-- Featured: Kenya -->
-      <article class="dest-featured-card reveal">
-        <img src="assets/safari-group-lake.webp" alt="Kenya Safari — Masai Mara, Amboseli and the Great Rift Valley" loading="lazy" />
-        <div class="dest-featured-card__shade"></div>
-        <div class="dest-featured-card__body">
-          <span class="dest-featured-card__tag">🇰🇪 Kenya</span>
-          <h2>Kenya Safari Destinations</h2>
-          <p>Home to the world-famous Masai Mara, snow-capped Mount Kenya, and the iconic landscapes of the Great Rift Valley — Kenya is Africa's original safari country.</p>
-          <div class="dest-featured-card__parks">
-            <span>Masai Mara</span>
-            <span>Amboseli</span>
-            <span>Tsavo</span>
-            <span>Lake Nakuru</span>
-            <span>Samburu</span>
-            <span>Mount Kenya</span>
-          </div>
-          <div class="dest-featured-card__stats">
-            <div class="dest-featured-stat"><strong>6</strong><span>Destinations</span></div>
-            <div class="dest-featured-stat"><strong>Big 5</strong><span>Wildlife</span></div>
-            <div class="dest-featured-stat"><strong>Jul–Oct</strong><span>Peak Season</span></div>
-          </div>
-          <a href="#kenya" class="btn btn-primary">Explore Kenya</a>
-        </div>
-      </article>
+      <!-- Left Content -->
+      <div class="about-hero-copy">
 
-      <!-- Featured: Tanzania -->
-      <article class="dest-featured-card reveal">
-        <img src="assets/safari-crater.webp" alt="Tanzania Safari — Serengeti, Ngorongoro Crater and Kilimanjaro" loading="lazy" />
-        <div class="dest-featured-card__shade"></div>
-        <div class="dest-featured-card__body">
-          <span class="dest-featured-card__tag">🇹🇿 Tanzania</span>
-          <h2>Tanzania Safari Destinations</h2>
-          <p>Africa's largest country by protected land — the Serengeti plains, the Ngorongoro Crater, the roof of Africa at Kilimanjaro, and the spice-scented beaches of Zanzibar.</p>
-          <div class="dest-featured-card__parks">
-            <span>Serengeti</span>
-            <span>Ngorongoro</span>
-            <span>Tarangire</span>
-            <span>Kilimanjaro</span>
-            <span>Zanzibar</span>
-            <span>Lake Manyara</span>
-          </div>
-          <div class="dest-featured-card__stats">
-            <div class="dest-featured-stat"><strong>7</strong><span>Destinations</span></div>
-            <div class="dest-featured-stat"><strong>Big 5</strong><span>Wildlife</span></div>
-            <div class="dest-featured-stat"><strong>Jun–Oct</strong><span>Peak Season</span></div>
-          </div>
-          <a href="#tanzania" class="btn btn-primary">Explore Tanzania</a>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">›</span>
+          <span style="color: rgba(255,255,255,.85);">Destinations</span>
         </div>
-      </article>
+
+        <p class="eyebrow">Kenya • Tanzania • East Africa</p>
+
+        <h1>
+          Discover East Africa's Most
+          <em>Iconic Destinations</em>
+        </h1>
+
+        <p class="about-hero-sub">
+          Explore the breathtaking landscapes of Tanzania and Kenya—from the
+          endless plains of the Serengeti and the wildlife-rich Ngorongoro
+          Crater to the iconic Maasai Mara, Mount Kilimanjaro, and the tropical
+          beaches of Zanzibar. Every destination is carefully selected to create
+          unforgettable safari experiences guided by local experts.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#tanzania" class="btn btn-primary btn-lg">
+            Explore Tanzania
+          </a>
+
+          <a href="#kenya" class="btn btn-ghost btn-lg">
+            Explore Kenya
+          </a>
+        </div>
+
+        <!-- Optional Trust Pills -->
+
+        <!--
+        <div class="hero-trust">
+
+          <div class="trust-pill">
+            Tanzania & Kenya
+          </div>
+
+          <div class="trust-pill">
+            National Parks & Beaches
+          </div>
+
+          <div class="trust-pill">
+            Local Safari Experts
+          </div>
+
+          <div class="trust-pill">
+            Tailor-Made Adventures
+          </div>
+
+        </div>
+        -->
+
+      </div>
+
+      <!-- Right Side Collage -->
+
+      <div class="hero-collage" aria-hidden="true">
+
+        <div class="hc-img hc-span">
+          <img
+            src="assets/safari-group-lake.webp"
+            alt="Guests exploring East Africa"
+          />
+        </div>
+
+        <div class="hc-img">
+          <img
+            src="assets/safari-3.webp"
+            alt="Safari game drive in Tanzania"
+          />
+        </div>
+
+        <div class="hc-img" style="position: relative;">
+
+          <img
+            src="assets/safari-group-fun.webp"
+            alt="Travellers enjoying an African safari"
+          />
+
+          <div class="hc-badge">
+            <strong>20+</strong>
+            <span>Top Destinations</span>
+          </div>
+
+        </div>
+
+      </div>
 
     </div>
   </div>
-</section>
+</header>
+<!-- ==================== FEATURED DESTINATIONS ==================== -->
+
 
 <!-- ==================== TANZANIA DESTINATIONS ==================== -->
 <section class="pad bg-sand" id="tanzania" data-screen-label="Tanzania Destinations">
   <div class="wrap">
 
     <div class="dest-country-header reveal">
-      <div class="dest-country-header__flag" aria-hidden="true">🇹🇿</div>
+      <!-- <div class="dest-country-header__flag" aria-hidden="true">🇹🇿</div> -->
       <div class="dest-country-header__text">
         <h2>Tanzania Destinations</h2>
         <p>7 extraordinary parks, peaks and shores — all guided by our Tanzania-based team</p>
@@ -428,7 +472,7 @@
   <div class="wrap">
 
     <div class="dest-country-header reveal">
-      <div class="dest-country-header__flag" aria-hidden="true">🇰🇪</div>
+      <!-- <div class="dest-country-header__flag" aria-hidden="true">🇰🇪</div> -->
       <div class="dest-country-header__text">
         <h2>Kenya Destinations</h2>
         <p>6 iconic parks and reserves — led by our Kenya-born, Nairobi-based guide team</p>
@@ -674,17 +718,17 @@
         <p>We partner with locally-owned lodges, Maasai-run conservancies, and community campsites. Every booking directly supports the families and wildlife that make East Africa extraordinary.</p>
       </div>
     </div>
-    <div class="why2-stats reveal">
+    <!-- <div class="why2-stats reveal">
       <div class="why2-stat"><strong>13</strong><span>Destinations covered</span></div>
       <div class="why2-stat"><strong>6+</strong><span>Years in the field</span></div>
       <div class="why2-stat"><strong>1,200+</strong><span>Happy travellers</span></div>
       <div class="why2-stat"><strong>5.0★</strong><span>Average Google rating</span></div>
-    </div>
+    </div> -->
   </div>
 </section>
 
 <!-- ==================== CTA ==================== -->
-<section class="cta-section pad" id="cta" data-screen-label="CTA">
+<!-- <section class="cta-section pad" id="cta" data-screen-label="CTA">
   <div class="wrap">
     <div class="cta-inner reveal">
       <p class="eyebrow center">Ready to Explore?</p>
@@ -705,8 +749,73 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
+<section class="cta-section pad" id="cta" data-screen-label="CTA">
+  <div class="wrap">
+    <div class="cta-inner reveal">
+
+      <p class="eyebrow center">Your African Journey Starts Here</p>
+
+      <h2>Ready to Discover East Africa's Most Iconic Destinations?</h2>
+
+      <p>
+        From the endless plains of the Serengeti and the wildlife-rich Maasai
+        Mara to the pristine beaches of Zanzibar and the majestic heights of
+        Mount Kilimanjaro, we'll create a personalised itinerary tailored to
+        your travel dates, interests, and budget. Receive your free custom
+        safari quote within 24 hours.
+      </p>
+
+      <div class="cta-btns">
+
+        <a href="contact.html" class="btn btn-primary btn-lg">
+          Get My Free Custom Quote
+        </a>
+
+        <a
+          href="https://wa.me/255781800878"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-ghost btn-lg"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+          Chat on WhatsApp
+        </a>
+
+      </div>
+
+      <!-- Optional Trust Pills -->
+
+      <!--
+      <div class="cta-trust">
+
+        <span class="cta-trust-item">
+          <i class="fa-solid fa-circle-check"></i>
+          Free Safari Consultation
+        </span>
+
+        <span class="cta-trust-item">
+          <i class="fa-solid fa-circle-check"></i>
+          Tailor-Made Itineraries
+        </span>
+
+        <span class="cta-trust-item">
+          <i class="fa-solid fa-circle-check"></i>
+          Reply Within 24 Hours
+        </span>
+
+        <span class="cta-trust-item">
+          <i class="fa-solid fa-circle-check"></i>
+          Local Safari Specialists
+        </span>
+
+      </div>
+      -->
+
+    </div>
+  </div>
+</section>
 <!-- ==================== FOOTER ==================== -->
 <footer class="footer" id="contact">
   <div class="wrap">

@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+<head>
+<script>/* mark JS alive synchronously */</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Northern Circuit Safari — Big 5 Africa Safari | Serengeti, Ngorongoro &amp; Tarangire Tanzania</title>
+<meta name="description" content="5–8 day private Northern Circuit Tanzania safari: Tarangire, Lake Manyara, Ngorongoro Crater and the Serengeti — led by expert local guides. All-inclusive, fully customisable." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/main.css" />
+
+<!-- NEW CSS START -->
+<style>
+/* ============================================================
+   northern-circuit-safari.html — minimal additional styles
+   All major layouts reused from css/components.css
+   Move to css/components.css when ready
+   ============================================================ */
+
+/* ---- Accommodation cards ---- */
+.accomm-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.accomm-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform .25s, box-shadow .25s;
+}
+.accomm-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.accomm-img { height: 160px; overflow: hidden; }
+.accomm-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
+.accomm-card:hover .accomm-img img { transform: scale(1.05); }
+.accomm-body { padding: 16px 18px 20px; }
+.accomm-type {
+  font-size: 11px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 6px; display: block;
+}
+.accomm-body h4 { font-size: 16px; margin: 0 0 4px; color: var(--brown-deep); }
+.accomm-loc { font-size: 13px; color: var(--brown); display: flex; align-items: center; gap: 5px; }
+.accomm-loc svg { width: 13px; height: 13px; color: var(--gold); flex-shrink: 0; }
+
+/* ---- Responsive ---- */
+@media (max-width: 960px) { .accomm-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .accomm-grid { grid-template-columns: 1fr; } }
+</style>
+<!-- NEW CSS END -->
+</head>
+<body>
+
+<!-- ==================== TOPBAR ==================== -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-left">
+      <a href="tel:+14372172330">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +1 437 217 2330
+      </a>
+      <a href="/cdn-cgi/l/email-protection#9ff6f1f9f0dffdf6f8aafef9edf6fcfeecfef9feedf6b1fcf0f2" class="hide-sm">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        <span class="__cf_email__" data-cfemail="70191e161f30121917451116021913110311161102195e131f1d">[email&#160;protected]</span>
+      </a>
+    </div>
+    <div class="topbar-right">
+      <div class="top-socials">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 4.67a5.13 5.13 0 1 0 0 10.26 5.13 5.13 0 0 0 0-10.26zm0 8.46a3.33 3.33 0 1 1 0-6.66 3.33 3.33 0 0 1 0 6.66zm6.54-8.66a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.5a3 3 0 0 0-2.12-2.13C19.5 3.86 12 3.86 12 3.86s-7.5 0-9.38.51A3 3 0 0 0 .5 6.5C0 8.38 0 12 0 12s0 3.62.5 5.5a3 3 0 0 0 2.12 2.13c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51A3 3 0 0 0 23.5 17.5C24 15.62 24 12 24 12s0-3.62-.5-5.5zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a>
+      </div>
+      <div class="top-divider"></div>
+      <div class="lang" id="lang">
+        <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span id="langLabel">English</span>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button class="active" data-lang="English"><span class="flag">🇬🇧</span> English</button>
+          <button data-lang="Français"><span class="flag">🇫🇷</span> Français</button>
+          <button data-lang="Deutsch"><span class="flag">🇩🇪</span> Deutsch</button>
+          <button data-lang="Español"><span class="flag">🇪🇸</span> Español</button>
+          <button data-lang="Kiswahili"><span class="flag">🇹🇿</span> Kiswahili</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a href="index.html" class="brand" aria-label="Big 5 Africa Safari home">
+      <img src="assets/big5-logo.png" alt="Big 5 Africa Safari" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="destinations-listing.html">Destinations</a></li>
+      <li><a href="trekking-listing.html">Trekking</a></li>
+      <li><a href="activities-listing.html">Activities</a></li>
+      <li><a href="tours-listing.html" class="active">Tours</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#tour-form" class="btn btn-primary">Book This Tour</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="drawer" id="drawer">
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer-panel">
+    <div class="drawer-head">
+      <img src="assets/big5-logo.png" alt="Big 5 Africa Safari" />
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="destinations-listing.html">Destinations</a>
+      <a href="trekking-listing.html">Trekking</a>
+      <a href="activities-listing.html">Activities</a>
+      <a href="tours-listing.html">Tours</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="#tour-form" class="btn btn-primary btn-block">Book This Tour</a>
+  </div>
+</div>
+
+<!-- ==================== HERO ==================== -->
+<header class="pkg-hero" id="top" data-screen-label="Hero">
+  <div class="wrap">
+    <div class="pkg-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="tours-listing.html">Tours</a><span class="breadcrumb-sep">›</span>
+        <a href="tours-listing.html#tanzania">Tanzania</a><span class="breadcrumb-sep">›</span>
+        <span style="color:rgba(255,255,255,.85);">Northern Circuit</span>
+      </div>
+      <p class="eyebrow">🇹🇿 Tanzania Safari · Classic Circuit</p>
+      <h1>Northern Circuit Safari —<br /><em>Serengeti, Ngorongoro &amp; Tarangire</em></h1>
+      <div class="pkg-meta-row">
+        <span class="pkg-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>5–8 Days</span>
+        <span class="pkg-badge-sep"></span>
+        <span class="pkg-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Northern Tanzania</span>
+        <span class="pkg-badge-sep"></span>
+        <span class="pkg-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Private Only</span>
+        <span class="pkg-badge-sep"></span>
+        <span class="pkg-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Year-Round</span>
+        <span class="pkg-badge-sep"></span>
+        <span class="pkg-badge">
+          <span style="display:inline-flex;gap:1px;">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;color:var(--gold-bright);"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;color:var(--gold-bright);"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;color:var(--gold-bright);"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;color:var(--gold-bright);"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;color:var(--gold-bright);"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+          </span>
+          5.0 · 120+ reviews
+        </span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== PAGE BODY ==================== -->
+<div class="page-body">
+  <div class="wrap">
+    <div class="page-layout">
+
+      <!-- ======= LEFT COLUMN ======= -->
+      <div class="left-col">
+
+        <!-- 1. Tour Overview -->
+        <div class="trek-intro reveal">
+          <p class="eyebrow">About This Tour</p>
+          <h3>Tanzania's Greatest Safari Loop</h3>
+          <p class="lead">The Northern Circuit is Tanzania's signature wildlife experience — a seamless private journey through four of East Africa's most iconic ecosystems, led by guides who have spent their entire lives in these parks.</p>
+          <p>Beginning in Arusha, the circuit weaves south through Tarangire National Park's ancient elephant herds, across the flamingo-pink shores of Lake Manyara, down into the extraordinary caldera of Ngorongoro Crater, and finally out onto the infinite plains of the Serengeti — where a million wildebeest share the savanna with all of the Big Five.</p>
+          <p>Every departure is private. Your vehicle, your guide, your pace. You stop when something captivates you, stay as long as you wish beside a pride of lions, and adjust the programme daily based on what the bush is delivering. This is not a group tour — it is your personal safari, designed around you.</p>
+          <div class="trek-why-list">
+            <div class="trek-why-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Four of Tanzania's finest parks in one seamless circuit</div>
+            <div class="trek-why-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Private open-roof 4WD — never shared with other guests</div>
+            <div class="trek-why-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>All park fees, accommodation and meals included</div>
+            <div class="trek-why-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fully customisable duration — from 5 to 8 days</div>
+          </div>
+        </div>
+
+        <!-- 2. Quick Facts -->
+        <div class="reveal">
+          <div class="overview-grid">
+            <div class="ov-card"><div class="ov-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><span class="ov-label">Duration</span><span class="ov-val">5 – 8 Days</span></div>
+            <div class="ov-card"><div class="ov-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><span class="ov-label">Parks Covered</span><span class="ov-val">4 Parks</span></div>
+            <div class="ov-card"><div class="ov-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><span class="ov-label">Tour Type</span><span class="ov-val">Private Safari</span></div>
+            <div class="ov-card"><div class="ov-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><span class="ov-label">Accommodation</span><span class="ov-val">Lodges &amp; Camps</span></div>
+            <div class="ov-card"><div class="ov-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><span class="ov-label">Best Season</span><span class="ov-val">Year-Round</span></div>
+            <div class="ov-card"><div class="ov-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><span class="ov-label">Family Friendly</span><span class="ov-val">Yes — All Ages</span></div>
+            <div class="ov-card"><div class="ov-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><span class="ov-label">Starts</span><span class="ov-val">Arusha</span></div>
+            <div class="ov-card"><div class="ov-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><span class="ov-label">Ends</span><span class="ov-val">Arusha</span></div>
+          </div>
+        </div>
+
+        <!-- 3. Tour Highlights -->
+        <div class="highlights-box reveal">
+          <p class="eyebrow">What Makes It Special</p>
+          <h3>Tour Highlights</h3>
+          <div class="hl-grid">
+            <div class="hl-item"><div class="hl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div><strong>Ngorongoro Crater Floor</strong><span>Descend into the world's largest intact caldera — 25,000 animals in 260 sq km, nowhere to hide</span></div></div>
+            <div class="hl-item"><div class="hl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div><strong>Serengeti Plains</strong><span>Endless golden savanna — resident Big Five, cheetah, leopard and year-round wildlife action</span></div></div>
+            <div class="hl-item"><div class="hl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div><div><strong>Tarangire Elephant Herds</strong><span>Massive elephant concentrations gather around the Tarangire River — up to 300 in a single herd</span></div></div>
+            <div class="hl-item"><div class="hl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/></svg></div><div><strong>Golden Hour Drives</strong><span>Dawn and dusk game drives timed for peak wildlife activity and extraordinary photography light</span></div></div>
+            <div class="hl-item"><div class="hl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div><strong>Maasai Cultural Visit</strong><span>A genuine Maasai village encounter — learn about warrior traditions, beadwork and daily life</span></div></div>
+            <div class="hl-item"><div class="hl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg></div><div><strong>Bush Picnic Lunches</strong><span>Full picnic lunches served in the reserve — the most memorable dining experience on Earth</span></div></div>
+            <div class="hl-item"><div class="hl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><strong>24/7 On-Trip Support</strong><span>A dedicated support contact is reachable by WhatsApp throughout your entire safari</span></div></div>
+            <div class="hl-item"><div class="hl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><div><strong>Family &amp; Honeymoon Ready</strong><span>Guides adapt entirely to your group — from young children to romantic couples to solo travellers</span></div></div>
+          </div>
+        </div>
+
+        <!-- 4. Day-by-Day Itinerary -->
+        <div class="itinerary-box reveal">
+          <p class="eyebrow">Day-by-Day Programme</p>
+          <h3>7-Day Northern Circuit Itinerary</h3>
+          <p style="font-size:14px;color:var(--brown);margin:0 0 20px;">Shown as 7 days — fully customisable from 5 to 8 days. Ask us to shorten, extend or adjust any section.</p>
+          <div class="day-list" id="dayList">
+
+            <div class="day-item open">
+              <button class="day-btn" aria-expanded="true">
+                <div class="day-num">1<span>Day</span></div>
+                <div class="day-title-wrap"><span class="day-title">Arrive Arusha — Safari Briefing</span><span class="day-sub">Kilimanjaro International Airport · Arusha Hotel</span></div>
+                <div class="day-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+              </button>
+              <div class="day-body">
+                <div class="day-content">
+                  <p>Your driver-guide meets you at Kilimanjaro International Airport (JRO) holding a Big 5 Africa Safari sign. Transfer to your Arusha hotel — typically a 45-minute drive depending on traffic. The afternoon is free to rest, explore Arusha town, or visit the Arusha Cultural Heritage Centre.</p>
+                  <p>In the evening your lead guide visits for a full safari briefing: the route, the parks, what to expect, packing tips and an introduction to the Maasai culture you'll encounter. This is a chance to ask every question you have before the adventure begins tomorrow.</p>
+                  <div class="day-activities">
+                    <div class="day-act">Airport transfer in private 4WD to Arusha hotel</div>
+                    <div class="day-act">Afternoon at leisure — town walk or shopping optional</div>
+                    <div class="day-act">Evening safari briefing with your lead guide</div>
+                    <div class="day-act">Welcome dinner at the hotel</div>
+                  </div>
+                  <div class="day-meals"><span class="day-meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>Dinner included</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <button class="day-btn" aria-expanded="false">
+                <div class="day-num">2<span>Day</span></div>
+                <div class="day-title-wrap"><span class="day-title">Arusha → Tarangire National Park</span><span class="day-sub">~2 hrs drive · Full day game drives</span></div>
+                <div class="day-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+              </button>
+              <div class="day-body">
+                <div class="day-content">
+                  <p>After an early breakfast, depart Arusha for Tarangire National Park — a 2-hour drive southeast. Enter the park in time for the morning game drive, immediately encountering Tarangire's defining feature: elephants. Hundreds of them. During the dry season (June–October) entire herds of 200–300 elephants congregate along the Tarangire River, the only water source for miles in every direction.</p>
+                  <p>Tarangire is also remarkable for its ancient baobab trees — some over 1,000 years old — and for its exceptional bird life with over 550 species recorded. Afternoon and evening game drives continue before settling into your tented camp for sundowners and dinner under the stars.</p>
+                  <div class="day-activities">
+                    <div class="day-act">Morning departure from Arusha after breakfast</div>
+                    <div class="day-act">Full-day game drives — elephants, baobabs, lions, leopards</div>
+                    <div class="day-act">Bush picnic lunch served in the park</div>
+                    <div class="day-act">Evening sundowner drinks at scenic viewpoint</div>
+                  </div>
+                  <div class="day-meals">
+                    <span class="day-meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>Breakfast</span>
+                    <span class="day-meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>Bush Picnic Lunch</span>
+                    <span class="day-meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>Dinner</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <button class="day-btn" aria-expanded="false">
+                <div class="day-num">3<span>Day</span></div>
+                <div class="day-title-wrap"><span class="day-title">Tarangire → Lake Manyara</span><span class="day-sub">Tree-climbing lions · Flamingos · Rift Valley</span></div>
+                <div class="day-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+              </button>
+              <div class="day-body">
+                <div class="day-content">
+                  <p>Drive north to Lake Manyara National Park — a compact but extraordinarily diverse park tucked between the walls of the Great Rift Valley escarpment and the alkaline soda lake that gives it its name. Lake Manyara is famous for its tree-climbing lions, a rare population that has developed the unusual habit of resting in the branches of fever trees above the ground.</p>
+                  <p>The lake itself is often tinged pink by hundreds of thousands of flamingos, while hippo pools in the park's freshwater streams produce some of the most photographed wildlife scenes in East Africa. An optional Maasai village visit can be arranged this afternoon before settling in at your lodge above the escarpment with panoramic rift valley views.</p>
+                  <div class="day-activities">
+                    <div class="day-act">Morning departure for Lake Manyara (~45 min drive)</div>
+                    <div class="day-act">Full game drive — tree-climbing lions, flamingos, hippo pools</div>
+                    <div class="day-act">Optional Maasai village cultural visit (afternoon)</div>
+                    <div class="day-act">Overnight at Rift Valley escarpment lodge</div>
+                  </div>
+                  <div class="day-meals">
+                    <span class="day-meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>All Meals</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <button class="day-btn" aria-expanded="false">
+                <div class="day-num">4<span>Day</span></div>
+                <div class="day-title-wrap"><span class="day-title">Ngorongoro Crater — Full Day</span><span class="day-sub">The 8th Wonder of the World</span></div>
+                <div class="day-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+              </button>
+              <div class="day-body">
+                <div class="day-content">
+                  <p>Today is arguably the centrepiece of the entire Northern Circuit. Ngorongoro Crater is the world's largest intact volcanic caldera — a 260 km² natural enclosure that contains approximately 25,000 large mammals in a single self-contained ecosystem. It is the only place in Africa where you are almost guaranteed to see all of the Big Five in a single day, including the critically endangered black rhino.</p>
+                  <p>You descend 600m on a dirt track from the crater rim into a landscape that feels utterly otherworldly — open grassland, soda lake, hippo pools and acacia woodland, all contained within perfect walls of ancient volcanic rock. Your guide navigates to each of the crater's wildlife hotspots systematically, ensuring you spend quality time with lions, elephants, rhino, hippos and the extraordinary birdlife.</p>
+                  <div class="day-activities">
+                    <div class="day-act">Pre-dawn crater rim breakfast with panoramic views</div>
+                    <div class="day-act">Full-day descent into the crater floor (600m down)</div>
+                    <div class="day-act">Black rhino tracking with your expert guide</div>
+                    <div class="day-act">Crater floor picnic lunch at designated site</div>
+                    <div class="day-act">Afternoon drives and ascent before sunset</div>
+                  </div>
+                  <div class="day-meals">
+                    <span class="day-meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>All Meals</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <button class="day-btn" aria-expanded="false">
+                <div class="day-num">5<span>Day</span></div>
+                <div class="day-title-wrap"><span class="day-title">Ngorongoro → Central Serengeti</span><span class="day-sub">~5 hrs with game drives en route</span></div>
+                <div class="day-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+              </button>
+              <div class="day-body">
+                <div class="day-content">
+                  <p>The drive from Ngorongoro to the central Serengeti passes through the Ngorongoro Conservation Area — itself teeming with wildlife — before entering the Serengeti proper through the Naabi Hill Gate. The drive itself is a game drive, and your guide makes multiple stops along the way.</p>
+                  <p>The Central Serengeti (Seronera Valley) is one of the most reliable areas for leopard sightings in all of Africa. A network of lugga (seasonal watercourses) lined with yellow-barked fever trees provides perfect leopard habitat, and your guide knows exactly where to look. Lions are resident year-round, and cheetah frequent the open plains around Seronera.</p>
+                  <div class="day-activities">
+                    <div class="day-act">Morning departure from Ngorongoro highland camp</div>
+                    <div class="day-act">Game drives en route through the NCA buffer zone</div>
+                    <div class="day-act">Enter the Serengeti via Naabi Hill Gate</div>
+                    <div class="day-act">Afternoon/evening drives in Seronera — leopard country</div>
+                  </div>
+                  <div class="day-meals"><span class="day-meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>All Meals</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <button class="day-btn" aria-expanded="false">
+                <div class="day-num">6<span>Day</span></div>
+                <div class="day-title-wrap"><span class="day-title">Full Day — Serengeti Game Drives</span><span class="day-sub">Dawn to dusk in Africa's most iconic park</span></div>
+                <div class="day-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+              </button>
+              <div class="day-body">
+                <div class="day-content">
+                  <p>A full day in the Serengeti — one of the great wildlife experiences on the planet. Your guide departs camp before first light, positioning for the magic of the African dawn. Predators are still active; a pride of lions may be finishing a night-time hunt, a cheetah scanning for impala on the open plain.</p>
+                  <p>Depending on the season, your guide navigates to the area of the Serengeti with the highest current wildlife concentrations. From December to July, vast wildebeest herds blanket the southern and eastern plains. From July to October, the focus shifts north toward the Mara River crossing zones. There is no bad time in the Serengeti — only different spectacles.</p>
+                  <div class="day-activities">
+                    <div class="day-act">Pre-dawn departure — predator window at sunrise</div>
+                    <div class="day-act">Full-day drives across multiple Serengeti ecosystems</div>
+                    <div class="day-act">Bush picnic lunch in the field</div>
+                    <div class="day-act">Afternoon drives through golden hour to sundowner spot</div>
+                  </div>
+                  <div class="day-meals"><span class="day-meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>All Meals</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="day-item">
+              <button class="day-btn" aria-expanded="false">
+                <div class="day-num">7<span>Day</span></div>
+                <div class="day-title-wrap"><span class="day-title">Serengeti → Arusha — Departure</span><span class="day-sub">Final morning drive · Return to Arusha</span></div>
+                <div class="day-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+              </button>
+              <div class="day-body">
+                <div class="day-content">
+                  <p>One final morning game drive before departing the Serengeti. Depending on your flight time, your guide will plan the return drive to Arusha accordingly — typically a 5–6 hour journey with a lunch stop en route. Guests with afternoon or evening flights can linger in the park until midday; early-morning flights may require an overnight near Arusha on night six instead.</p>
+                  <p>Airport transfer to Kilimanjaro International Airport (JRO) or Julius Nyerere Airport (DAR) as required, in time for your onward flight. Your Big 5 Africa Safari experience concludes — but the memories begin now.</p>
+                  <div class="day-activities">
+                    <div class="day-act">Final morning drive at sunrise before departure</div>
+                    <div class="day-act">Drive from Serengeti to Arusha (~5–6 hrs, with stops)</div>
+                    <div class="day-act">Lunch stop en route at arranged restaurant</div>
+                    <div class="day-act">Airport transfer — farewell from your guide</div>
+                  </div>
+                  <div class="day-meals"><span class="day-meal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>Breakfast · Lunch</span></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 5. Includes / Excludes -->
+        <div class="incl-box reveal">
+          <p class="eyebrow">What's Covered</p>
+          <h3>Includes &amp; Excludes</h3>
+          <div class="incl-grid">
+            <div class="incl-col">
+              <h4 class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> What's Included</h4>
+              <div class="incl-list">
+                <div class="incl-item yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Private open-roof 4WD safari vehicle</div>
+                <div class="incl-item yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Expert licensed driver-guide</div>
+                <div class="incl-item yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>All national park entry fees</div>
+                <div class="incl-item yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>All accommodation (lodges/camps)</div>
+                <div class="incl-item yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>All meals (full board)</div>
+                <div class="incl-item yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Drinking water and cold beverages</div>
+                <div class="incl-item yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Airport transfers (Arusha/JRO)</div>
+                <div class="incl-item yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Ngorongoro Conservation Area fees</div>
+                <div class="incl-item yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>24/7 WhatsApp support</div>
+              </div>
+            </div>
+            <div class="incl-col">
+              <h4 class="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Not Included</h4>
+              <div class="incl-list">
+                <div class="incl-item no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>International flights</div>
+                <div class="incl-item no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Tanzania visa fees (~$50 on arrival)</div>
+                <div class="incl-item no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Travel and medical insurance</div>
+                <div class="incl-item no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Alcoholic beverages</div>
+                <div class="incl-item no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Hot air balloon safari (add-on available)</div>
+                <div class="incl-item no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Guide and camp staff gratuities</div>
+                <div class="incl-item no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Personal items and souvenirs</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Accommodation -->
+        <div class="highlights-box reveal">
+          <p class="eyebrow">Where You'll Sleep</p>
+          <h3>Accommodation</h3>
+          <p style="font-size:14.5px;color:var(--brown);margin:0 0 22px;">All lodges and camps are carefully selected for their location, quality and immersion in the natural environment. Upgrades to luxury or premium properties are available on request.</p>
+          <div class="accomm-grid">
+            <div class="accomm-card">
+              <div class="accomm-img"><img src="assets/safari-1.webp" alt="Tarangire tented camp lodge" loading="lazy" /></div>
+              <div class="accomm-body"><span class="accomm-type">Night 1–2 · Tarangire</span><h4>Tarangire River Camp</h4><p class="accomm-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Inside the park · Tented camp</p></div>
+            </div>
+            <div class="accomm-card">
+              <div class="accomm-img"><img src="assets/safari-2.webp" alt="Manyara escarpment lodge" loading="lazy" /></div>
+              <div class="accomm-body"><span class="accomm-type">Night 3 · Lake Manyara</span><h4>Rift Valley Escarpment Lodge</h4><p class="accomm-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Above the Rift Valley · Lodge</p></div>
+            </div>
+            <div class="accomm-card">
+              <div class="accomm-img"><img src="assets/safari-crater.webp" alt="Ngorongoro crater rim lodge" loading="lazy" /></div>
+              <div class="accomm-body"><span class="accomm-type">Night 4 · Ngorongoro</span><h4>Crater Rim Highland Camp</h4><p class="accomm-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Crater rim at 2,400m · Lodge</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Best Time -->
+        <div class="best-time-box reveal">
+          <p class="eyebrow">Plan Your Visit</p>
+          <h3>Best Time to Visit the Northern Circuit</h3>
+          <p style="font-size:14.5px;color:var(--brown);margin:0 0 20px;line-height:1.65;">The Northern Circuit is exceptional year-round — different seasons offer different spectacles. Here's what to expect month by month.</p>
+          <div class="month-strip">
+            <div class="ms-cell good"><span class="ms-cell__name">Jan</span><span class="ms-cell__tag">Calving</span></div>
+            <div class="ms-cell good"><span class="ms-cell__name">Feb</span><span class="ms-cell__tag">Calving</span></div>
+            <div class="ms-cell avoid"><span class="ms-cell__name">Mar</span><span class="ms-cell__tag">Rains</span></div>
+            <div class="ms-cell avoid"><span class="ms-cell__name">Apr</span><span class="ms-cell__tag">Rains</span></div>
+            <div class="ms-cell avoid"><span class="ms-cell__name">May</span><span class="ms-cell__tag">Rains</span></div>
+            <div class="ms-cell peak"><span class="ms-cell__name">Jun</span><span class="ms-cell__tag">Peak</span></div>
+            <div class="ms-cell peak"><span class="ms-cell__name">Jul</span><span class="ms-cell__tag">Peak</span></div>
+            <div class="ms-cell peak"><span class="ms-cell__name">Aug</span><span class="ms-cell__tag">Peak</span></div>
+            <div class="ms-cell peak"><span class="ms-cell__name">Sep</span><span class="ms-cell__tag">Peak</span></div>
+            <div class="ms-cell peak"><span class="ms-cell__name">Oct</span><span class="ms-cell__tag">Peak</span></div>
+            <div class="ms-cell avoid"><span class="ms-cell__name">Nov</span><span class="ms-cell__tag">Short rains</span></div>
+            <div class="ms-cell good"><span class="ms-cell__name">Dec</span><span class="ms-cell__tag">Good</span></div>
+          </div>
+          <div class="month-legend" style="margin-top:14px;">
+            <span class="ml-item"><span class="ml-dot" style="background:var(--gold);"></span>Peak — dry season, maximum wildlife density, best photography</span>
+            <span class="ml-item"><span class="ml-dot" style="background:var(--sand-deep);"></span>Good — wildlife present, occasional showers, fewer crowds</span>
+            <span class="ml-item"><span class="ml-dot" style="background:rgba(0,0,0,.1);"></span>Rainy — lush and green, some tracks muddy, reduced game drive access</span>
+          </div>
+        </div>
+
+        <!-- 8. Gallery -->
+        <div class="gallery-box reveal">
+          <p class="eyebrow">Northern Circuit Moments</p>
+          <h3>Photo Gallery</h3>
+          <div class="trek-gallery" id="trekGallery">
+            <div class="trek-gallery__item span2" data-src="assets/safari-1.webp">
+              <img src="assets/safari-1.webp" alt="Serengeti plains at sunrise with lion pride" loading="lazy" />
+              <div class="trek-gallery__item__overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            </div>
+            <div class="trek-gallery__item" data-src="assets/safari-crater.webp">
+              <img src="assets/safari-crater.webp" alt="Ngorongoro Crater floor with flamingos at the soda lake" loading="lazy" />
+              <div class="trek-gallery__item__overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            </div>
+            <div class="trek-gallery__item" data-src="assets/safari-2.webp">
+              <img src="assets/safari-2.webp" alt="Tarangire elephant herd at the river at sunset" loading="lazy" />
+              <div class="trek-gallery__item__overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            </div>
+            <div class="trek-gallery__item" data-src="https://images.unsplash.com/photo-1559521783-1d1599583485?w=900&q=80&auto=format&fit=crop">
+              <img src="https://images.unsplash.com/photo-1559521783-1d1599583485?w=900&q=80&auto=format&fit=crop" alt="Wildebeest herds on the open Serengeti plains" loading="lazy" />
+              <div class="trek-gallery__item__overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            </div>
+            <div class="trek-gallery__item" data-src="assets/safari-group-fun.webp">
+              <img src="assets/safari-group-fun.webp" alt="Happy guests on the Northern Circuit with Big 5 Africa Safari" loading="lazy" />
+              <div class="trek-gallery__item__overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. FAQ -->
+        <div style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;" class="reveal">
+          <p class="eyebrow">Questions Answered</p>
+          <h3 style="font-size:22px;margin-bottom:22px;">Frequently Asked Questions</h3>
+          <div class="faq-grid">
+
+            <div class="faq-item">
+              <button class="faq-btn" aria-expanded="false">What is the best time of year for the Northern Circuit?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+              <div class="faq-body">The dry season from June to October is considered peak season — excellent wildlife viewing, dusty but navigable tracks, and the highest density of animals concentrated around water sources. January–February is the calving season on the Serengeti plains — spectacular for predator action. The long rains in April–May make some tracks challenging but also deliver lush green scenery and far fewer tourists.</div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-btn" aria-expanded="false">How far in advance should I book?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+              <div class="faq-body">We recommend booking 3–6 months in advance for peak season (June–October) to secure your preferred lodges and guide availability. Outside peak season, 4–8 weeks is usually sufficient. We work with a network of lodges across the circuit and can often accommodate shorter-notice bookings — contact us and we'll see what's available for your dates.</div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-btn" aria-expanded="false">Can the itinerary be customised?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+              <div class="faq-body">Absolutely — every itinerary we produce is custom-built around your group. You can shorten to 5 days (dropping one Serengeti night), extend to 8 days (adding a day in Tarangire or the northern Serengeti), add a Zanzibar beach extension, include a hot air balloon flight, add a Maasai village visit, or upgrade any lodge to a luxury alternative. Just tell us what you're looking for.</div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-btn" aria-expanded="false">Is the Northern Circuit suitable for children?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+              <div class="faq-body">Yes — the Northern Circuit is one of the world's best family safari destinations. Our guides are experienced with children of all ages and adapt their briefings, pacing and focus accordingly. Most lodges on the circuit welcome children and have family rooms. There are no minimum age requirements for game drives, though very young children should be discussed with us when booking.</div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-btn" aria-expanded="false">Do I need vaccinations or visas?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+              <div class="faq-body">A Yellow Fever vaccination certificate is required if arriving from a yellow fever country. A Tanzania tourist visa ($50 USD) can be obtained on arrival at Kilimanjaro International Airport or online via the Tanzania e-visa portal. We strongly recommend anti-malaria medication — consult your doctor. We'll provide a full health and travel information pack with every confirmed booking.</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 10. Related Tours -->
+        <div class="other-pkg reveal">
+          <p class="eyebrow">You Might Also Like</p>
+          <h3>Related Tanzania Tours</h3>
+          <div class="other-grid">
+            <a href="tours-listing.html#tanzania" class="op-card">
+              <div class="op-img"><img src="assets/safari-2.webp" alt="Southern Circuit Tanzania — Ruaha and Selous" loading="lazy" /><span class="op-badge">Tanzania</span></div>
+              <div class="op-body">
+                <div class="op-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Southern Tanzania</div>
+                <h4>Southern Circuit Safari</h4>
+                <div class="op-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>7–10 Days</span><span>Off-the-beaten-track</span></div>
+                <div class="op-foot"><div class="op-price"><span>From</span><strong>$1,380</strong></div><span class="btn btn-outline" style="padding:8px 16px;font-size:13px;">View Tour</span></div>
+              </div>
+            </a>
+            <a href="tours-listing.html#tanzania" class="op-card">
+              <div class="op-img"><img src="assets/safari-crater.webp" alt="Luxury Tanzania Safari — exclusive private camps" loading="lazy" /><span class="op-badge">Luxury</span></div>
+              <div class="op-body">
+                <div class="op-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Tanzania</div>
+                <h4>Luxury Tanzania Safari</h4>
+                <div class="op-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>7–12 Days</span><span>Private camps</span></div>
+                <div class="op-foot"><div class="op-price"><span>From</span><strong>$3,200</strong></div><span class="btn btn-outline" style="padding:8px 16px;font-size:13px;">View Tour</span></div>
+              </div>
+            </a>
+            <a href="tours-listing.html#combined" class="op-card">
+              <div class="op-img"><img src="https://images.unsplash.com/photo-1559521783-1d1599583485?w=800&q=80&auto=format&fit=crop" alt="Great Migration Safari — wildebeest river crossing" loading="lazy" /><span class="op-badge">Migration</span></div>
+              <div class="op-body">
+                <div class="op-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Kenya &amp; Tanzania</div>
+                <h4>Great Migration Safari</h4>
+                <div class="op-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>7–10 Days</span><span>Jul – Oct</span></div>
+                <div class="op-foot"><div class="op-price"><span>From</span><strong>$2,100</strong></div><span class="btn btn-outline" style="padding:8px 16px;font-size:13px;">View Tour</span></div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /left-col -->
+
+      <!-- ======= RIGHT SIDEBAR ======= -->
+      <div class="right-col" id="tour-form">
+        <div class="price-box">
+          <div class="price-head">
+            <div class="from">Tour price from</div>
+            <div class="price-main"><span class="price-amt">$1,150</span><span class="price-pp">/ person</span></div>
+            <div class="price-orig">Luxury upgrade from $2,800/person</div>
+            <div class="price-save"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>All-inclusive · No hidden fees</div>
+            <div class="price-quick-stats">
+              <div class="pqs"><span class="pqs-label">Duration</span><span class="pqs-val">5 – 8 Days</span></div>
+              <div class="pqs"><span class="pqs-label">Parks</span><span class="pqs-val">4 Parks</span></div>
+              <div class="pqs"><span class="pqs-label">Min Guests</span><span class="pqs-val">1 Person</span></div>
+              <div class="pqs"><span class="pqs-label">Departs</span><span class="pqs-val">Year-round</span></div>
+            </div>
+          </div>
+          <div class="price-body">
+            <p class="sdb-form-head">Reserve This Tour</p>
+            <p class="sdb-form-sub">Send your details — we'll reply with a fully customised quote and itinerary within 24 hours.</p>
+            <form class="sdb-form" id="sidebarForm" novalidate>
+              <div class="sf"><label for="sb-name">Full Name</label><input type="text" id="sb-name" placeholder="Jane Doe" autocomplete="name" /></div>
+              <div class="sf"><label for="sb-email">Email Address</label><input type="email" id="sb-email" placeholder="jane@email.com" autocomplete="email" /></div>
+              <div class="sf"><label for="sb-phone">Phone / WhatsApp</label><input type="tel" id="sb-phone" placeholder="+1 437 000 0000" autocomplete="tel" /></div>
+              <div class="sf-row">
+                <div class="sf"><label for="sb-dates">Travel Dates</label><input type="text" id="sb-dates" placeholder="e.g. Aug 10–17, 2026" /></div>
+                <div class="sf"><label for="sb-pax">Guests</label>
+                  <select id="sb-pax"><option value="">Select…</option><option>1 (Solo)</option><option>2</option><option>3 – 4</option><option>5 – 8</option><option>9+</option></select>
+                </div>
+              </div>
+              <div class="sf"><label for="sb-dur">Preferred Duration</label>
+                <select id="sb-dur"><option value="">Select…</option><option>5 Days</option><option>6 Days</option><option>7 Days</option><option>8 Days</option><option>I need advice</option></select>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Request My Free Quote
+              </button>
+              <div id="sbSuccess" style="display:none;text-align:center;padding:14px 0;font-size:14px;color:var(--olive);font-weight:700;">✔ Sent! We'll reply within 24 hrs.</div>
+            </form>
+            <p class="form-note-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Free quote · No obligation · No spam</p>
+            <a href="https://wa.me/255781800878?text=Hi!%20I%27m%20interested%20in%20the%20Northern%20Circuit%20Safari." target="_blank" rel="noopener" class="btn btn-wa btn-block" style="margin-top:14px;">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="sdb-offer">
+          <div class="sdb-offer-tag">🎈 Popular Add-On</div>
+          <h4>Add a Balloon Safari Over the Serengeti</h4>
+          <p>Float over the Serengeti at dawn in a hot air balloon — the most breathtaking perspective of the African landscape available. Champagne breakfast on landing.</p>
+        </div>
+        <div class="sdb-trust">
+          <div class="sdb-trust-items">
+            <div class="st-item"><div class="st-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><span>All park fees included</span></div>
+            <div class="st-item"><div class="st-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div><span>5.0 ★ · 120+ reviews</span></div>
+            <div class="st-item"><div class="st-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><span>Private — your group only</span></div>
+            <div class="st-item"><div class="st-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div><span>Transparent, itemised pricing</span></div>
+            <div class="st-item"><div class="st-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><span>Family &amp; honeymoon friendly</span></div>
+          </div>
+        </div>
+      </div><!-- /right-col -->
+
+    </div><!-- /page-layout -->
+  </div>
+</div>
+
+<!-- ==================== CTA ==================== -->
+<section class="cta-section pad" id="cta" data-screen-label="CTA">
+  <div class="wrap">
+    <div class="cta-inner reveal">
+      <p class="eyebrow center">The Serengeti Is Waiting</p>
+      <h2>Ready to Book the Northern Circuit?</h2>
+      <p>Send us your travel dates and group size — we'll build a personalised itinerary with exact pricing and lodge options within 24 hours. Free, no obligation.</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn btn-primary btn-lg">Get My Free Itinerary</a>
+        <a href="https://wa.me/255781800878?text=Hi%20Big%205!%20I%27m%20interested%20in%20the%20Northern%20Circuit%20Safari." target="_blank" rel="noopener" class="btn btn-ghost btn-lg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>WhatsApp Our Team</a>
+      </div>
+      <div class="cta-trust">
+        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>All park fees included</span>
+        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Private — your group only</span>
+        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free quote within 24 hrs</span>
+        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>5.0 ★ · 120+ verified reviews</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer" id="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/big5-logo.png" alt="Big 5 Africa Safari" />
+        <p>Private, tailor-made Kenya &amp; Tanzania safaris crafted by local experts. From the Great Migration to the Big Five — your African adventure starts here.</p>
+        <div class="foot-contact">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Toronto, Ontario, Canada · M4X 1G3</span></div>
+          <a href="tel:+14372172330"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+1 437 217 2330</a>
+          <a href="https://wa.me/255781800878" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>+255 781 800 878 (WhatsApp)</a>
+          <a href="/cdn-cgi/l/email-protection#1970777f76597b707e2c787f6b707a786a787f786b70377a7674"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><span class="__cf_email__" data-cfemail="6b02050d042b09020c5e0a0d1902080a180a0d0a190245080406">[email&#160;protected]</span></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <div class="foot-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="destinations-listing.html">Destinations</a>
+          <a href="trekking-listing.html">Trekking</a>
+          <a href="activities-listing.html">Activities</a>
+          <a href="tours-listing.html">Tours</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4>Popular Tours</h4>
+        <div class="foot-links">
+          <a href="northern-circuit-safari.html">Northern Circuit</a>
+          <a href="tours-listing.html#tanzania">Southern Circuit</a>
+          <a href="tours-listing.html#combined">Great Migration</a>
+          <a href="tours-listing.html#tanzania">Luxury Tanzania</a>
+          <a href="tours-listing.html#kenya">Masai Mara Safari</a>
+          <a href="tours-listing.html#combined">Wildlife &amp; Beach</a>
+        </div>
+      </div>
+      <div>
+        <h4>Working Hours</h4>
+        <div class="foot-hours">
+          <div class="row"><span>Mon – Fri</span><span>8 AM – 4 PM</span></div>
+          <div class="row"><span>Saturday</span><span>8 AM – 12 PM</span></div>
+          <div class="row closed"><span>Sunday</span><span>Closed</span></div>
+        </div>
+        <div class="foot-social-row">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 4.67a5.13 5.13 0 1 0 0 10.26 5.13 5.13 0 0 0 0-10.26zm0 8.46a3.33 3.33 0 1 1 0-6.66 3.33 3.33 0 0 1 0 6.66zm6.54-8.66a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.5a3 3 0 0 0-2.12-2.13C19.5 3.86 12 3.86 12 3.86s-7.5 0-9.38.51A3 3 0 0 0 .5 6.5C0 8.38 0 12 0 12s0 3.62.5 5.5a3 3 0 0 0 2.12 2.13c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51A3 3 0 0 0 23.5 17.5C24 15.62 24 12 24 12s0-3.62-.5-5.5zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a><span class="sep">·</span>
+      <a href="#">Terms &amp; Conditions</a><span class="sep">·</span>
+      <a href="#">Cookie Policy</a><span class="sep">·</span>
+      <a href="#">Booking &amp; Payment</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Big 5 Africa Safari. All rights reserved.</span>
+      <span class="credit">Designed &amp; Managed by <strong>DUENCY</strong></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== WA FLOAT ==================== -->
+<div class="wa-float" id="waFloat">
+  <div class="wa-panel">
+    <div class="wa-phead">
+      <div class="wa-pavatar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg></div>
+      <div><h4>Big 5 Africa Safari</h4><span>Typically replies instantly</span></div>
+      <button class="wa-close" id="waClose" aria-label="Close">&times;</button>
+    </div>
+    <div class="wa-pbody"><div class="wa-msg"><div class="who">Big 5 Africa Safari</div>Jambo! 👋 Interested in the Northern Circuit? Send us your dates and we'll build a free custom itinerary!<div class="time">Online now</div></div></div>
+    <div class="wa-pfoot"><a href="https://wa.me/255781800878?text=Hi!%20I%27m%20interested%20in%20the%20Northern%20Circuit%20Safari." target="_blank" rel="noopener" class="btn btn-wa" style="width:100%;justify-content:center;">Start Chat on WhatsApp</a></div>
+  </div>
+  <button class="wa-bubble" id="waBubble" aria-label="Open WhatsApp chat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zM6.597 20.13c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.513 5.26l-.999 3.648 3.975-1.043zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></button>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Close">&times;</button>
+  <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" class="lightbox__img" id="lightboxImg" />
+</div>
+
+<!-- NEW JS START -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+(function () {
+  'use strict';
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightboxImg');
+  var lightboxClose = document.getElementById('lightboxClose');
+  if (!lightbox || !lightboxImg) return;
+  document.querySelectorAll('.trek-gallery__item').forEach(function (item) {
+    item.addEventListener('click', function () {
+      var src = item.dataset.src || item.querySelector('img').src;
+      lightboxImg.src = src;
+      lightboxImg.alt = item.querySelector('img').alt || '';
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    lightboxImg.src = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+    document.body.style.overflow = '';
+  }
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
+}());
+</script>
+<!-- NEW JS END -->
+
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/forms.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
